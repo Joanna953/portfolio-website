@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+<!--Menu top desktop start-->
+
+<div class="menu__main_container">
+
+    <div class="menu__container">
+    
+    <!--Logo start-->
+    
+    <a class="menu__logo" href="/sklep internetowy/Portfolio/index.html">JOANNA BORYSZEWSKA</a>
+    
+    <!--Logo end-->
+    
+    <!--Menu labels start-->
+    
+    <div class="menu__labels">
+    
+    <a class="labels__item" href="/sklep internetowy/Portfolio/Projects--portfolio.html">Projects</a>
+    <a class="labels__item" href="/sklep internetowy/Portfolio/About_me--portfolio.html">About</a>
+    <a class="labels__item" href="/sklep internetowy/Portfolio/Contact--portfolio.html">Contact</a>
+    
+    </div>
+    
+    <!--Menu labels end-->
+    </div>
+    
+    <!--Line start-->
+    
+    <div class="menu__line"></div>
+    
+    <!--Line end-->
+    
+    </div>
+    
+    
+    <!--Menu top desktop end-->
+    
+    
+    <!--Menu mobile desktop start-->
+    
+    <div class="menu__main_container--mobile">
+    
+        <div class="menu__container--mobile">
+        
+    
+    <!--hamburger menu icon-->
+    
+    <img class="hamburger_menu__icon" src="/sklep internetowy/Portfolio/assets/icons/hamburger_menu.svg"/>
+    
+        <!--Logo start-->
+        
+        <div class="menu__logo">JOANNA BORYSZEWSKA</div>
+        
+        <!--Logo end-->
+        
+    
+        </div>
+        
+        <!--Line start-->
+        
+        <div class="menu__line"></div>
+        
+        <!--Line end-->
+        
+    <!--Drop down menu start-->
+    
+    <div class="drop_down_menu__container">
+    
+    <a class="drop_down_menu__label" style="padding-top: 48px;" href="/sklep internetowy/Portfolio/index.html"><span class="highlight">Home</span></a>
+    <a class="drop_down_menu__label"><span class="highlight">Projects</span></a>
+    <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/About_me--portfolio.html"><span class="highlight">About me</span></a>
+    <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/Contact--portfolio.html"><span class="highlight">Contact</span></a>
+    
+    </div>
+    
+    
+    <!--Drop down menu end-->
+        </div>
+        
+    
+        <style>
+
+            body {
+            
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            
+            
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+            }
+            
+            :root {
+            
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            
+            } 
+            
+            :root {
+            
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            
+            
+            }
+            
+            
+            .menu__main_container {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark);
+            }
+            
+            .menu__container {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: 144px;
+            padding-right: 144px;
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            }
+            
+            
+            
+            .menu__logo {
+            
+            font-size: 24px;
+            line-height: 110%;
+            font-family: 'Picaflor', sans-serif;
+            color: var(--bright);
+            text-decoration: none;
+            }
+            
+            .menu__labels {
+            
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            font-family: Jost;
+            font-size: 20px;
+            line-height: 110%;
+            color: var(--bright);
+            }
+            
+            .menu__line {
+            
+            width: 100%;
+            height: 3px;
+            background-color: var(--bright)
+            }
+            
+            .menu__main_container--mobile {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark);
+            
+            }
+            
+            .menu__container--mobile {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: var(--padding-tablet);
+            padding-right: var(--padding-tablet);
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-start;
+            padding-left: 72px;
+            padding-right: 72px;
+            background-color: var(--bright);
+            color: var(--dark);
+            font-size: 24px;
+            font-family: Jost;
+            max-height: 0; /* Początkowo ukryte */
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: max-height 0.6s ease; /* Płynne otwieranie/zamykanie */
+              position: absolute;
+              width: 100%;
+              top: 122.41px;
+              height: calc(100vh - 122px);
+              z-index: 2;
+             
+            }
+            
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 122px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            
+            
+            .drop_down_menu__label {
+            
+            transition: transform 0.6s ease-in-out;
+            cursor: pointer;
+            
+            }
+            
+            .highlight {
+              position: relative;
+              display: inline-block; /* Required for proper pseudo-element positioning */
+              cursor: pointer;
+              color: var(--dark);
+            }
+            
+            .highlight::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px; /* Thickness of the underline */
+              background-color: var(--dark); /* Color of the underline */
+              transition: width 0.5s ease;
+            }
+            
+            .highlight:hover::after {
+              width: 100%; /* Extends the underline on hover */
+            }
+            
+.labels__item {
+
+text-decoration: none;
+color: var(--bright);
+
+}
+
+
+            @media (min-width: 1024px) {
+            
+            .menu__main_container--mobile {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            @media (max-width: 1024px) {
+            
+            .menu__main_container {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            
+            @media (max-width: 480px) {
+            
+                .menu__container--mobile {
+            
+            
+            padding-left: var(--padding--phone);
+            padding-right: var(--padding--phone);
+            
+            
+            }
+            
+            
+            .menu__logo {
+            
+            font-size: 18px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+                padding-left: var(--padding--phone);
+                padding-right: var(--padding--phone);
+            
+            }
+            
+            .drop_down_menu__container {
+            
+ 
+              height: calc(100vh - 115px);
+             
+             
+            }
+
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 115px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            }
+            
+        </style>
+    
+    <script>
+    
+    // script.js
+    document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
+      const menu = document.querySelector(".drop_down_menu__container");
+      menu.classList.toggle("active");
+    });
+    
+    
+    </script>
+    
+    <!--Menu top mobile end-->
+
+<!--Banner content start-->
+
+<div class="banner__main_content banner__main_content--desktop">
+
+    <div class="banner__content">
+    
+    <div class="photos__main_container">
+    
+    <div class="photos__container">
+    
+    <img src="/sklep internetowy/Portfolio/assets/photos/czesc1.png"/>
+    <img src="/sklep internetowy/Portfolio/assets/photos/czesc2.png"/>
+    </div>
+    
+    <div class="photos__container">
+    
+        <img src="/sklep internetowy/Portfolio/assets/photos/czesc3.png"/>
+        <img class="photos--invisible" src="/sklep internetowy/Portfolio/assets/photos/czesc4.png"/>
+        </div>
+    
+    
+    </div>
+    
+    
+    <div class="banner_title__container">
+    
+    <div class="title__container">
+    
+    <div class="title--part1">HELLO THERE!</div>
+    <div class="title--part2">I AM JOANNA</div>
+    
+    </div>
+    
+    <div class="banner__paragraph">I am a UI/UX and web designer with a passion for creative solutions. In my design process, I emphasize details, aesthetics, and unique ideas. The aim of my work is to create user-friendly yet visually captivating designs.</div>
+    
+    </div>
+    
+    
+    <div class="photo__container"><img src="/sklep internetowy/Portfolio/assets/photos/czesc4.png"/></div>
+    
+    </div>
+    
+    
+        
+    
+    </div>
+    <!--Banner content end-->
+    
+    
+    <!--Banner content mobile start-->
+    
+    <div class="banner__main_content banner__main_content--mobile">
+    
+        <div class="banner__content banner__content--mobile">
+        
+        
+        
+        <div class="banner_title__container banner_title__container--mobile">
+        
+        <div class="title__container title__container--mobile">
+        
+        <div class="title--part1">HELLO THERE!</div>
+        <div class="title--part2">I AM JOANNA</div>
+        
+        </div>
+        
+    <div class="photo__container--mobile"><img class="photo--mobile" src="/sklep internetowy/Portfolio/assets/photos/photo--mobile.png"/></div>
+    
+        <div class="banner__paragraph banner__paragraph--mobile">I am a UI/UX and web designer with a passion for creative solutions. In my design process, I emphasize details, aesthetics, and unique ideas. The aim of my work is to create user-friendly yet visually captivating designs.</div>
+        
+        </div>
+        
+        
+        </div>
+        
+        
+            
+        
+        </div>
+
+        <style>
+            body {
+            margin: 0px;
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+            
+            .banner__main_content {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            }
+            
+            
+            .banner__content {
+            
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            
+            
+            }
+            
+            .banner__content:before {
+            
+            
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: var(--dark);
+                border-radius: 0 0 50% 50%/0 0 100% 100%;
+                transform: scaleX(1.5);
+            
+            }
+            
+            
+            .banner_title__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            color: var(--bright);
+            align-items: center;
+            }
+            
+            .title__container {
+            
+            display: flex;
+            flex-direction: column;
+            font-family: Picaflor;
+            font-size: 192px;
+            text-align: center;
+            
+            }
+            
+            .banner__paragraph {
+            
+            font-family: Jost;
+            font-size: 20px;
+            width: 794px;
+            line-height: 150%;
+            }
+            
+            .photo__container {
+            
+            position: absolute;
+            z-index: -1;
+            
+            }
+            
+            .photos__main_container {
+            
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            transform: translate(-84px, -39px);
+            
+            }
+            
+            .photos__container {
+            
+            display: flex;
+            
+            }
+            
+            .photos--invisible {
+            
+            opacity: 0%;
+            
+            }
+            
+            .title__container--mobile {
+            
+            font-size: 132px !important;
+            
+            }
+            
+            .banner__paragraph--mobile {
+            
+            width: 578px;
+            font-size: 18px;
+            }
+            
+            .photo__container--mobile {
+            
+                margin-top: -80px;
+                z-index: -1;
+            display: flex;
+            width: 100%;
+            height: auto;
+            }
+            
+            .photo__container--mobile img {
+            
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            
+            }
+            
+            .photo--mobile {
+            
+            width: 100%;
+            height: 100%;
+            
+            }
+            
+            .banner__content--mobile {
+            
+            justify-content: flex-start;
+            
+            }
+            
+            .banner_title__container--mobile {
+            
+            margin-top: 48px;
+            
+            }
+            
+            
+            
+            @media (min-width: 1024px) {
+            
+            .banner__main_content--mobile {
+            
+            display: none;
+            
+            }
+            
+            }
+             
+            @media (max-width: 1024px) {
+            
+            .banner__main_content--desktop {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            @media (max-width: 744px) {
+            
+            .title__container--mobile {
+            
+            font-size: 96px !important;
+            
+            }
+            
+            .banner__paragraph--mobile {
+            
+            font-size: 16px;
+            width: 100%;
+            
+            }
+            
+            .banner_title__container--mobile {
+            
+            padding-left: 48px;
+            padding-right: 48px;
+            
+            }
+            
+.banner__content--mobile {
+
+height: 90vh;
+
+}
+
+
+            .banner__content--mobile:before {
+            
+            transform: scaleX(2);
+            
+            }
+            
+            .banner_title__container--mobile {
+            
+            margin-top: 120px;
+            
+            }
+            
+            }
+            
+            @media (max-width: 560px) {
+            
+            .title__container--mobile {
+            
+            font-size: 72px !important;
+            
+            }
+            
+            .photo__container--mobile {
+            
+            margin-top: -50px;
+            
+            }
+            
+.banner__content--mobile {
+
+height: 85vh;
+
+}
+
+            }
+            
+            @media (max-width: 430px) {
+            
+                .title__container--mobile {
+            
+            font-size: 56px !important;
+            
+            }
+            
+            .photo__container--mobile {
+            
+            margin-top: -30px;
+            
+            }
+            
+            .banner__paragraph--mobile {
+            
+            font-size: 14px !important;
+            
+            }
+            
+            .banner_title__container--mobile {
+            
+            margin-top: 0px !important;
+            
+            }
+            
+            .banner__content--mobile {
+            
+            justify-content: center;
+            height: 75vh;
+            }
+            
+            .banner__content--mobile:before {
+            
+            transform: scaleX(2.4);
+            
+            }
+            
+            
+            }
+             
+            
+            
+            </style>
+
+    <!--Banner content mobile end-->
+
+<!--My projects start-->
+
+<div class="my_projects__main_container">
+
+    <div class="arrow__container--projects"><img class="main_arrow" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    
+    <div class="my_projects__title">MY PROJECTS</div>
+    
+    <div class="projects_box__container">
+    
+    <!--Project start-->
+    
+    <div class="project__container">
+    <div class="project--I"><img class="project__main_photo" src="/sklep internetowy/Portfolio/assets/photos/Banner.png"/></div>
+    <div class="project__title">Design of the Regenova Therapeutics website: User shopping experience.</div>
+    
+    <div class="project__line"></div>
+    
+    
+    <div class="bottom_title__container">
+    <!--Tags start-->
+    
+    <div class="tags__container">
+    
+    <div class="project__tag">Website</div>
+    <div class="project__tag">UI</div>
+    <div class="project__tag">Responsive</div>
+    
+    </div>
+    
+    <!--Tags end-->
+    
+    <!--Button start-->
+    
+    <div class="project_button__container">
+    
+    <div class="project_button__label">See case study</div>
+    
+    <img class="project_button__arrow" src="/sklep internetowy/Portfolio/assets/icons/Arrow_right.svg"/>
+    
+    </div>
+    
+    <!--Button end-->
+    
+    
+    </div>
+    
+    </div>
+    
+    <!--Project end-->
+    
+    
+    </div>
+    
+    
+    </div>
+    
+    <style>
+
+        body {
+        margin: 0px;
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .my_projects__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        width: 100%;
+        
+        }
+        
+        .my_projects__title {
+        
+        font-family: Picaflor;
+        font-size: 64px;
+        color: var(--dark);
+        }
+        
+        .projects_box__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 100%;
+            box-sizing: border-box;
+            padding-left: 144px;
+            padding-right: 144px;
+        }
+        
+        .project__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        }
+        
+        .project--I {
+        
+        display: flex;
+        overflow: hidden;
+        }
+        
+        .project__title {
+        
+        color: var(--dark);
+        font-family: Jost;
+        font-size: 20px;
+        
+        }
+        
+        .project__line {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        }
+        
+        .tags__container {
+        
+        display: flex;
+        gap: 8px;
+        
+        }
+        
+        .project__tag {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bright);
+        color: var(--dark);
+        font-family: Jost;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 20px;
+        border: 2px solid var(--dark);
+        border-radius: 25px;
+        }
+        
+        .bottom_title__container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        
+        .project_button__container {
+        
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+        }
+        
+        .project_button__label {
+        
+        font-family: Jost;
+        font-size: 20px;
+        }
+        
+        .project__main_photo {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Utrzymanie proporcji obrazu */
+        transition: transform 0.6s ease-in-out; /* Płynna animacja */
+        }
+        
+        .project__main_photo:hover {
+
+            transform: scale(1.05); /* Powiększenie obrazu */
+
+        }
+
+
+        .main_arrow {
+        
+        height: 100%;
+        width: 100%;
+        }
+        
+        .arrow__container--projects {
+        
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+        
+        @media (max-width: 1024px) {
+        
+            .projects_box__container {
+        
+        
+            padding-left: 72px !important;
+            padding-right: 72px !important;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 18px;
+        
+        }
+        
+        .project__tag {
+        
+        font-size: 18px;
+        
+        }
+        
+        .project_button__label {
+        
+            font-size: 18px;
+        
+        }
+        
+        .main_arrow {
+        
+        height: 80%;
+        width: 80%;
+        }
+        
+        
+        }
+        
+        
+        @media (max-width: 744px) {
+        
+            .projects_box__container {
+        
+        
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        }
+        
+        .project__title {
+        
+        font-size: 16px;
+        
+        }
+        
+        .project__tag {
+        
+        font-size: 16px;
+        
+        }
+        
+        .project_button__label {
+        
+            font-size: 16px;
+        
+        }
+        
+        .main_arrow {
+        
+        height: 70%;
+        width: 70%;
+        }
+        
+        .my_projects__main_container {
+        
+        gap: 32px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 560px) {
+        
+        .my_projects__main_container {
+        
+        gap: 24px;
+        
+        }
+        
+        .main_arrow {
+        
+        height: 60%;
+        width: 60%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 40px;
+        
+        }
+        
+        .bottom_title__container {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+        .main_arrow {
+        
+        height: 50%;
+        width: 50%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project__tag {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project_button__label {
+        
+            font-size: 14px;
+        
+        }
+        
+        
+        }
+        
+        
+        </style>
+
+
+    <!--My projects end-->
+
+<!--About me start-->
+
+<div class="about_me__main_container">
+
+    <!--Lines container start-->
+    
+    <div class="about_me__lines_container">
+    
+    <div class="horizontal_line"></div>
+    <div class="vertical_line"></div>
+    
+    </div>
+    
+    <!--Lines container end-->
+    
+    <!--About me content start-->
+    
+    <div class="about_me__content">
+    
+    <!--Photo start-->
+    
+    <div class="about_me_photo__container">
+    
+    <div class="about_me__circle"></div>
+    
+    <img class="about_me__photo" src="/sklep internetowy/Portfolio/assets/photos/about_me__photo.png"/>
+    
+    </div>
+    
+    <!--Photo end-->
+    
+    <!--About me text start-->
+    
+    <div class="about_me_text__container">
+    
+    <div class="about_me_text__title">ABOUT ME</div>
+    
+    <div class="about_me_text__paragraph">I am a designer with an artistic background. Currently, I work at a small software house in Warsaw. On a daily basis, I design websites in Figma and implement them in WordPress using HTML and CSS. 
+        I am also responsible for creating graphic materials such as posters, presentations, and icon sets. In my work, paying attention to details and creating user-friendly websites with a unique character is especially important to me. </div>
+    
+    </div>
+    
+    <!--About me text end-->
+    
+    
+    </div>
+    
+    <!--Additional information start-->
+    
+    <div class="additional_information__container">
+    
+        <!--Information column start-->
+        
+        <div class="information__content--about_me">
+        
+    
+        <!--Title start-->
+        <div class="information_title__container--about_me">
+        
+        <div class="line__title--about_me"></div>
+        <div class="information__title--about_me">EXPERIENCE</div>
+        </div>
+        <!--Title end-->
+    
+    <!--Details start-->
+    
+    <div class="details_information__container">
+    
+    <div class="position--about_me">WEB DESIGNER</div>
+    <div class="company--about_me">u24web / LukanovaConstruction</div>
+    <div class="period_time--about_me">December 2023 - Present</div>
+    
+    </div>
+    
+    <!--Details end-->
+        </div>
+        
+        <!--Information column end-->
+        
+    
+        <!--Information column start - Education-->
+        
+        <div class="information__content--about_me">
+        
+    
+            <!--Title start-->
+            <div class="information_title__container--about_me">
+            
+            <div class="line__title--about_me"></div>
+            <div class="information__title--about_me">EDUCATION</div>
+            </div>
+            <!--Title end-->
+        
+        <!--Details start-->
+        
+    <div class="details__main_container">
+    
+        <div class="details_information__container">
+        
+        <div class="position--about_me">MASTER OF PAINTING</div>
+        <div class="company--about_me">Nicolaus Copernicus University</div>
+        <div class="period_time--about_me">2014 - 2019</div>
+        
+        </div>
+    
+        <div class="details_information__container">
+        
+            <div class="position--about_me">MASTER OF CONSERVATION OF PAINTINGS</div>
+            <div class="company--about_me">Nicolaus Copernicus University</div>
+            <div class="period_time--about_me">2016 - 2023</div>
+            
+            </div>
+    
+    </div>
+        <!--Details end-->
+            </div>
+            
+        <!--Information column end - Education-->
+    
+            <!--Information column start - Courses-->
+        
+            <div class="information__content--about_me">
+        
+    
+                <!--Title start-->
+                <div class="information_title__container--about_me">
+                
+                <div class="line__title--about_me"></div>
+                <div class="information__title--about_me">COURSES</div>
+                </div>
+                <!--Title end-->
+            
+            <!--Details start-->
+            
+        <div class="details__main_container">
+        
+            <div class="details_information__container">
+            
+            <div class="position--about_me">GOOGLE UX DESIGN</div>
+            <div class="company--about_me">coursera.org</div>
+            <div class="period_time--about_me">2021 - 2022</div>
+            
+            </div>
+        
+            <div class="details_information__container">
+            
+                <div class="position--about_me">RESPONSIVE WEB DESIGN</div>
+                <div class="company--about_me">freecodecamp.org</div>
+                <div class="period_time--about_me">2022</div>
+                
+                </div>
+    
+                <div class="details_information__container">
+            
+                    <div class="position--about_me">DAREIT CHALLENGE - INTRODUCTION TO UI DESIGN</div>
+                    <div class="company--about_me">DareIT</div>
+                    <div class="period_time--about_me">2023</div>
+                    
+                    </div>
+    
+    
+                    <div class="details_information__container">
+            
+                        <div class="position--about_me">COMPLETE WEB & MOBILE DESIGNER IN 2023: UI/UX, FIGMA AND MORE</div>
+                        <div class="company--about_me">udemy.com</div>
+                        <div class="period_time--about_me">2023</div>
+                        
+                        </div>
+        
+        </div>
+            <!--Details end-->
+                </div>
+                
+            <!--Information column end - Education-->
+    
+        </div>
+        
+        <!--Additional information end-->
+    
+    <!--About me content end-->
+    
+    </div>
+    
+    <style>
+
+        body {
+        margin: 0px;
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .about_me__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 72px;
+        margin-top: 96px;
+        
+        }
+        
+        .about_me__lines_container {
+        
+        display: flex;
+        flex-direction: column;
+        padding-left: 144px;
+        padding-right: 144px;
+        justify-content: center;
+        align-items: center;
+        }
+        
+        .horizontal_line {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        
+        }
+        
+        .vertical_line {
+        
+        width: 3px;
+        height: 120px;
+        background-color: var(--dark);
+        }
+        
+        .about_me__content {
+        
+        display: flex;
+        align-items: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        justify-content: center;
+        gap: 188px;
+        
+        }
+        
+        .about_me__circle {
+        
+        height: 511px;
+        width: 511px;
+        border: 3px solid var(--dark);
+        border-radius: 50%;
+        }
+        
+        .about_me_photo__container {
+        
+        display: flex;
+        position: relative;
+        align-items: center;
+        
+        }
+        
+        .about_me__photo {
+        
+        position: absolute;
+        
+        }
+        
+        .about_me_text__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        }
+        
+        .about_me_text__title {
+        
+        color: var(--dark);
+        font-size: 64px;
+        font-family: Picaflor;
+        }
+        
+        .about_me_text__paragraph {
+        
+        font-size: 20px;
+        color: var(--dark);
+        line-height: 150%;
+        font-family: Jost;
+        }
+        
+        .additional_information__container {
+        
+        display: flex;
+        justify-content: space-between;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+        .information__content--about_me {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 371px;
+        }
+        
+        .information_title__container--about_me {
+        
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        
+        }
+        
+        .line__title--about_me {
+        
+        width: 116px;
+        height: 2px;
+        background-color: var(--dark);
+        
+        }
+        
+        .information__title--about_me {
+        
+        color: var(--dark);
+        font-family: Picaflor;
+        font-size: 48px;
+        }
+        
+        .details_information__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-family: Jost;
+        font-size: 20px;
+        
+        }
+        
+        .company--about_me {
+        
+        font-weight: 300;
+        
+        }
+        
+        .period_time--about_me {
+        
+        font-size: 500;
+        
+        }
+        
+        .details__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        }
+        
+        @media (max-width: 1440px) {
+        
+        .about_me__content {
+        
+        gap: 96px;
+        
+        }
+        
+        .about_me__circle {
+        
+        width: 355px;
+        height: 355px;
+        
+        }
+        
+        .about_me__photo {
+        
+        width: 250px;
+        height: 175px;
+        object-fit: cover;
+        
+        }
+        
+        .line__title--about_me {
+        
+        display: none;
+        
+        }
+        
+        .additional_information__container {
+        
+        gap: 48px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        .about_me__content {
+        
+        flex-direction: column;
+        gap: 48px;
+        align-items: flex-start;
+        padding-left: 72px;
+        padding-right: 72px;
+        }
+        
+        .additional_information__container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        gap: 24px;
+        }
+        
+        .about_me_text__paragraph {
+        
+        font-size: 18px;
+        
+        }
+        
+        .about_me_text__title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .details_information__container {
+        
+            font-size: 18px;
+            gap: 4px;
+        
+        }
+        
+        .information__title--about_me {
+        
+        font-size: 32px;
+        
+        }
+        
+        .information__content--about_me {
+        
+        gap: 24px;
+        
+        }
+        
+        .about_me__lines_container {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 96px;
+        
+        }
+        
+        .about_me__main_container {
+        
+        margin-top: 72px;
+        
+        }
+
+
+        }
+        
+        @media (max-width: 744px) {
+        
+        
+        .about_me_text__paragraph {
+        
+        font-size: 16px;
+        
+        }
+        
+        .details_information__container {
+        
+        font-size: 16px;
+        
+        }
+        
+        .additional_information__container {
+        
+        padding-left: 48px;
+        padding-right: 48px;
+        
+        }
+        
+        .about_me__content {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .about_me__lines_container {
+        
+        padding-left: 48px;
+        padding-right: 48px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 72px;
+        
+        }
+        
+     
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .additional_information__container {
+        
+        flex-direction: column;
+        
+        
+        }
+        
+        .additional_information__container {
+        
+        gap: 48px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+        .about_me_text__title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .about_me_text__paragraph {
+        
+        font-size: 14px;
+        
+        }
+        
+        .about_me_text__container {
+        
+        gap: 12px;
+        
+        }
+        
+        .about_me__main_container {
+        
+        gap: 48px;
+        
+        }
+        
+        .about_me__circle {
+        
+        width: 220px;
+        height: 220px;
+        
+        }
+        
+        .about_me__photo {
+        
+        width: 175px;
+        height: 125px;
+        
+        }
+        
+        .information__content--about_me {
+        
+        width: 220px;
+        gap: 12px;
+        }
+        
+        .information__title--about_me {
+        
+        font-size: 24px;
+        
+        }
+        
+        .details_information__container {
+        
+        font-size: 14px;
+        
+        }
+        
+        .additional_information__container {
+        
+        gap: 32px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 48px;
+        
+        }
+        
+        .about_me__main_container {
+        
+        margin-top: 48px;
+        
+        }
+        
+        }
+        
+        </style>
+
+
+    <!--About me end-->
+
+
+<!--Footer start-->
+
+<div class="footer__main_container">
+
+    <!--Lines start-->
+    
+    <div class="lines__container--footer">
+    
+    <div class="line--footer"></div>
+    <div class="arrow__container--footer"><img class="arrow--footer" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    <div class="line--footer"></div>
+    
+    </div>
+    
+    <!--Lines end-->
+    
+    <!--Main title footer start-->
+    
+    <div class="footer__main_title">LET'S GET IN TOUCH</div>
+    
+    <!--Main title footer end-->
+    
+    <!--Contact details start-->
+    
+    <div class="contact_details__main_container">
+    
+    <!--Email and phone start-->
+    
+    <div class="details__container--footer">
+    
+    <!--Email start-->
+    
+    <div class="email__container--footer">
+    
+    <div class="email__label">EMAIL</div>
+    
+    <div class="email__address">jboryszewska953@gmail.com</div>
+    
+    </div>
+    
+    <!--Email end-->
+    
+    <!--Phone start-->
+    
+    <div class="email__container--footer">
+    
+        <div class="email__label">PHONE</div>
+    
+        <div class="email__address">+48 575 756 186</div>
+        
+        </div>
+        
+        <!--Phone end-->
+    </div>
+    
+    <!--Email and phone end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.linkedin.com/in/joanna-boryszewska-19443220a/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a class="link--footer" href="https://www.facebook.com/share/14bTbpF44R/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        </div>
+        
+        <!--Links end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.behance.net/joannaboryszewska" target="_blank" rel="noopener noreferrer">BEHANCE</a>
+        <a class="link--footer" href="/sklep internetowy/Portfolio/assets/CV Joanna Boryszewska RODO.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+        
+        <!--Links end-->
+    
+    
+    </div>
+    
+    <!--Contact details end-->
+    
+    
+    </div>
+    
+  
+    <style>
+
+        body {
+        margin: 0px;
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .footer__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        margin-top: 96px;
+        margin-bottom: 72px;
+        }
+        
+        
+        
+        .lines__container--footer {
+        
+        display: flex;
+        gap: 12px;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+        .line--footer {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        flex-basis: calc(45% - 12px);
+        }
+        
+        .footer__main_title {
+        
+        font-size: 168px;
+        font-family: Picaflor;
+        display: flex;
+        justify-content: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        color: var(--dark);
+        }
+        
+        .contact_details__main_container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        gap: 72px;
+        
+        }
+        
+        .details__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(50% - 72px);
+        }
+        
+        .email__container--footer {
+        
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 48px;
+        font-family: Picaflor;
+        color: var(--dark);
+        
+        }
+        
+        
+        
+        .email__address {
+        
+        font-family: Jost;
+        color: var(--dark);
+        font-size: 20px;
+        flex-basis: calc(25% - 24px);
+        white-space: nowrap;
+        }
+        
+        .links__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(25% - 72px);
+        }
+        
+        .link--footer {
+        
+        font-family: Picaflor;
+        font-size: 48px;
+        color: var(--dark);
+        text-decoration: underline;
+        }
+        
+        .arrow__container--footer {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-basis: calc(10% - 12px);
+        }
+        
+        
+        
+        
+        @media (max-width: 1440px) {
+        
+        .footer__main_title {
+        
+        font-size: 96px;
+        
+        }
+        
+        .email__line {
+        
+            flex-basis: calc(60% - 24px);
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 40px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 40px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+        gap: 48px;
+        
+        }
+        
+        .details__container--footer {
+        
+            flex-basis: calc(50% - 48px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 48px);
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        .lines__container--footer {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 18px;
+        
+        }
+        
+        .contact_details__main_container {
+                gap: 32px;
+            }
+        
+        
+            .details__container--footer {
+        
+        flex-basis: calc(50% - 32px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 32px);
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 72px;
+        
+        }
+        
+        .line--footer {
+        
+        flex-basis: calc(47% - 12px);
+        
+        }
+        
+        .arrow__container--footer {
+        
+        flex-basis: calc(6% - 12px);
+        
+        }
+        
+        .footer__main_container {
+        
+        margin-top: 72px;
+        margin-bottom: 48px;
+        }
+
+.arrow--footer {
+
+width: 100px;
+
+}
+
+
+        }
+        
+        @media (max-width: 744px) {
+        
+        .lines__container--footer {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 16px;
+        
+        }
+        
+.arrow--footer {
+
+width: 87px;
+
+}
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .footer__main_title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 24px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 24px;
+        
+        }
+        
+        .arrow--footer {
+
+width: 74px;
+
+}
+
+
+        }
+        
+        @media (max-width: 430px) {
+        
+        .email__container--footer {
+        
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .footer__main_container {
+        
+        gap: 32px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        }
+        
+        .email__address {
+        
+        font-size: 14px;
+        
+        }
+        
+.arrow--footer {
+
+width: 62px;
+
+}
+        
+        }
+        
+        
+        </style>
+
+    <!--Footer end-->
+
+</body>
+</html>

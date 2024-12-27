@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!--Menu top desktop start-->
+
+<div class="menu__main_container">
+
+    <div class="menu__container">
+    
+    <!--Logo start-->
+    
+    <a class="menu__logo" href="/sklep internetowy/Portfolio/index.html">JOANNA BORYSZEWSKA</a>
+    
+    <!--Logo end-->
+    
+    <!--Menu labels start-->
+    
+    <div class="menu__labels">
+    
+    <a class="labels__item" href="/sklep internetowy/Portfolio/Projects--portfolio.html">Projects</a>
+    <a class="labels__item" href="/sklep internetowy/Portfolio/About_me--portfolio.html">About</a>
+    <a class="labels__item" href="/sklep internetowy/Portfolio/Contact--portfolio.html">Contact</a>
+    
+    </div>
+    
+    <!--Menu labels end-->
+    </div>
+    
+    <!--Line start-->
+    
+    <div class="menu__line"></div>
+    
+    <!--Line end-->
+    
+    </div>
+    
+    
+    <!--Menu top desktop end-->
+    
+    
+    <!--Menu mobile desktop start-->
+    
+    <div class="menu__main_container--mobile">
+    
+        <div class="menu__container--mobile">
+        
+    
+    <!--hamburger menu icon-->
+    
+    <img class="hamburger_menu__icon" src="/sklep internetowy/Portfolio/assets/icons/dark.svg"/>
+    
+        <!--Logo start-->
+        
+        <div class="menu__logo">JOANNA BORYSZEWSKA</div>
+        
+        <!--Logo end-->
+        
+    
+        </div>
+        
+        <!--Line start-->
+        
+        <div class="menu__line"></div>
+        
+        <!--Line end-->
+        
+    <!--Drop down menu start-->
+    
+    <div class="drop_down_menu__container">
+    
+    <a class="drop_down_menu__label" style="padding-top: 48px;" href="/sklep internetowy/Portfolio/index.html"><span class="highlight">Home</span></a>
+    <a class="drop_down_menu__label"><span class="highlight">Projects</span></a>
+    <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/About_me--portfolio.html"><span class="highlight">About me</span></a>
+    <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/Contact--portfolio.html"><span class="highlight">Contact</span></a>
+    
+    </div>
+    
+    
+    <!--Drop down menu end-->
+        </div>
+        
+    
+        <style>
+
+            body {
+            
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            
+            
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+            }
+            
+            :root {
+            
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            
+            } 
+            
+            :root {
+            
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            
+            
+            }
+            
+            
+            .menu__main_container {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bright);
+            }
+            
+            .menu__container {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: 144px;
+            padding-right: 144px;
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            }
+            
+            
+            
+            .menu__logo {
+            
+            font-size: 24px;
+            line-height: 110%;
+            font-family: 'Picaflor', sans-serif;
+            color: var(--dark);
+            text-decoration: none;
+            }
+            
+            .menu__labels {
+            
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            font-family: Jost;
+            font-size: 20px;
+            line-height: 110%;
+            color: var(--dark) !important;
+            }
+            
+            .menu__line {
+            
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark)
+            }
+            
+            .menu__main_container--mobile {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bright);
+            
+            }
+            
+            .menu__container--mobile {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: var(--padding-tablet);
+            padding-right: var(--padding-tablet);
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-start;
+            padding-left: 72px;
+            padding-right: 72px;
+            background-color: var(--bright);
+            color: var(--dark);
+            font-size: 24px;
+            font-family: Jost;
+            max-height: 0; /* Początkowo ukryte */
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: max-height 0.6s ease; /* Płynne otwieranie/zamykanie */
+              position: absolute;
+              width: 100%;
+              top: 122.41px;
+              height: calc(100vh - 122px);
+              z-index: 2;
+             
+            }
+            
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 122px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            
+            
+            .drop_down_menu__label {
+            
+            transition: transform 0.6s ease-in-out;
+            cursor: pointer;
+            color: var(--dark);
+            }
+            
+            .highlight {
+              position: relative;
+              display: inline-block; /* Required for proper pseudo-element positioning */
+              cursor: pointer;
+              color: var(--dark);
+            }
+            
+            .highlight::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px; /* Thickness of the underline */
+              background-color: var(--dark); /* Color of the underline */
+              transition: width 0.5s ease;
+            }
+            
+            .highlight:hover::after {
+              width: 100%; /* Extends the underline on hover */
+            }
+            
+.labels__item {
+
+text-decoration: none;
+color: var(--dark);
+
+}
+
+
+            @media (min-width: 1024px) {
+            
+            .menu__main_container--mobile {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            @media (max-width: 1024px) {
+            
+            .menu__main_container {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            
+            @media (max-width: 480px) {
+            
+                .menu__container--mobile {
+            
+            
+            padding-left: var(--padding--phone);
+            padding-right: var(--padding--phone);
+            
+            
+            }
+            
+            
+            .menu__logo {
+            
+            font-size: 18px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+                padding-left: var(--padding--phone);
+                padding-right: var(--padding--phone);
+            
+            }
+            
+            .drop_down_menu__container {
+            
+ 
+              height: calc(100vh - 115px);
+             
+             
+            }
+
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 115px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            }
+            
+        </style>
+    
+    <script>
+    
+    // script.js
+    document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
+      const menu = document.querySelector(".drop_down_menu__container");
+      menu.classList.toggle("active");
+    });
+    
+    
+    </script>
+    
+    <!--Menu top mobile end-->
+
+<!--Footer start-->
+
+<div class="footer__main_container">
+
+    <!--Lines start-->
+    
+    <div class="lines__container--footer">
+    
+    <div class="line--footer"></div>
+    <div class="arrow__container--footer"><img class="arrow--footer" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    <div class="line--footer"></div>
+    
+    </div>
+    
+    <!--Lines end-->
+    
+    <!--Main title footer start-->
+    
+    <div class="footer__main_title">LET'S GET IN TOUCH</div>
+    
+    <!--Main title footer end-->
+    
+    <!--Contact details start-->
+    
+    <div class="contact_details__main_container">
+    
+    <!--Email and phone start-->
+    
+    <div class="details__container--footer">
+    
+    <!--Email start-->
+    
+    <div class="email__container--footer">
+    
+    <div class="email__label">EMAIL</div>
+    
+    <div class="email__address">jboryszewska953@gmail.com</div>
+    
+    </div>
+    
+    <!--Email end-->
+    
+    <!--Phone start-->
+    
+    <div class="email__container--footer">
+    
+        <div class="email__label">PHONE</div>
+    
+        <div class="email__address">+48 575 756 186</div>
+        
+        </div>
+        
+        <!--Phone end-->
+    </div>
+    
+    <!--Email and phone end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.linkedin.com/in/joanna-boryszewska-19443220a/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a class="link--footer" href="https://www.facebook.com/share/14bTbpF44R/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        </div>
+        
+        <!--Links end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.behance.net/joannaboryszewska" target="_blank" rel="noopener noreferrer">BEHANCE</a>
+        <a class="link--footer" href="/sklep internetowy/Portfolio/assets/CV Joanna Boryszewska RODO.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+        
+        <!--Links end-->
+    
+    
+    </div>
+    
+    <!--Contact details end-->
+    
+    
+    </div>
+    
+  
+    <style>
+
+        body {
+        margin: 0px;
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .footer__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        margin-top: 96px;
+        margin-bottom: 72px;
+        }
+        
+        
+        
+        .lines__container--footer {
+        
+        display: flex;
+        gap: 12px;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+        .line--footer {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        flex-basis: calc(45% - 12px);
+        }
+        
+        .footer__main_title {
+        
+        font-size: 168px;
+        font-family: Picaflor;
+        display: flex;
+        justify-content: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        color: var(--dark);
+        }
+        
+        .contact_details__main_container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        gap: 72px;
+        
+        }
+        
+        .details__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(50% - 72px);
+        }
+        
+        .email__container--footer {
+        
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 48px;
+        font-family: Picaflor;
+        color: var(--dark);
+        
+        }
+        
+        
+        
+        .email__address {
+        
+        font-family: Jost;
+        color: var(--dark);
+        font-size: 20px;
+        flex-basis: calc(25% - 24px);
+        white-space: nowrap;
+        }
+        
+        .links__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(25% - 72px);
+        }
+        
+        .link--footer {
+        
+        font-family: Picaflor;
+        font-size: 48px;
+        color: var(--dark);
+        text-decoration: underline;
+        }
+        
+        .arrow__container--footer {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-basis: calc(10% - 12px);
+        }
+        
+        
+        
+        
+        @media (max-width: 1440px) {
+        
+        .footer__main_title {
+        
+        font-size: 96px;
+        
+        }
+        
+        .email__line {
+        
+            flex-basis: calc(60% - 24px);
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 40px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 40px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+        gap: 48px;
+        
+        }
+        
+        .details__container--footer {
+        
+            flex-basis: calc(50% - 48px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 48px);
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        .lines__container--footer {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 18px;
+        
+        }
+        
+        .contact_details__main_container {
+                gap: 32px;
+            }
+        
+        
+            .details__container--footer {
+        
+        flex-basis: calc(50% - 32px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 32px);
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 72px;
+        
+        }
+        
+        .line--footer {
+        
+        flex-basis: calc(47% - 12px);
+        
+        }
+        
+        .arrow__container--footer {
+        
+        flex-basis: calc(6% - 12px);
+        
+        }
+        
+        .footer__main_container {
+        
+        margin-top: 72px;
+        margin-bottom: 48px;
+        }
+
+.arrow--footer {
+
+width: 100px;
+
+}
+
+
+        }
+        
+        @media (max-width: 744px) {
+        
+        .lines__container--footer {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 16px;
+        
+        }
+        
+.arrow--footer {
+
+width: 87px;
+
+}
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .footer__main_title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 24px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 24px;
+        
+        }
+        
+        .arrow--footer {
+
+width: 74px;
+
+}
+
+
+        }
+        
+        @media (max-width: 430px) {
+        
+        .email__container--footer {
+        
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .footer__main_container {
+        
+        gap: 32px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        }
+        
+        .email__address {
+        
+        font-size: 14px;
+        
+        }
+        
+.arrow--footer {
+
+width: 62px;
+
+}
+        
+        }
+        
+        
+        </style>
+
+    <!--Footer end-->
+
+</body>
+</html>
