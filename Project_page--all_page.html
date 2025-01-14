@@ -1,0 +1,6133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+<!--Banner + menu start-->
+
+
+<div class="banner--project_page"><img class="photo__banner--project_page" src="/sklep internetowy/Portfolio/assets/photos/main__banner.jpg"/>
+
+    <!--Menu top desktop start-->
+    
+    <div class="menu__main_container">
+    
+        <div class="menu__container">
+        
+        <!--Logo start-->
+        
+        <a class="menu__logo" href="/sklep internetowy/Portfolio/index.html">JOANNA BORYSZEWSKA</a>
+        
+        <!--Logo end-->
+        
+        <!--Menu labels start-->
+        
+        <div class="menu__labels">
+        
+        <a class="labels__item" href="/sklep internetowy/Portfolio/Projects--portfolio.html">Projects</a>
+        <a class="labels__item" href="/sklep internetowy/Portfolio/About_me--portfolio.html">About</a>
+        <a class="labels__item" href="/sklep internetowy/Portfolio/Contact--portfolio.html">Contact</a>
+        
+        </div>
+        
+        <!--Menu labels end-->
+        </div>
+        
+        <!--Line start-->
+        
+        <div class="menu__line"></div>
+        
+        <!--Line end-->
+        
+        </div>
+        
+        
+        <!--Menu top desktop end-->
+        
+        
+        <!--Menu mobile desktop start-->
+        
+        <div class="menu__main_container--mobile">
+        
+            <div class="menu__container--mobile">
+            
+        
+        <!--hamburger menu icon-->
+        
+        <img class="hamburger_menu__icon" src="/sklep internetowy/Portfolio/assets/icons/dark.svg"/>
+        
+            <!--Logo start-->
+            
+            <div class="menu__logo">JOANNA BORYSZEWSKA</div>
+            
+            <!--Logo end-->
+            
+        
+            </div>
+            
+            <!--Line start-->
+            
+            <div class="menu__line"></div>
+            
+            <!--Line end-->
+            
+        <!--Drop down menu start-->
+        
+        <div class="drop_down_menu__container">
+        
+        <a class="drop_down_menu__label" style="padding-top: 48px;" href="/sklep internetowy/Portfolio/index.html"><span class="highlight">Home</span></a>
+        <a class="drop_down_menu__label"><span class="highlight">Projects</span></a>
+        <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/About_me--portfolio.html"><span class="highlight">About me</span></a>
+        <a class="drop_down_menu__label" href="/sklep internetowy/Portfolio/Contact--portfolio.html"><span class="highlight">Contact</span></a>
+        
+        </div>
+        
+        
+        <!--Drop down menu end-->
+            </div>
+    
+        <!--Menu top mobile end-->
+    
+    
+    </div>
+    
+    
+    <!--Project title start-->
+    
+    <div class="project_title--Regenova">Design of the Regenova Therapeutics website: User shopping experience.</div>
+    
+    <!--Project title end-->
+
+    <style>
+
+        body {
+        
+        margin: 0;
+        
+        }
+        
+        .banner--project_page {
+        
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        }
+        
+        .photo__banner--project_page {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        
+        body {
+                    
+                    margin: 0px;
+                    
+                    }
+                    
+                    
+                    @font-face {
+                      font-family: 'Picaflor';
+                      src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+                      src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                           url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                           url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                           url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+                      font-weight: normal;
+                      font-style: normal;
+                    }
+                    
+                    :root {
+                    
+                    --bright: #F8F3F3;
+                    --dark: #190B0B;
+                    
+                    } 
+                    
+                    :root {
+                    
+                    --padding-desktop: 144px;
+                    --padding-tablet: 72px;
+                    --padding--phone: 48px;
+                    
+                    
+                    }
+                    
+                    
+                    .menu__main_container {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    
+                    position: absolute;
+                    width: 100%;
+                    }
+                    
+                    .menu__container {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 144px;
+                    padding-right: 144px;
+                    align-items: center;
+                    padding-top: 48px;
+                    padding-bottom: 48px;
+                    }
+                    
+                    
+                    
+                    .menu__logo {
+                    
+                    font-size: 24px;
+                    line-height: 110%;
+                    font-family: 'Picaflor', sans-serif;
+                    color: var(--dark);
+                    text-decoration: none;
+                    }
+                    
+                    .menu__labels {
+                    
+                    display: flex;
+                    gap: 48px;
+                    align-items: center;
+                    font-family: Jost;
+                    font-size: 20px;
+                    line-height: 110%;
+                    color: var(--dark) !important;
+                    }
+                    
+                    .menu__line {
+                    
+                    width: 100%;
+                    height: 3px;
+                    background-color: var(--dark)
+                    }
+                    
+                    .menu__main_container--mobile {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    position: absolute;
+                    
+                    }
+                    
+                    .menu__container--mobile {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: var(--padding-tablet);
+                    padding-right: var(--padding-tablet);
+                    align-items: center;
+                    padding-top: 48px;
+                    padding-bottom: 48px;
+                    
+                    }
+                    
+                    .drop_down_menu__container {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    align-items: flex-start;
+                    padding-left: 72px;
+                    padding-right: 72px;
+                    background-color: var(--bright);
+                    color: var(--dark);
+                    font-size: 24px;
+                    font-family: Jost;
+                    max-height: 0; /* Początkowo ukryte */
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    transition: max-height 0.6s ease; /* Płynne otwieranie/zamykanie */
+                      position: absolute;
+                      width: 100%;
+                      top: 122.41px;
+                      height: calc(100vh - 122px);
+                      z-index: 2;
+                     
+                    }
+                    
+                    .drop_down_menu__container.active {
+                        max-height: calc(100vh - 122px); /* Dopasuj do maksymalnej wysokości menu */
+                    }
+                    
+                    
+                    .drop_down_menu__label {
+                    
+                    transition: transform 0.6s ease-in-out;
+                    cursor: pointer;
+                    color: var(--dark);
+                    }
+                    
+                    .highlight {
+                      position: relative;
+                      display: inline-block; /* Required for proper pseudo-element positioning */
+                      cursor: pointer;
+                      color: var(--dark);
+                    }
+                    
+                    .highlight::after {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      bottom: 0;
+                      width: 0;
+                      height: 2px; /* Thickness of the underline */
+                      background-color: var(--dark); /* Color of the underline */
+                      transition: width 0.5s ease;
+                    }
+                    
+                    .highlight:hover::after {
+                      width: 100%; /* Extends the underline on hover */
+                    }
+                    
+        .labels__item {
+        
+        text-decoration: none;
+        color: var(--dark);
+        
+        }
+        
+        .project_title--Regenova {
+        
+        font-family: Picaflor;
+        font-size: 64px;
+        display: flex;
+        justify-content: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        padding-top: 48px;
+        text-align: center;
+        }
+        
+        
+        
+        @media (max-width: 1440px) {
+        
+        .banner--project_page {
+        
+        height: 100vh;
+        
+        }
+        
+        
+        }
+        
+        
+        
+                    @media (min-width: 1024px) {
+                    
+                    .menu__main_container--mobile {
+                    
+                    display: none;
+                    
+                    }
+                    
+        
+        
+        
+        
+                    }
+                    
+                    
+                    @media (max-width: 1024px) {
+                    
+                    .menu__main_container {
+                    
+                    display: none;
+                    
+                    }
+                    
+                    .project_title--Regenova {
+        
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        font-size: 48px;
+        }
+        
+                    }
+                    
+                    
+        @media (max-width: 560px) {
+        
+        .project_title--Regenova {
+        
+        font-size: 40px;
+        
+        }
+        
+        
+        }
+        
+        
+                    
+                    @media (max-width: 480px) {
+                    
+                        .menu__container--mobile {
+                    
+                    
+                    padding-left: var(--padding--phone);
+                    padding-right: var(--padding--phone);
+                    
+                    
+                    }
+                    
+                    
+                    .menu__logo {
+                    
+                    font-size: 18px;
+                    
+                    }
+                    
+                    .drop_down_menu__container {
+                    
+                        padding-left: var(--padding--phone);
+                        padding-right: var(--padding--phone);
+                    
+                    }
+                    
+                    .drop_down_menu__container {
+                    
+         
+                      height: calc(100vh - 115px);
+                     
+                     
+                    }
+        
+                    .drop_down_menu__container.active {
+                        max-height: calc(100vh - 115px); /* Dopasuj do maksymalnej wysokości menu */
+                    }
+        
+        .project_title--Regenova {
+        
+        padding-left: 48px;
+        padding-right: 48px;
+        
+        }
+        
+                    }
+        
+        
+        @media (max-width: 430px) {
+        
+        .project_title--Regenova {
+        
+        font-size: 32px;
+        
+        }
+        
+        }
+        
+        </style>
+        
+        <script>
+            
+            // script.js
+            document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
+              const menu = document.querySelector(".drop_down_menu__container");
+              menu.classList.toggle("active");
+            });
+            
+            
+        </script>
+
+        <!--Banner + menu end-->
+
+
+<!--Client overview start-->
+
+<div class="my_projects__main_container">
+
+    <div class="arrow__container--projects"><img class="main_arrow" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    
+    <div class="my_projects__title">CLIENT OVERVIEW</div>
+    
+    <div class="paragraph--client_overview">Regenova Therapeutics is a Polish company operating for 15 years, dealing with distributing medicines and medical cosmetics on the Polish market. The company cooperates with group of 2,500 specialists and has its representatives in every voivodeships. In shaping its image, Regenova Therapeutics focuses on professionalism and credibility, which is extremely important in the medical market sector. The client wanted the design to reflect these features of the company’s image.</div>
+    
+    </div>
+
+    <style>
+
+        body {
+        margin: 0px;
+        background-color: var(--bright);
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .my_projects__main_container {
+        
+        display: flex;
+        flex-direction: column;
+  
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        width: 100%;
+        
+        }
+        
+        .my_projects__title {
+        
+        font-family: Picaflor;
+        font-size: 64px;
+        color: var(--dark);
+        }
+        
+        .projects_box__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 100%;
+            box-sizing: border-box;
+            padding-left: 144px;
+            padding-right: 144px;
+        }
+        
+
+        
+        .project__title {
+        
+        color: var(--dark);
+        font-family: Jost;
+        font-size: 20px;
+        
+        }
+        
+
+        
+        .bottom_title__container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        
+
+
+        .main_arrow {
+        
+        height: 100%;
+        width: 100%;
+        }
+        
+        .arrow__container--projects {
+        
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+
+        .paragraph--client_overview {
+
+font-size: 20px;
+font-family: Jost;
+display: flex;
+justify-content: center;
+padding-left: 284px;
+padding-right: 284px;
+line-height: 150%;
+
+        }
+
+        
+        @media (max-width: 1024px) {
+        
+            .projects_box__container {
+        
+        
+            padding-left: 72px !important;
+            padding-right: 72px !important;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 18px;
+        
+        }
+        
+
+        
+        .main_arrow {
+        
+        height: 80%;
+        width: 80%;
+        }
+        
+        .paragraph--client_overview {
+
+            padding-left: 72px !important;
+            padding-right: 72px !important;
+font-size: 18px;
+        }
+
+
+
+        }
+        
+        
+        @media (max-width: 744px) {
+        
+            .projects_box__container {
+        
+        
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        }
+        
+        .project__title {
+        
+        font-size: 16px;
+        
+        }
+        
+
+        
+        .main_arrow {
+        
+        height: 70%;
+        width: 70%;
+        }
+        
+        .my_projects__main_container {
+        
+        gap: 32px;
+        
+        }
+        
+        .paragraph--client_overview {
+
+padding-left: 48px !important;
+padding-right: 48px !important;
+font-size: 16px;
+}
+
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .my_projects__main_container {
+        
+        gap: 24px;
+        
+        }
+        
+        .main_arrow {
+        
+        height: 60%;
+        width: 60%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 40px;
+        
+        }
+        
+        .bottom_title__container {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+        .main_arrow {
+        
+        height: 50%;
+        width: 50%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project__tag {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project_button__label {
+        
+            font-size: 14px;
+        
+        }
+        
+        .paragraph--client_overview {
+
+
+font-size: 14px;
+}
+
+
+        }
+        
+        
+    </style>
+
+
+   <!--Client overview end-->
+
+<!--Aims of the project start-->
+
+<div class="about_me__main_container">
+
+    <!--Lines container start-->
+    
+    <div class="about_me__lines_container">
+    
+    <div class="horizontal_line"></div>
+    <div class="vertical_line"></div>
+    
+    </div>
+    
+    <!--Lines container end-->
+    
+<!--Title start-->
+    
+<div class="title--aims_of_the_project">AIMS OF THE PROJECT</div>
+
+<!--Title end-->
+
+    </div>
+    
+
+<div class="aims_project__container">
+
+<!--Aim of the project start-->
+
+<div class="aim_project__card">
+
+<div class="aim_project__number">1.</div>
+<div class="aim_project__paragraph">Create a <span style="font-weight: 500;">visually appealing and minimalistic</span> website design that <span style="font-weight: 500;">aligns with the character of a company</span> distributing medicines and medical cosmetics.</div>
+
+</div>
+
+<!--Aim of the project end-->
+
+<!--Aim of the project start-->
+
+<div class="aim_project__card">
+
+    <div class="aim_project__number">2.</div>
+    <div class="aim_project__paragraph">Enable users to <span style="font-weight: 500;">easily access information</span> about products and the company.</div>
+    
+    </div>
+    
+    <!--Aim of the project end-->
+
+<!--Aim of the project start-->
+
+<div class="aim_project__card">
+
+    <div class="aim_project__number">3.</div>
+    <div class="aim_project__paragraph">Create a <span style="font-weight: 500;">simple shopping process</span> that allows users to purchase products <span style="font-weight: 500;">quickly and effortlessly</span>.</div>
+    
+    </div>
+    
+    <!--Aim of the project end-->
+
+
+<!--Aim of the project start-->
+
+<div class="aim_project__card">
+
+    <div class="aim_project__number">4.</div>
+    <div class="aim_project__paragraph">Create an <span style="font-weight: 500;">aesthetic and easy to understand</span> design an extensive number of company representatives.</div>
+    
+    </div>
+    
+    <!--Aim of the project end-->
+
+</div>
+
+
+<style>
+
+        body {
+        margin: 0px;
+        background-color: var(--bright);
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .about_me__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        
+        
+        }
+        
+        .about_me__lines_container {
+        
+        display: flex;
+        flex-direction: column;
+        padding-left: 144px;
+        padding-right: 144px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 96px;
+        }
+        
+        .horizontal_line {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        
+        }
+        
+        .vertical_line {
+        
+        width: 3px;
+        height: 120px;
+        background-color: var(--dark);
+        }
+        
+  
+        
+        .about_me__circle {
+        
+        height: 511px;
+        width: 511px;
+        border: 3px solid var(--dark);
+        border-radius: 50%;
+        }
+        
+
+        
+        .additional_information__container {
+        
+        display: flex;
+        justify-content: space-between;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+
+    
+        
+        .details__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        }
+        
+.title--aims_of_the_project {
+
+font-family: Picaflor;
+font-size: 64px;
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+.aims_project__container {
+
+display: flex;
+gap: 48px;
+padding-left: 144px;
+padding-right: 144px;
+padding-top: 48px;
+justify-content: space-between;
+}
+
+.aim_project__card {
+
+display: flex;
+gap: 4px;
+flex-basis: calc(25% - 48px);
+}
+
+.aim_project__number {
+
+font-size: 20px;
+font-family: Jost;
+
+}
+
+.aim_project__paragraph {
+
+    font-size: 20px;
+    font-family: Jost;
+
+
+}
+
+        @media (max-width: 1440px) {
+        
+
+        
+
+        
+        .about_me__photo {
+        
+        width: 250px;
+        height: 175px;
+        object-fit: cover;
+        
+        }
+        
+
+        
+        .additional_information__container {
+        
+        gap: 48px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+
+        
+        .additional_information__container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        gap: 24px;
+        }
+        
+
+        
+        .about_me__lines_container {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 96px;
+        
+        }
+        
+
+        .title--aims_of_the_project {
+
+
+font-size: 48px;
+
+        }
+        
+.aims_project__container {
+
+padding-left: 72px;
+padding-right: 72px;
+gap: 24px;
+}
+
+.aim_project__card {
+
+    flex-basis: calc(25% - 24px);
+
+}
+
+.aim_project__paragraph {
+
+font-size: 18px;
+
+}
+
+.aim_project__number {
+
+font-size: 18px;
+
+}
+
+        }
+        
+        @media (max-width: 744px) {
+        
+
+        
+        .about_me__lines_container {
+        
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 72px !important;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 72px;
+        
+        }
+        
+        .aim_project__paragraph {
+
+font-size: 16px;
+
+}
+
+.aims_project__container {
+
+flex-wrap: wrap;
+padding-left: 48px;
+padding-right: 48px;
+padding-top: 24px;
+gap: 16px;
+}
+
+.aim_project__card {
+
+flex-basis: calc(50% - 24px);
+
+}
+
+.aim_project__number {
+
+font-size: 16px;
+
+}
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+
+        .title--aims_of_the_project {
+
+font-size: 40px;
+
+        }
+
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+
+ 
+        
+        .vertical_line {
+        
+        height: 48px;
+        
+        }
+        
+        .title--aims_of_the_project {
+
+font-size: 32px;
+
+        }
+        
+.aim_project__card {
+
+flex-basis: 100%;
+
+}
+
+.aim_project__number {
+
+font-size: 14px;
+
+}
+
+.aim_project__paragraph {
+
+font-size: 14px;
+
+}
+
+
+        }
+        
+</style>
+
+<!--Aims of the project end-->
+
+<!--Design process start-->
+
+<div class="about_me__main_container">
+
+    <!--Lines container start-->
+    
+    <div class="about_me__lines_container">
+    
+    <div class="horizontal_line"></div>
+    <div class="vertical_line"></div>
+    
+    </div>
+    
+    <!--Lines container end-->
+    
+<!--Title start-->
+    
+<div class="title--aims_of_the_project">DESIGN PROCESS</div>
+
+<!--Title end-->
+
+    </div>
+    
+<!--Paragraph start-->
+
+<div class="paragraph--design_process">After consulting with a client and analyzing the company’s business interests and potential users’ needs, I create a sitemap for the website. The aim of this step is to construct a logical network for every step of the users' flow.</div>
+
+<!--Paragraph end-->
+
+<!--Sitemap photo start-->
+
+<div class="sitemap__container"><img class="sitemap__image" src="/sklep internetowy/Portfolio/assets/photos/Sitemap.png"/></div>
+
+<!--Sitemap photo end-->
+
+    <style>
+
+        body {
+        margin: 0px;
+        background-color: var(--bright);
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .about_me__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        
+        
+        }
+        
+        .about_me__lines_container {
+        
+        display: flex;
+        flex-direction: column;
+        padding-left: 144px;
+        padding-right: 144px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 96px;
+        }
+        
+        .horizontal_line {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        
+        }
+        
+        .vertical_line {
+        
+        width: 3px;
+        height: 120px;
+        background-color: var(--dark);
+        }
+        
+  
+        
+        .about_me__circle {
+        
+        height: 511px;
+        width: 511px;
+        border: 3px solid var(--dark);
+        border-radius: 50%;
+        }
+        
+
+        
+        .additional_information__container {
+        
+        display: flex;
+        justify-content: space-between;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+
+    
+        
+        .details__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        }
+        
+.title--aims_of_the_project {
+
+font-family: Picaflor;
+font-size: 64px;
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+.paragraph--design_process {
+
+display: flex;
+justify-content: center;
+padding-left: 284px;
+padding-right: 284px;
+font-family: Jost;
+font-size: 20px;
+line-height: 150%;
+padding-top: 48px;
+
+}
+
+.sitemap__container {
+
+display: flex;
+justify-content: center;
+padding-left: 144px;
+padding-right: 144px;
+box-sizing: border-box;
+padding-top: 48px;
+}
+
+.sitemap__image {
+
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+        @media (max-width: 1440px) {
+        
+
+        .about_me__photo {
+        
+        width: 250px;
+        height: 175px;
+        object-fit: cover;
+        
+        }
+        
+
+        
+        .additional_information__container {
+        
+        gap: 48px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+
+        
+        .additional_information__container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        gap: 24px;
+        }
+        
+
+        
+        .about_me__lines_container {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 96px;
+        
+        }
+        
+
+        .title--aims_of_the_project {
+
+
+font-size: 48px;
+
+        }
+        
+        .paragraph--design_process {
+
+padding-left: 72px;
+padding-right: 72px;
+font-size: 18px;
+
+}
+
+.sitemap__container {
+
+
+padding-left: 72px;
+padding-right: 72px;
+
+
+}
+
+
+        }
+        
+        @media (max-width: 744px) {
+        
+
+        
+        .about_me__lines_container {
+        
+        padding-left: 48px;
+        padding-right: 48px;
+        
+        }
+        
+        .vertical_line {
+        
+        height: 72px;
+        
+        }
+        
+.paragraph--design_process {
+
+font-size: 16px;
+padding-top: 24px;
+padding-left: 48px;
+padding-right: 48px;
+
+}
+
+.sitemap__container {
+
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 24px;
+}
+
+        }
+        
+        @media (max-width: 560px) {
+        
+
+        .title--aims_of_the_project {
+
+font-size: 40px;
+
+        }
+
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+
+ 
+        
+        .vertical_line {
+        
+        height: 48px;
+        
+        }
+        
+        .title--aims_of_the_project {
+
+font-size: 32px;
+
+        }
+        
+.paragraph--design_process {
+
+font-size: 14px;
+
+}
+
+
+        }
+        
+        </style>
+
+    <!--Design process end-->
+
+<!--Initial design start-->
+
+<!--Title start-->
+<div class="initial_design_title__container">
+
+    <div class="initial_design__line"></div>
+    
+    <div class="initial_design__title">INITIAL DESIGN</div>
+    
+    <div class="initial_design__line"></div>
+    
+    </div>
+    <!--Title end-->
+    
+    <!--Paragraph start-->
+    
+    <div class="initial_design__paragraph">The next step was creating wireframes for the Regenova Therapeutics website based on the sitemap prepared in advance. In this step, I chose a grid for the project and designed the basic layout of the website.</div>
+    
+    <!--Paragraph end-->
+    
+    <!--Wireframes start-->
+    
+    <div class="wireframes__main_container">
+    
+    <div class="wireframes__container">
+    
+    <img class="wireframe__image" src="/sklep internetowy/Portfolio/assets/photos/Home_wireframe.png"/>
+    
+    </div>
+    
+    <div class="wireframes__container">
+    
+        <img class="wireframe__image" src="/sklep internetowy/Portfolio/assets/photos/Archive_wireframe.png"/>
+        <img class="wireframe__image" src="/sklep internetowy/Portfolio/assets/photos/Log_in__wireframe.png"/>
+    </div>
+    
+    <div class="wireframes__container">
+    
+        <img class="wireframe__image" src="/sklep internetowy/Portfolio/assets/photos/Product_page_wireframe.png"/>
+        <img class="wireframe__image" src="/sklep internetowy/Portfolio/assets/photos/Cart_wireframe.png"/>
+    </div>
+    
+    </div>
+    
+    <!--Wireframes end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .initial_design__title {
+    
+    font-size: 64px;
+    font-family: Picaflor;
+    color: var(--dark);
+    white-space: nowrap;
+    }
+    
+    .initial_design_title__container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 72px;
+    }
+    
+    .initial_design__line {
+    
+    background-color: var(--dark);
+    width: 100%;
+    height: 2px;
+    
+    }
+    
+    .initial_design__paragraph {
+    
+    display: flex;
+    justify-content: center;
+    font-family: Jost;
+    font-size: 20px;
+    padding-top: 48px;
+    padding-left: 284px;
+    padding-right: 284px;
+    color: var(--dark);
+    line-height: 150%;
+    
+    }
+    
+    .wireframes__main_container {
+    
+    display: flex;
+    gap: 48px;
+    padding-top: 48px;
+    padding-left: 144px;
+    padding-right: 144px;
+    align-items: flex-start;
+    justify-content: space-between;
+    }
+    
+    .wireframes__container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    flex-basis: calc(33.3% - 48px);
+    }
+    
+    .wireframe__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .initial_design__title {
+    
+    font-size: 48px;
+    
+    }
+    
+    .initial_design_title__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .initial_design__paragraph {
+    
+    font-size: 18px;
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .wireframes__main_container {
+    
+    gap: 24px;
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .wireframes__container {
+    
+    flex-basis: calc(33.3% - 24px);
+    
+    }
+    
+    .wireframes__container {
+    
+    gap: 24px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+        .initial_design_title__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    padding-top: 48px !important;
+    }
+    
+    .initial_design__paragraph {
+    
+    font-size: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 24px;
+    }
+    
+    .wireframes__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    padding-top: 24px;
+    }
+    
+    .wireframes__container {
+    
+    flex-basis: calc(33.3% - 12px);
+    
+    }
+    
+    .wireframes__container {
+    
+    gap: 12px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 560px) {
+    
+    .initial_design__title {
+    
+    font-size: 40px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .initial_design__title {
+    
+    font-size: 32px;
+    
+    }
+    
+    .initial_design__paragraph {
+    
+    font-size: 14px;
+    
+    }
+    
+    .wireframes__main_container {
+    
+    flex-wrap: wrap;
+    
+    }
+    
+    .wireframes__container {
+    
+    flex-basis: 100%;
+    
+    }
+    
+    }
+    
+    
+    </style>
+    
+    <!--Initial design end-->
+
+<!--Grids start-->
+
+<!--Title start-->
+<div class="initial_design_title__container">
+
+    <div class="initial_design__line"></div>
+    
+    <div class="initial_design__title">GRID</div>
+    
+    <div class="initial_design__line"></div>
+    
+    </div>
+    <!--Title end-->
+    
+    <!--Grids start-->
+    
+    <div class="grids__main_container">
+    
+    <!--Grid desktop start-->
+    
+    <div class="grid__container grid__container--desktop"><img class="grid__image" src="/sklep internetowy/Portfolio/assets/photos/Grid_desktop.png"/></div>
+    
+    <!--Grid desktop end-->
+    
+    <!--Grid tablet start-->
+    
+    <div class="grid__container grid__container--tablet"><img class="grid__image" src="/sklep internetowy/Portfolio/assets/photos/Tablet_grid.png"/></div>
+    
+    <!--Grid tablet end-->
+    
+    <!--Grid phone start-->
+    
+    <div class="grid__container grid__container--phone"><img class="grid__image" src="/sklep internetowy/Portfolio/assets/photos/Phone_grid.png"/></div>
+    
+    <!--Grid phone end-->
+    
+    </div>
+    
+    <!--Grids end-->
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .initial_design__title {
+    
+    font-size: 64px;
+    font-family: Picaflor;
+    color: var(--dark);
+    white-space: nowrap;
+    }
+    
+    .initial_design_title__container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 72px;
+    }
+    
+    .initial_design__line {
+    
+    background-color: var(--dark);
+    width: 100%;
+    height: 2px;
+    
+    }
+    
+    
+    
+    .wireframe__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    }
+    
+    .grids__main_container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 48px;
+    align-items: center;
+    }
+    
+    .grid__container {
+    
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .grid__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    .grid__container--desktop {
+    
+    width: 100%;
+    
+    }
+    
+    .grid__container--tablet {
+    
+    width: 80%;
+    
+    }
+    
+    .grid__container--phone {
+    
+    width: 60%;
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .initial_design__title {
+    
+    font-size: 48px;
+    
+    }
+    
+    .initial_design_title__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .grids__main_container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    gap: 48px;
+    }
+    
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+        .initial_design_title__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    }
+    
+    .grids__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 560px) {
+    
+    .initial_design__title {
+    
+    font-size: 40px;
+    
+    }
+    
+    .grid__container--tablet {
+        width: 100%;
+    }
+    
+    .grid__container--phone {
+        width: 100%;
+    }
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .initial_design__title {
+    
+    font-size: 32px;
+    
+    }
+    
+    
+    }
+    
+    
+    </style>
+    
+    <!--Grids end-->
+
+<!--Colors start-->
+
+<!--Title start-->
+<div class="initial_design_title__container">
+
+    <div class="initial_design__line"></div>
+    
+    <div class="initial_design__title">COLORS</div>
+    
+    <div class="initial_design__line"></div>
+    
+    </div>
+    <!--Title end-->
+    
+    <!--Colors start-->
+    
+    <div class="colors__main_container">
+    
+    <!--Colors row start-->
+    
+    <div class="colors__container">
+    
+    <!--Color start-->
+    
+    <div class="color__content">
+    
+    <div class="color__circle"></div>
+    <div class="color__name">#DFDFDF</div>
+    
+    </div>
+    
+    <!--Color end-->
+    
+    <!--Color start-->
+    
+    <div class="color__content">
+    
+        <div class="color__circle color__circle--medium_grey"></div>
+        <div class="color__name">#ACACAC</div>
+        
+        </div>
+    <!--Color end-->
+    
+    <!--Color start-->
+    
+    <div class="color__content">
+    
+        <div class="color__circle color__circle--dark_grey"></div>
+        <div class="color__name">#828282</div>
+        
+        </div>
+    <!--Color end-->
+    
+    <!--Color start-->
+    
+    <div class="color__content">
+    
+        <div class="color__circle color__circle--dark"></div>
+        <div class="color__name">#0B0F19</div>
+        
+        </div>
+    <!--Color end-->
+    
+    
+    </div>
+    
+    <!--Colors row end-->
+    
+    <!--Colors row start-->
+    
+    <div class="colors__container">
+    
+        <!--Color start-->
+        
+        <div class="color__content">
+        
+        <div class="color__circle color__circle--bright_blue"></div>
+        <div class="color__name">#0073E3</div>
+        
+        </div>
+        
+        <!--Color end-->
+        
+        <!--Color start-->
+        
+        <div class="color__content">
+        
+            <div class="color__circle color__circle--medium_blue"></div>
+            <div class="color__name">#015BB2</div>
+            
+            </div>
+        <!--Color end-->
+        
+        <!--Color start-->
+        
+        <div class="color__content">
+        
+            <div class="color__circle color__circle--dark_blue"></div>
+            <div class="color__name">#003B75</div>
+            
+            </div>
+        <!--Color end-->
+        
+    
+        
+        
+        </div>
+        
+    <!--Colors row end-->
+    
+    <!--Colors row start-->
+    
+    <div class="colors__container">
+    
+        <!--Color start-->
+        
+        <div class="color__content">
+        
+        <div class="color__circle color__circle--bright_1"></div>
+        <div class="color__name">#F3F5F8</div>
+        
+        </div>
+        
+        <!--Color end-->
+        
+        <!--Color start-->
+        
+        <div class="color__content">
+        
+            <div class="color__circle color__circle--bright_2"></div>
+            <div class="color__name">#EDF1F5</div>
+            
+            </div>
+        <!--Color end-->
+            
+        </div>
+        
+    <!--Colors row end-->
+    
+    </div>
+    
+    <!--Colors end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .initial_design__title {
+    
+    font-size: 64px;
+    font-family: Picaflor;
+    color: var(--dark);
+    white-space: nowrap;
+    }
+    
+    .initial_design_title__container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 72px;
+    }
+    
+    .initial_design__line {
+    
+    background-color: var(--dark);
+    width: 100%;
+    height: 2px;
+    
+    }
+    
+    
+    
+    .wireframe__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    }
+    
+    .colors__main_container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 48px;
+    padding-left: 144px;
+    padding-right: 144px;
+    
+    }
+    
+    .colors__container {
+    
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    
+    }
+    
+    .color__content {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    }
+    
+    .color__circle {
+    
+    width: 232px;
+    height: 232px;
+    border-radius: 300px;
+    border: 3px solid var(--dark);
+    background-color: #DFDFDF;
+    
+    }
+    
+    .color__name {
+    
+    font-family: Jost;
+    font-size: 20px;
+    
+    }
+    
+    .color__circle--medium_grey {
+    
+    background-color: #ACACAC;
+    
+    }
+    
+    .color__circle--dark_grey {
+    
+        background-color: #828282;
+    
+    }
+    
+    .color__circle--dark {
+    
+    background-color: #0B0F19;
+    
+    }
+    
+    .color__circle--bright_blue {
+    
+    background-color: #0073E3;
+    
+    }
+    
+    .color__circle--medium_blue {
+    
+    background-color: #015BB2;
+    
+    }
+    
+    .color__circle--dark_blue {
+    
+    background-color: #003B75;
+    
+    }
+    
+    .color__circle--bright_1 {
+    
+    background-color: #F3F5F8;
+    
+    }
+    
+    .color__circle--bright_2 {
+    
+    background-color: #EDF1F5;
+    
+    }
+    
+    @media (max-width: 1440px) {
+    
+        .color__circle {
+        width: 144px;
+        height: 144px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .initial_design__title {
+    
+    font-size: 48px;
+    
+    }
+    
+    .initial_design_title__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .colors__main_container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    gap: 32px;
+    
+    }
+    
+    .color__circle {
+            width: 120px;
+            height: 120px;
+        }
+    
+    .colors__container {
+    
+    gap: 32px;
+    
+    }
+    
+    .color__name {
+    
+    font-size: 18px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+        .initial_design_title__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    }
+    
+    .colors__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 24px;
+    
+    }
+    
+    .color__circle {
+            width: 96px;
+            height: 96px;
+            border: 2px solid var(--dark);
+        }
+    
+    .colors__container {
+    
+    gap: 24px;
+    
+    }
+    
+    .color__name {
+    
+    font-size: 16px;
+    
+    }
+    
+    .color__content {
+    
+    gap: 8px;
+    
+    }
+    
+    .colors__main_container {
+    
+    padding-top: 24px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 560px) {
+    
+    .initial_design__title {
+    
+    font-size: 40px;
+    
+    }
+    
+    .colors__container {
+    
+    flex-wrap: wrap;
+    
+    }
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .initial_design__title {
+    
+    font-size: 32px;
+    
+    }
+    
+    .color__name {
+    
+    font-size: 14px;
+    
+    }
+    
+    .color__circle {
+            width: 72px;
+            height: 72px;
+        }
+    
+    }
+    
+    
+    </style>
+    
+    <!--Colors end-->
+
+<!--All typography start-->
+
+<!--Title start-->
+<div class="initial_design_title__container">
+
+    <div class="initial_design__line"></div>
+    
+    <div class="initial_design__title">TYPOGRAPHY</div>
+    
+    <div class="initial_design__line"></div>
+    
+    </div>
+    <!--Title end-->
+    
+    <!--Typography start-->
+    
+    <!--Typography table start-->
+    
+    <div class="typography_table__container">
+    
+    <div class="typography__row">
+    
+    <div class="table__element table__element--invisible">DESKTOP</div>
+    <div class="table__element">DESKTOP</div>
+    <div class="table__element">TABLET</div>
+    <div class="table__element">PHONE</div>
+    
+    </div>
+    
+    
+    <div class="typography__row">
+    
+        <div class="table__element table__element--main">H1</div>
+        <div class="table__small_element">64px</div>
+        <div class="table__small_element">56px</div>
+        <div class="table__small_element">36px</div>
+        
+        </div>
+    
+    
+        <div class="typography__row">
+    
+            <div class="table__element table__element--main">H2</div>
+            <div class="table__small_element">36px</div>
+            <div class="table__small_element">28px</div>
+            <div class="table__small_element">16px</div>
+            
+            </div>
+    
+    
+            <div class="typography__row">
+    
+                <div class="table__element table__element--main">H3</div>
+                <div class="table__small_element">24px</div>
+                <div class="table__small_element">20px</div>
+                <div class="table__small_element">16px</div>
+                
+                </div>
+    
+                <div class="typography__row">
+    
+                    <div class="table__element table__element--main">H4</div>
+                    <div class="table__small_element">20px</div>
+                    <div class="table__small_element">16px</div>
+                    <div class="table__small_element">14px</div>
+                    
+                    </div>
+    
+                    <div class="typography__row">
+    
+                        <div class="table__element table__element--main">PARAGRAPH</div>
+                        <div class="table__small_element">24px</div>
+                        <div class="table__small_element">16px</div>
+                        <div class="table__small_element">12px</div>
+                        
+                        </div>
+    
+                        <div class="typography__row">
+    
+                            <div class="table__element table__element--main">BUTTON</div>
+                            <div class="table__small_element">20px</div>
+                            <div class="table__small_element">20px</div>
+                            <div class="table__small_element">16px</div>
+                            
+                            </div>
+    
+                            <div class="typography__row">
+    
+                                <div class="table__element table__element--main">SUBTITLE 1</div>
+                                <div class="table__small_element">16px</div>
+                                <div class="table__small_element">14px</div>
+                                <div class="table__small_element">12px</div>
+                                
+                                </div>
+    
+                                <div class="typography__row">
+    
+                                    <div class="table__element table__element--main">SUBTITLE 2</div>
+                                    <div class="table__small_element">14px</div>
+                                    <div class="table__small_element">13px</div>
+                                    <div class="table__small_element">12px</div>
+                                    
+                                    </div>
+    
+    </div>
+    
+    <!--Typography table end-->
+    
+    <!--Paragraph start-->
+    
+    <div class="typography__paragraph">For the project, I used two different fonts: the elegant <span style="font-weight: 500;">Cormorant Garamond</span>, which blends historical typography inspiration with a contemporary edge. I used this font for the headers in my project. The second font is the popular <span style="font-weight: 500;">Open Sans</span>, known for its neutral and legible design. I used Open Sans for paragraphs, buttons, and subtitles.</div>
+    
+    <!--Paragraph end-->
+    
+    <!--Slide track start-->
+    
+      <div class="marquee-container">
+        <div class="marquee">
+          <!-- Napisy -->
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <!-- Duplikat dla płynności -->
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+          <span class="cormorant">Cormorant Garamond</span>
+        </div>
+      </div>
+    
+      <style>
+    
+    .marquee-container {
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+          
+          display: flex;
+          align-items: center;
+          background-color: var(--bright);
+        }
+    
+        .marquee {
+          display: flex;
+          animation: scroll 100s ease infinite;
+        }
+    
+        .marquee span {
+          margin: 0 40px;
+          font-size: 36px;
+          color: #6a6a6a;
+        }
+    
+        .cormorant {
+          font-family: 'Cormorant Garamond', serif;
+        }
+    
+        .open-sans {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 20px;
+        }
+    
+        @keyframes scroll {
+          0% {
+            transform: translateX(-25vw);
+          }
+          50% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-25vw);
+          }
+        }
+    
+    .cormorant {
+    
+    font-size: 152px !important;
+    font-family: Cormorant Garamond;
+    color: var(--dark) !important;
+    opacity: 0.4;
+    }
+    
+    @media (max-width: 1024px) {
+    
+        .cormorant {
+    
+    font-size: 120px !important;
+    
+        }
+    
+    }
+    
+    
+      </style>
+    
+    <!--Slide track end-->
+    
+    <!--Slide track start-->
+    
+    <div class="scroll-container-2">
+        <div class="scroll-track-2">
+          <!-- Napisy (duplikacja dla płynności) -->
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+    
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+          <span class="scroll-item-2">Open Sans</span>
+        </div>
+    </div>
+    
+    <style>
+        .scroll-container-2 {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            
+            background-color: var(--bright);
+        }
+        
+        .scroll-track-2 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: move-left 100s ease infinite;
+        }
+        
+        .scroll-item-2 {
+            display: inline-block;
+            margin: 0 40px;
+            font-size: 24px;
+            color: var(--dark);
+            opacity: 0.4;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        @keyframes move-left {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-25vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    
+        @media (max-width: 1024px) {
+    
+    .scroll-item-2 {
+    
+    font-size: 20px !important;
+    
+    }
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+    .scroll-item-2 {
+    
+    font-size: 18px !important;
+    
+    }
+    
+    }
+    
+    
+        </style>
+    
+    
+    <!--Slide track end-->
+    
+    <!--Typography end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .initial_design__title {
+    
+    font-size: 64px;
+    font-family: Picaflor;
+    color: var(--dark);
+    white-space: nowrap;
+    }
+    
+    .initial_design_title__container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 72px;
+    }
+    
+    .initial_design__line {
+    
+    background-color: var(--dark);
+    width: 100%;
+    height: 2px;
+    
+    }
+    
+    
+    
+    .wireframe__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    }
+    
+    .typography_table__container {
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 144px;
+    padding-right: 144px;
+    gap: 24px;
+    padding-top: 48px;
+    }
+    
+    .typography__row {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+    
+    .table__element--invisible {
+    
+    opacity: 0;
+    
+    }
+    
+    .table__element {
+    
+    font-family: Picaflor;
+    font-size: 48px;
+    text-align: center;
+    flex-basis: 25%;
+    }
+    
+    .table__small_element {
+    
+    font-size: 20px;
+    font-family: Jost;
+    color: var(--dark);
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .table__element--main {
+    
+    justify-content: flex-start;
+    text-align: start;
+    }
+    
+    .typography__paragraph {
+    
+    font-family: Jost;
+    font-size: 20px;
+    color: var(--dark);
+    padding-top: 72px;
+    padding-left: 284px;
+    padding-right: 284px;
+    line-height: 150%;
+    
+    }
+    
+    
+    @media (max-width: 1024px) {
+    
+    .initial_design__title {
+    
+    font-size: 48px;
+    
+    }
+    
+    .initial_design_title__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .typography_table__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .table__element {
+    
+    font-size: 32px;
+    
+    }
+    
+    .table__small_element {
+    
+    font-size: 18px;
+    
+    }
+    
+    .typography__paragraph {
+    
+    font-size: 18px;
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+        .initial_design_title__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    }
+    
+    .table__small_element {
+    
+    font-size: 16px;
+    
+    }
+    
+    .typography_table__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    }
+    
+    .table__element {
+    
+    font-size: 32px;
+    
+    }
+    
+    .table__element--main {
+    
+    font-size: 24px;
+    
+    }
+    
+    .typography_table__container {
+    
+    padding-top: 24px;
+    
+    }
+    
+    .typography__paragraph {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    font-size: 16px;
+    }
+    
+    
+    }
+    
+    @media (max-width: 560px) {
+    
+    .initial_design__title {
+    
+    font-size: 40px;
+    
+    }
+    
+    .table__element--main {
+    
+    font-size: 20px !important;
+    
+    }
+    
+    .table__element {
+    
+    font-size: 28px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .initial_design__title {
+    
+    font-size: 32px;
+    
+    }
+    
+    .table__element {
+    
+    font-size: 20px;
+    
+    }
+    
+    .table__element--main {
+    
+    font-size: 14px !important;
+    
+    }
+    
+    .table__small_element {
+    
+    font-size: 14px;
+    }
+    
+    .typography__paragraph {
+    
+    font-size: 14px;
+    }
+    
+    .cormorant {
+    
+    font-size: 72px !important;
+    
+    }
+    
+    }
+    
+    
+    </style>
+    
+    <!--All typography end-->
+
+<!--Components start-->
+
+<!--Title start-->
+<div class="initial_design_title__container">
+
+    <div class="initial_design__line"></div>
+    
+    <div class="initial_design__title">COMPONENTS</div>
+    
+    <div class="initial_design__line"></div>
+    
+    </div>
+    <!--Title end-->
+    
+    <!--Input title start-->
+    
+    <div class="initial_design_title__container input_title__container">
+    
+        <div class="initial_design__title input__title">INPUTS</div>
+        
+    
+        </div>
+    
+    <!--Input title end-->
+    
+    <!--Input's components start-->
+    
+    <div class="inputs__main_container">
+    
+    <div class="inputs__container">
+    
+    <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/password.png"/></div>
+    <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/email.png"/></div>
+    
+    
+    <div class="inputs__container inputs__container--narrow">
+    
+    <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/month.png"/></div>
+    <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/year.png"/></div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!--Input's components end-->
+    
+    <!--Buttons title start-->
+    
+    <div class="initial_design_title__container input_title__container">
+    
+        <div class="initial_design__title input__title">BUTTONS</div>
+        
+    
+        </div>
+    
+    <!--Buttons title end-->
+    
+    <!--Buttons's components start-->
+    
+    <div class="inputs__main_container">
+    
+        <div class="inputs__container">
+        
+        <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/submit.png"/></div>
+        <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/add review.png"/></div>
+        <div class="input_image__container"><img class="input__image" src="/sklep internetowy/Portfolio/assets/photos/login.png"/></div>
+        
+        </div>
+        
+        </div>
+        
+        <!--Buttons's components end-->
+    
+    <!--Other components title start-->
+    
+    <div class="initial_design_title__container input_title__container">
+    
+        <div class="initial_design__title input__title">OTHERS</div>
+        
+    
+        </div>
+    
+    <!--Other components title end-->
+    
+    <!--Other components's components start-->
+    
+    <div class="inputs__main_container">
+    
+        <div class="inputs__container">
+        
+    <div class="other_component__container">
+    
+    <div class="other_component__name">Drop-down list</div>
+    <img class="other_component__image" src="/sklep internetowy/Portfolio/assets/photos/Choose quantity.png"/>
+    
+    </div>
+    
+    <div class="other_component__container">
+    
+        <div class="other_component__name">Spinner</div>
+        <div class="other_component_image__container"><img class="other_component__image" src="/sklep internetowy/Portfolio/assets/photos/Spinner.png"/></div>
+        
+        </div>
+    
+    </div>
+        
+    <!--Image product gallery start-->
+    <div class="inputs__container">
+        
+        <div class="other_component__container">
+        
+        <div class="other_component__name">Image product gallery</div>
+        <img class="other_component__image" src="/sklep internetowy/Portfolio/assets/photos/Image_product gallery.png"/>
+        
+        </div>
+        
+        </div>
+    
+    
+    
+    
+    <!--Image product gallery end-->
+    
+    
+    
+    
+        </div>
+        
+        </div>
+        
+        <!--Other components's components end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .initial_design__title {
+    
+    font-size: 64px;
+    font-family: Picaflor;
+    color: var(--dark);
+    white-space: nowrap;
+    }
+    
+    .initial_design_title__container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 72px;
+    }
+    
+    .initial_design__line {
+    
+    background-color: var(--dark);
+    width: 100%;
+    height: 2px;
+    
+    }
+    
+    .input__title {
+    
+    font-size: 48px !important;
+    
+    }
+    
+    .input_title__container {
+    
+    padding-top: 48px !important;
+    
+    }
+    
+    .inputs__main_container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 24px;
+    }
+    
+    .inputs__container {
+    
+    display: flex;
+    gap: 48px;
+    
+    
+    }
+    
+    .input__image {
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }
+    
+    .input_image__container {
+    
+    border: 2px dashed var(--dark);
+    border-radius: 5px;
+    
+    }
+    
+    .other_component__container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    }
+    
+    .other_component__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px dashed var(--dark);
+    border-radius: 5px;
+    
+    }
+    
+    .other_component__name {
+    
+    font-size: 20px;
+    font-family: Jost;
+    
+    }
+    
+    .dropdown_image__container {
+    
+    display: flex;
+    gap: 48px;
+    
+    }
+    
+    .dropdwon__image__container {
+    
+    display: flex;
+    gap: 48px;
+    
+    }
+    
+    
+    @media (max-width: 1440px) {
+    
+        .input_image__container {
+    
+    border: 1px dashed var(--dark);
+    
+    }
+    
+    .other_component__image {
+    
+        border: 1px dashed var(--dark);
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .initial_design__title {
+    
+    font-size: 48px;
+    
+    }
+    
+    .initial_design_title__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .input__title {
+    
+    font-size: 32px !important;
+    
+    }
+    
+    .inputs__main_container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .inputs__container {
+    
+    gap: 24px;
+    
+    }
+    
+    .other_component__name {
+    
+    font-size: 18px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+        .initial_design_title__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    gap: 12px;
+    }
+    
+    .input_title__container {
+    
+    padding-top: 24px !important;
+    
+    }
+    
+    .inputs__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    }
+    
+    .other_component__name {
+    
+    font-size: 16px;
+    
+    }
+    
+    .other_component__container {
+    
+    gap: 8px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 560px) {
+    
+    .initial_design__title {
+    
+    font-size: 40px;
+    
+    }
+    
+    .input__title {
+    
+    font-size: 28px !important;
+    
+    }
+    
+    .inputs__container {
+    
+    gap: 12px;
+    
+    }
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .initial_design__title {
+    
+    font-size: 32px;
+    
+    }
+    
+    .input__title {
+    
+    font-size: 24px !important;
+    
+    }
+    
+    .other_component__name {
+    
+    font-size: 14px;
+    
+    }
+    
+    .inputs__container {
+    
+    flex-direction: column;
+    
+    }
+    
+    .inputs__container--narrow {
+    
+    flex-direction: row !important;
+    
+    }
+    
+    
+    }
+    
+    
+    </style>
+    
+    <!--Components end-->
+
+<!--Final design 1 start-->
+
+<!--Final design title start-->
+
+<div class="my_projects__main_container my_projects__main_container--final_design">
+
+    <div class="arrow__container--projects"><img class="main_arrow" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    
+    <div class="my_projects__title">FINAL DESIGN</div>
+    
+    </div>
+
+     <!--Final design title end-->
+
+<!--Interactive mockup start-->
+
+<div class="interactive_mockup__container interactive_mockup__container--first">
+
+
+<!--Button and description start-->
+
+<div class="description_mockup__container">
+
+<!--Button start-->
+
+<div class="description_mockup__button">
+
+<div class="description_button__label">Hover/tap to see the flow</div>
+<img class="description_arrow__image" src="/sklep internetowy/Portfolio/assets/photos/arrow_mockup.svg"/>
+
+</div>
+
+<!--Button end-->
+
+<!--Content start-->
+
+<div class="description_mockup__content">
+
+<div class="description_content__title">Smooth and simple shopping experience</div>
+
+<div class="description_content__paragraph">One of the most important parts of the project was creating an effortless and simple shopping experience in Regenova Therapeutics’ online shop. My aim was to make every step of the process clear and intuitive for the user.</div>
+
+</div>
+
+<!--Content end-->
+</div>
+
+<!--Button and description end-->
+
+
+<!--Interactive image mockup start-->
+
+<div class="interactive_image__conteiner">
+    <img class="mockup__image" src="/sklep internetowy/Portfolio/assets/photos/Mockup__shopping_experience.png"/>
+
+    <video muted loop>
+        <source src="/sklep internetowy/Portfolio/assets/video/shopping_experience_7.mp4" type="video/mp4">
+        <source src="/sklep internetowy/Portfolio/assets/video/shopping_experience_7.mp4" type="video/webm">
+    </video>
+
+    </div>
+    
+    <!--Interactive image mockup end-->
+
+</div>
+
+<!--Interactive mockup end-->
+
+<!--Mockup photo start-->
+
+<div class="mockup_photo__container"><img class="mockup_photo__image" src="/sklep internetowy/Portfolio/assets/photos/Mockup__image_1.png"/></div>
+
+<!--Mockup photo end-->
+
+
+     <style>
+
+        body {
+        margin: 0px;
+        background-color: var(--bright);
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .my_projects__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        width: 100%;
+        
+        }
+        
+        .my_projects__title {
+        
+        font-family: Picaflor;
+        font-size: 64px;
+        color: var(--dark);
+        }
+        
+        .projects_box__container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 100%;
+            box-sizing: border-box;
+            padding-left: 144px;
+            padding-right: 144px;
+        }
+        
+
+        
+        .project__title {
+        
+        color: var(--dark);
+        font-family: Jost;
+        font-size: 20px;
+        
+        }
+        
+
+        
+        .bottom_title__container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        
+
+
+        .main_arrow {
+        
+        height: 100%;
+        width: 100%;
+        }
+        
+        .arrow__container--projects {
+        
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+
+        .paragraph--client_overview {
+
+font-size: 20px;
+font-family: Jost;
+display: flex;
+justify-content: center;
+padding-left: 284px;
+padding-right: 284px;
+line-height: 150%;
+
+        }
+
+        .interactive_mockup__container {
+
+display: flex;
+justify-content: space-between;
+padding-left: 144px;
+padding-right: 144px;
+padding-top: 48px;
+align-items: center;
+        }
+
+.description_mockup__container {
+
+display: flex;
+flex-direction: column;
+gap: 72px;
+
+}
+
+.description_mockup__button {
+
+display: flex;
+gap: 8px;
+
+}
+
+.description_button__label {
+
+font-family: Jost;
+font-size: 20px;
+
+}
+
+.description_mockup__content {
+
+display: flex;
+flex-direction: column;
+gap: 16px;
+
+}
+
+.description_content__paragraph {
+
+font-family: Jost;
+font-size: 20px;
+line-height: 150%;
+}
+
+.description_content__title {
+
+font-size: 32px;
+font-weight: 500;
+font-family: Jost;
+}
+
+.interactive_image__conteiner {
+
+display: flex;
+position: relative;
+
+}
+
+.mockup__image {
+
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 100;
+transition: opacity 0.5s ease;
+}
+
+.mockup__image:hover {
+
+opacity: 0;
+
+}
+
+
+video {
+
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover; /* dodaj tę linię */
+    top: 0; /* dodaj tę linię */
+    left: 0; /* dodaj tę linię */
+}
+
+.mockup_photo__container {
+
+display: flex;
+padding-top: 120px;
+
+}
+
+.mockup_photo__image {
+
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+}
+
+.my_projects__main_container--final_design {
+
+padding-top: 96px !important;
+
+}
+
+.interactive_mockup__container--first {
+
+padding-top: 48px !important;
+
+}
+
+@media (max-width: 1440px) {
+
+    .interactive_mockup__container {
+
+flex-direction: column;
+gap: 24px;
+        }
+
+.description_mockup__button {
+
+order: 2;
+
+}
+
+.description_mockup__container {
+
+gap: 48px;
+
+}
+
+.description_arrow__image {
+
+width: 3%;
+transform: rotate(90deg);
+
+}
+
+.description_mockup__button {
+
+flex-direction: column;
+gap: 24px;
+align-items: center;
+}
+
+
+}
+
+
+
+        @media (max-width: 1024px) {
+        
+            .projects_box__container {
+        
+        
+            padding-left: 72px !important;
+            padding-right: 72px !important;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 18px;
+        
+        }
+        
+
+        
+        .main_arrow {
+        
+        height: 80%;
+        width: 80%;
+        }
+        
+        .paragraph--client_overview {
+
+            padding-left: 72px !important;
+            padding-right: 72px !important;
+font-size: 18px;
+        }
+
+.interactive_mockup__container {
+
+padding-left: 72px;
+padding-right: 72px;
+
+}
+
+.description_content__title {
+
+font-size: 28px;
+
+}
+
+.description_content__paragraph {
+
+font-size: 18px;
+
+}
+
+.description_button__label {
+
+font-size: 18px;
+
+}
+
+.description_mockup__button {
+
+gap: 16px;
+
+}
+
+        }
+        
+        
+        @media (max-width: 744px) {
+        
+            .projects_box__container {
+        
+        
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        }
+        
+        .project__title {
+        
+        font-size: 16px;
+        
+        }
+        
+
+        
+        .main_arrow {
+        
+        height: 70%;
+        width: 70%;
+        }
+        
+        .my_projects__main_container {
+        
+        gap: 32px;
+        
+        }
+        
+        .paragraph--client_overview {
+
+padding-left: 48px !important;
+padding-right: 48px !important;
+font-size: 16px;
+}
+
+.interactive_mockup__container {
+
+padding-left: 48px;
+padding-right: 48px;
+padding-top: 24px;
+
+}
+
+.description_content__title {
+
+font-size: 24px;
+
+}
+
+.description_content__paragraph {
+
+font-size: 16px;
+
+}
+
+.description_mockup__button {
+
+gap: 12px;
+
+}
+
+.description_button__label {
+
+font-size: 16px;
+
+}
+
+.my_projects__main_container--final_design {
+
+padding-top: 72px !important;
+
+}
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .my_projects__main_container {
+        
+        gap: 24px;
+        
+        }
+        
+        .main_arrow {
+        
+        height: 60%;
+        width: 60%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 40px;
+        
+        }
+        
+        .bottom_title__container {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        
+        }
+        
+        }
+        
+        @media (max-width: 430px) {
+        
+        .main_arrow {
+        
+        height: 50%;
+        width: 50%;
+        }
+        
+        .my_projects__title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .project__title {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project__tag {
+        
+        font-size: 14px;
+        
+        }
+        
+        .project_button__label {
+        
+            font-size: 14px;
+        
+        }
+        
+        .paragraph--client_overview {
+
+
+font-size: 14px;
+}
+
+.description_content__title {
+
+font-size: 20px;
+
+}
+
+.description_content__paragraph {
+
+font-size: 14px;
+
+}
+
+.description_arrow__image {
+
+width: 5%;
+
+}
+
+.description_mockup__container {
+
+gap: 24px;
+
+}
+
+.description_button__label {
+
+font-size: 14px;
+
+}
+
+.description_mockup__button {
+
+gap: 8px;
+
+}
+
+
+        }
+        
+        
+    </style>
+
+<script>
+const container = document.querySelector('.interactive_image__conteiner');
+const video = container.querySelector('video');  // znajdź element video wewnątrz kontenera
+
+// Odtwarzanie na hover
+container.addEventListener('mouseenter', () => {
+    video.play();
+});
+
+// Zatrzymanie po zjechaniu myszką
+container.addEventListener('mouseleave', () => {
+    video.pause();
+});
+
+// Dodatkowe zabezpieczenie - pauza przy załadowaniu strony
+window.addEventListener('load', () => {
+    video.pause();
+});
+</script>
+
+<!--Final design 1 end-->
+
+<!--Final design 2 start-->
+
+<!--Interactive mockup start-->
+
+<div class="interactive_mockup__container">
+
+
+    <!--Interactive image mockup start-->
+    
+    <div class="interactive_image__conteiner interactive_image__conteiner--favourites">
+        <img class="mockup__image" src="/sklep internetowy/Portfolio/assets/photos/Add to favourites__mockup.png"/>
+    
+        <video muted loop>
+            <source src="/sklep internetowy/Portfolio/assets/video/Favourites_video.mp4" type="video/mp4">
+            <source src="/sklep internetowy/Portfolio/assets/video/Favourites_video.mp4" type="video/webm">
+        </video>
+    
+        </div>
+        
+        <!--Interactive image mockup end-->
+    
+    <!--Button and description start-->
+    
+    <div class="description_mockup__container">
+    
+        <!--Button start-->
+        
+        <div class="description_mockup__button">
+        
+        <img class="description_arrow__image description_arrow__image--left" src="/sklep internetowy/Portfolio/assets/photos/arrow_mockup.svg"/>
+        <div class="description_button__label description_button__label--left">Hover/tap to see the flow</div>
+        
+        
+        </div>
+        
+        <!--Button end-->
+        
+        <!--Content start-->
+        
+        <div class="description_mockup__content">
+        
+        <div class="description_content__title">Feature for creating personalized lists of favorite products</div>
+        
+        <div class="description_content__paragraph">In this project, a user can create personalized lists of products after logging into the website.</div>
+        
+        </div>
+        
+        <!--Content end-->
+        </div>
+        
+        <!--Button and description end-->
+    
+    
+    </div>
+    
+    <!--Interactive mockup end-->
+    
+    <!--Interactive mockup start-->
+    
+    <div class="interactive_mockup__container">
+    
+    
+        <!--Button and description start-->
+        
+        <div class="description_mockup__container">
+        
+        <!--Button start-->
+        
+        <div class="description_mockup__button">
+        
+        <div class="description_button__label">Hover/tap to see the flow</div>
+        <img class="description_arrow__image" src="/sklep internetowy/Portfolio/assets/photos/arrow_mockup.svg"/>
+        
+        </div>
+        
+        <!--Button end-->
+        
+        <!--Content start-->
+        
+        <div class="description_mockup__content">
+        
+        <div class="description_content__title">Intuitive and simple search thanks to filters option</div>
+        
+        <div class="description_content__paragraph">A good design of filters in an online shop is a key part of quick and trouble-free searching. Users can add or remove filters at any time according to their preferences.</div>
+        
+        </div>
+        
+        <!--Content end-->
+        </div>
+        
+        <!--Button and description end-->
+        
+        
+        <!--Interactive image mockup start-->
+        
+        <div class="interactive_image__conteiner">
+            <img class="mockup__image" src="/sklep internetowy/Portfolio/assets/photos/Filters_image_5.png"/>
+        
+            <video muted loop>
+                <source src="/sklep internetowy/Portfolio/assets/video/Filters_video_2.mp4" type="video/mp4">
+                <source src="/sklep internetowy/Portfolio/assets/video/Filters_video_2.mp4" type="video/webm">
+            </video>
+        
+            </div>
+            
+            <!--Interactive image mockup end-->
+        
+        </div>
+        
+        <!--Interactive mockup end-->
+    
+    
+    
+    <!--Mockup photo start-->
+    
+    <div class="mockup_photo__container"><img class="mockup_photo__image" src="/sklep internetowy/Portfolio/assets/photos/mockup__image_2.png"/></div>
+    
+    <!--Mockup photo end-->
+    
+    
+         <style>
+    
+            body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+            
+            .my_projects__main_container {
+            
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            width: 100%;
+            
+            }
+            
+            .my_projects__title {
+            
+            font-family: Picaflor;
+            font-size: 64px;
+            color: var(--dark);
+            }
+            
+            .projects_box__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            width: 100%;
+                box-sizing: border-box;
+                padding-left: 144px;
+                padding-right: 144px;
+            }
+            
+    
+            
+            .project__title {
+            
+            color: var(--dark);
+            font-family: Jost;
+            font-size: 20px;
+            
+            }
+            
+    
+            
+            .bottom_title__container {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+            
+    
+    
+            .main_arrow {
+            
+            height: 100%;
+            width: 100%;
+            }
+            
+            .arrow__container--projects {
+            
+                display: flex;
+                justify-content: center;
+            
+            }
+            
+    
+            .paragraph--client_overview {
+    
+    font-size: 20px;
+    font-family: Jost;
+    display: flex;
+    justify-content: center;
+    padding-left: 284px;
+    padding-right: 284px;
+    line-height: 150%;
+    
+            }
+    
+            .interactive_mockup__container {
+    
+    display: flex;
+    justify-content: space-between;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 120px;
+    align-items: center;
+            }
+    
+    .description_mockup__container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    flex-basis: 40%;
+    }
+    
+    .description_mockup__button {
+    
+    display: flex;
+    gap: 8px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-family: Jost;
+    font-size: 20px;
+    
+    }
+    
+    .description_mockup__content {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-family: Jost;
+    font-size: 20px;
+    line-height: 150%;
+    }
+    
+    .description_content__title {
+    
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Jost;
+    }
+    
+    .interactive_image__conteiner {
+    
+    display: flex;
+    position: relative;
+    flex-basis: 60%;
+    }
+    
+    .mockup__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    transition: opacity 0.5s ease;
+    }
+    
+    .mockup__image:hover {
+    
+    opacity: 0;
+    
+    }
+    
+    
+    video {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* dodaj tę linię */
+        top: 0; /* dodaj tę linię */
+        left: 0; /* dodaj tę linię */
+    }
+    
+    .mockup_photo__container {
+    
+    display: flex;
+    padding-top: 120px;
+    
+    }
+    
+    .mockup_photo__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    .description_arrow__image--left {
+    
+    transform: rotate(180deg);
+    
+    }
+    
+    
+    
+    
+    @media (max-width: 1440px) {
+    
+        .interactive_mockup__container {
+    
+    flex-direction: column;
+    gap: 24px;
+            }
+    
+    .description_mockup__button {
+    
+    order: 2;
+    
+    }
+    
+    .description_mockup__container {
+    
+    gap: 48px;
+    width: 100%;
+    }
+    
+    .description_arrow__image {
+    
+    width: 3%;
+    transform: rotate(90deg);
+    
+    }
+    
+    .description_mockup__button {
+    
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    }
+    
+    .interactive_image__conteiner--favourites {
+    
+    order: 2;
+        
+    }
+    
+    .description_arrow__image--left {
+    
+    order: 2 !important;
+    
+    }
+    
+    
+    }
+    
+    
+    
+            @media (max-width: 1024px) {
+            
+                .projects_box__container {
+            
+            
+                padding-left: 72px !important;
+                padding-right: 72px !important;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 48px;
+            
+            }
+            
+            .project__title {
+            
+            font-size: 18px;
+            
+            }
+            
+    
+            
+            .main_arrow {
+            
+            height: 80%;
+            width: 80%;
+            }
+            
+            .paragraph--client_overview {
+    
+                padding-left: 72px !important;
+                padding-right: 72px !important;
+    font-size: 18px;
+            }
+    
+    .interactive_mockup__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .description_content__title {
+    
+    font-size: 28px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 18px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 18px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 16px;
+    
+    }
+    
+            }
+            
+            
+            @media (max-width: 744px) {
+            
+                .projects_box__container {
+            
+            
+            padding-left: 48px !important;
+            padding-right: 48px !important;
+            }
+            
+            .project__title {
+            
+            font-size: 16px;
+            
+            }
+            
+    
+            
+            .main_arrow {
+            
+            height: 70%;
+            width: 70%;
+            }
+            
+            .my_projects__main_container {
+            
+            gap: 32px;
+            
+            }
+            
+            .paragraph--client_overview {
+    
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+    font-size: 16px;
+    }
+    
+    .interactive_mockup__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 24px;
+    
+    }
+    
+    .description_content__title {
+    
+    font-size: 24px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 16px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 12px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 16px;
+    
+    }
+
+    .mockup_photo__container {
+    
+  
+    padding-top: 96px !important;
+    
+    }
+
+            }
+            
+            @media (max-width: 560px) {
+            
+            .my_projects__main_container {
+            
+            gap: 24px;
+            
+            }
+            
+            .main_arrow {
+            
+            height: 60%;
+            width: 60%;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 40px;
+            
+            }
+            
+            .bottom_title__container {
+            
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            
+            }
+            
+            }
+            
+            @media (max-width: 430px) {
+            
+            .main_arrow {
+            
+            height: 50%;
+            width: 50%;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 32px;
+            
+            }
+            
+            .project__title {
+            
+            font-size: 14px;
+            
+            }
+            
+            .project__tag {
+            
+            font-size: 14px;
+            
+            }
+            
+            .project_button__label {
+            
+                font-size: 14px;
+            
+            }
+            
+            .paragraph--client_overview {
+    
+    
+    font-size: 14px;
+    }
+    
+    .description_content__title {
+    
+    font-size: 20px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 14px;
+    
+    }
+    
+    .description_arrow__image {
+    
+    width: 5%;
+    
+    }
+    
+    .description_mockup__container {
+    
+    gap: 24px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 14px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 8px;
+    
+    }
+    
+    .mockup_photo__container {
+    
+  
+    padding-top: 72px !important;
+    
+    }
+    
+            }
+            
+            
+        </style>
+    
+
+    
+    <!--Final design 2 end-->
+
+    <!--Final design 3 start-->
+
+<!--Interactive mockup start-->
+
+<div class="interactive_mockup__container">
+
+
+    <!--Interactive image mockup start-->
+    
+    <div class="interactive_image__conteiner interactive_image__conteiner--favourites">
+        <img class="mockup__image" src="/sklep internetowy/Portfolio/assets/photos/Add_review__mockup.png"/>
+    
+        <video muted loop>
+            <source src="/sklep internetowy/Portfolio/assets/video/Add_a_review_video.mp4" type="video/mp4">
+            <source src="/sklep internetowy/Portfolio/assets/video/Add_a_review_video.mp4" type="video/webm">
+        </video>
+    
+        </div>
+        
+        <!--Interactive image mockup end-->
+    
+    <!--Button and description start-->
+    
+    <div class="description_mockup__container">
+    
+        <!--Button start-->
+        
+        <div class="description_mockup__button">
+        
+        <img class="description_arrow__image description_arrow__image--left" src="/sklep internetowy/Portfolio/assets/photos/arrow_mockup.svg"/>
+        <div class="description_button__label description_button__label--left">Hover/tap to see the flow</div>
+        
+        
+        </div>
+        
+        <!--Button end-->
+        
+        <!--Content start-->
+        
+        <div class="description_mockup__content">
+        
+        <div class="description_content__title">Effortless feature for adding product reviews</div>
+        
+        <div class="description_content__paragraph">Users can easily add a review for a product. Every step is clear and well-marked.</div>
+        
+        </div>
+        
+        <!--Content end-->
+        </div>
+        
+        <!--Button and description end-->
+    
+    
+    </div>
+    
+    <!--Interactive mockup end-->
+    
+    <!--Interactive mockup start-->
+    
+    <div class="interactive_mockup__container">
+    
+    
+        <!--Button and description start-->
+        
+        <div class="description_mockup__container">
+        
+        <!--Button start-->
+        
+        <div class="description_mockup__button">
+        
+        <div class="description_button__label">Hover/tap to see the flow</div>
+        <img class="description_arrow__image" src="/sklep internetowy/Portfolio/assets/photos/arrow_mockup.svg"/>
+        
+        </div>
+        
+        <!--Button end-->
+        
+        <!--Content start-->
+        
+        <div class="description_mockup__content">
+        
+        <div class="description_content__title">Interactive map of Poland with information about company representatives</div>
+        
+        <div class="description_content__paragraph">The map allows users to quickly get contact information for company representatives based on Poland's voivodeships.</div>
+        
+        </div>
+        
+        <!--Content end-->
+        </div>
+        
+        <!--Button and description end-->
+        
+        
+        <!--Interactive image mockup start-->
+        
+        <div class="interactive_image__conteiner">
+            <img class="mockup__image" src="/sklep internetowy/Portfolio/assets/photos/Interactive_map__mockup.png"/>
+        
+            <video muted loop>
+                <source src="/sklep internetowy/Portfolio/assets/video/Interactive_map_video.mp4" type="video/mp4">
+                <source src="/sklep internetowy/Portfolio/assets/video/Interactive_map_video.mp4" type="video/webm">
+            </video>
+        
+            </div>
+            
+            <!--Interactive image mockup end-->
+        
+        </div>
+        
+        <!--Interactive mockup end-->
+    
+    
+    
+    <!--Mockup photo start-->
+    
+    <div class="mockup_photo__container"><img class="mockup_photo__image" src="/sklep internetowy/Portfolio/assets/photos/mockup__3.png"/></div>
+    
+    <!--Mockup photo end-->
+    
+    
+         <style>
+    
+            body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+            
+            .my_projects__main_container {
+            
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            width: 100%;
+            
+            }
+            
+            .my_projects__title {
+            
+            font-family: Picaflor;
+            font-size: 64px;
+            color: var(--dark);
+            }
+            
+            .projects_box__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            width: 100%;
+                box-sizing: border-box;
+                padding-left: 144px;
+                padding-right: 144px;
+            }
+            
+    
+            
+            .project__title {
+            
+            color: var(--dark);
+            font-family: Jost;
+            font-size: 20px;
+            
+            }
+            
+    
+            
+            .bottom_title__container {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+            
+    
+    
+            .main_arrow {
+            
+            height: 100%;
+            width: 100%;
+            }
+            
+            .arrow__container--projects {
+            
+                display: flex;
+                justify-content: center;
+            
+            }
+            
+    
+            .paragraph--client_overview {
+    
+    font-size: 20px;
+    font-family: Jost;
+    display: flex;
+    justify-content: center;
+    padding-left: 284px;
+    padding-right: 284px;
+    line-height: 150%;
+    
+            }
+    
+            .interactive_mockup__container {
+    
+    display: flex;
+    justify-content: space-between;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 120px;
+    align-items: center;
+            }
+    
+    .description_mockup__container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    flex-basis: 40%;
+    }
+    
+    .description_mockup__button {
+    
+    display: flex;
+    gap: 8px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-family: Jost;
+    font-size: 20px;
+    
+    }
+    
+    .description_mockup__content {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-family: Jost;
+    font-size: 20px;
+    line-height: 150%;
+    }
+    
+    .description_content__title {
+    
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Jost;
+    }
+    
+    .interactive_image__conteiner {
+    
+    display: flex;
+    position: relative;
+    flex-basis: 60%;
+    }
+    
+    .mockup__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    transition: opacity 0.5s ease;
+    }
+    
+    .mockup__image:hover {
+    
+    opacity: 0;
+    
+    }
+    
+    
+    video {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* dodaj tę linię */
+        top: 0; /* dodaj tę linię */
+        left: 0; /* dodaj tę linię */
+    }
+    
+    .mockup_photo__container {
+    
+    display: flex;
+    padding-top: 120px;
+    
+    }
+    
+    .mockup_photo__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    .description_arrow__image--left {
+    
+    transform: rotate(180deg);
+    
+    }
+    
+    
+    
+    
+    @media (max-width: 1440px) {
+    
+        .interactive_mockup__container {
+    
+    flex-direction: column;
+    gap: 24px;
+            }
+    
+    .description_mockup__button {
+    
+    order: 2;
+    
+    }
+    
+    .description_mockup__container {
+    
+    gap: 48px;
+    width: 100%;
+    }
+    
+    .description_arrow__image {
+    
+    width: 3%;
+    transform: rotate(90deg);
+    
+    }
+    
+    .description_mockup__button {
+    
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    }
+    
+    .interactive_image__conteiner--favourites {
+    
+    order: 2;
+        
+    }
+    
+    .description_arrow__image--left {
+    
+    order: 2 !important;
+    
+    }
+    
+    
+    }
+    
+    
+    
+            @media (max-width: 1024px) {
+            
+                .projects_box__container {
+            
+            
+                padding-left: 72px !important;
+                padding-right: 72px !important;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 48px;
+            
+            }
+            
+            .project__title {
+            
+            font-size: 18px;
+            
+            }
+            
+    
+            
+            .main_arrow {
+            
+            height: 80%;
+            width: 80%;
+            }
+            
+            .paragraph--client_overview {
+    
+                padding-left: 72px !important;
+                padding-right: 72px !important;
+    font-size: 18px;
+            }
+    
+    .interactive_mockup__container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    }
+    
+    .description_content__title {
+    
+    font-size: 28px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 18px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 18px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 16px;
+    
+    }
+    
+            }
+            
+            
+            @media (max-width: 744px) {
+            
+                .projects_box__container {
+            
+            
+            padding-left: 48px !important;
+            padding-right: 48px !important;
+            }
+            
+            .project__title {
+            
+            font-size: 16px;
+            
+            }
+            
+    
+            
+            .main_arrow {
+            
+            height: 70%;
+            width: 70%;
+            }
+            
+            .my_projects__main_container {
+            
+            gap: 32px;
+            
+            }
+            
+            .paragraph--client_overview {
+    
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+    font-size: 16px;
+    }
+    
+    .interactive_mockup__container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 48px;
+    
+    }
+    
+    .description_content__title {
+    
+    font-size: 24px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 16px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 12px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 16px;
+    
+    }
+            }
+            
+            @media (max-width: 560px) {
+            
+            .my_projects__main_container {
+            
+            gap: 24px;
+            
+            }
+            
+            .main_arrow {
+            
+            height: 60%;
+            width: 60%;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 40px;
+            
+            }
+            
+            .bottom_title__container {
+            
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            
+            }
+            
+            }
+            
+            @media (max-width: 430px) {
+            
+            .main_arrow {
+            
+            height: 50%;
+            width: 50%;
+            }
+            
+            .my_projects__title {
+            
+            font-size: 32px;
+            
+            }
+            
+            .project__title {
+            
+            font-size: 14px;
+            
+            }
+            
+            .project__tag {
+            
+            font-size: 14px;
+            
+            }
+            
+            .project_button__label {
+            
+                font-size: 14px;
+            
+            }
+            
+            .paragraph--client_overview {
+    
+    
+    font-size: 14px;
+    }
+    
+    .description_content__title {
+    
+    font-size: 20px;
+    
+    }
+    
+    .description_content__paragraph {
+    
+    font-size: 14px;
+    
+    }
+    
+    .description_arrow__image {
+    
+    width: 5%;
+    
+    }
+    
+    .description_mockup__container {
+    
+    gap: 24px;
+    
+    }
+    
+    .description_button__label {
+    
+    font-size: 14px;
+    
+    }
+    
+    .description_mockup__button {
+    
+    gap: 8px;
+    
+    }
+    
+    
+            }
+            
+            
+        </style>
+    
+    <script>
+    // Znajdź wszystkie kontenery
+    const containers = document.querySelectorAll('.interactive_image__conteiner');
+    
+    // Dla każdego kontenera dodaj obsługę zdarzeń
+    containers.forEach(container => {
+        const video = container.querySelector('video');  // znajdź element video w danym kontenerze
+    
+        // Odtwarzanie na hover
+        container.addEventListener('mouseenter', () => {
+            video.play();
+        });
+    
+        // Zatrzymanie po zjechaniu myszką
+        container.addEventListener('mouseleave', () => {
+            video.pause();
+        });
+    
+        // Dodatkowe zabezpieczenie - pauza przy załadowaniu strony
+        window.addEventListener('load', () => {
+            video.pause();
+        });
+    });
+    </script>
+    
+    <!--Final design 3 end-->
+
+<!--Final design 4 start-->
+
+<!--Mockups start-->
+
+<div class="mockups_regenova__main_container">
+
+    <!--Mockups container start-->
+    
+    <div class="mockups_regenova__container">
+    
+    <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--1.png"/></div>
+    <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--2.png"/></div>
+    
+    </div>
+    
+    <!--Mockups container end-->
+    
+    <!--Mockups container start-->
+    
+    <div class="mockups_regenova__container">
+    
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--3.png"/></div>
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--4.png"/></div>
+        
+        </div>
+        
+        <!--Mockups container end-->
+    
+    <!--Mockups container start-->
+    
+    <div class="mockups_regenova__container">
+    
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--5.png"/></div>
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--6.png"/></div>
+        
+        </div>
+        
+        <!--Mockups container end-->
+    
+    
+    </div>
+    
+    <!--Mockups end-->
+    
+    
+    <!--Mockup photo start-->
+    
+    <div class="mockup_photo__container"><img class="mockup_photo__image" src="/sklep internetowy/Portfolio/assets/photos/mockup__4.png"/></div>
+    
+    <!--Mockup photo end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .mockups_regenova__main_container {
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 120px;
+    gap: 72px;
+    }
+    
+    .mockups_regenova__container {
+    
+    display: flex;
+    gap: 48px;
+    
+    }
+    
+    .mockup--regenova {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    .mockup_photo__container {
+    
+    display: flex;
+    padding-top: 120px;
+    
+    }
+    
+    .mockup_photo__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .mockups_regenova__main_container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    gap: 48px;
+    }
+    
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+    .mockups_regenova__container {
+    
+    flex-direction: column;
+    
+    }
+    
+    .mockups_regenova__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 96px !important;
+    }
+    
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .mockups_regenova__main_container {
+    
+    gap: 24px;
+    
+        }
+    
+    .mockups_regenova__container {
+    
+    gap: 24px;
+    
+    }
+    
+    .mockups_regenova__main_container {
+    
+    padding-top: 72px !important;
+    }
+    
+    }
+    
+    
+    </style>
+    
+    <!--Final design 4 end-->
+
+    <!--Final design 5 start-->
+
+<!--Mockups start-->
+
+<div class="mockups_regenova__main_container">
+
+    <!--Mockups container start-->
+    
+    <div class="mockups_regenova__container">
+    
+    <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--7.png"/></div>
+    <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--8.png"/></div>
+    
+    </div>
+    
+    <!--Mockups container end-->
+    
+    <!--Mockups container start-->
+    
+    <div class="mockups_regenova__container">
+    
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--9.png"/></div>
+        <div class="mockups_image__container--regenova"><img class="mockup--regenova" src="/sklep internetowy/Portfolio/assets/photos/mockup_regenova--10.png"/></div>
+        
+        </div>
+        
+        <!--Mockups container end-->
+    
+    
+    
+    
+    </div>
+    
+    <!--Mockups end-->
+    
+    
+    <!--Mockup photo start-->
+    
+    <div class="mockup_photo__container"><img class="mockup_photo__image" src="/sklep internetowy/Portfolio/assets/photos/mockup__5.png"/></div>
+    
+    <!--Mockup photo end-->
+    
+    <style>
+    
+    body {
+            margin: 0px;
+            background-color: var(--bright);
+            }
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+              box-sizing: border-box;
+            }
+            :root {
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            }
+            :root {
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            }
+    
+    .mockups_regenova__main_container {
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-top: 120px;
+    gap: 72px;
+    }
+    
+    .mockups_regenova__container {
+    
+    display: flex;
+    gap: 48px;
+    
+    }
+    
+    .mockup--regenova {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    .mockup_photo__container {
+    
+    display: flex;
+    padding-top: 120px;
+    
+    }
+    
+    .mockup_photo__image {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+    @media (max-width: 1024px) {
+    
+    .mockups_regenova__main_container {
+    
+    padding-left: 72px;
+    padding-right: 72px;
+    gap: 48px;
+    }
+    
+    
+    }
+    
+    @media (max-width: 744px) {
+    
+    .mockups_regenova__container {
+    
+    flex-direction: column;
+    
+    }
+    
+    .mockups_regenova__main_container {
+    
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    }
+    
+    
+    }
+    
+    @media (max-width: 430px) {
+    
+        .mockups_regenova__main_container {
+    
+    gap: 24px;
+    
+        }
+    
+    .mockups_regenova__container {
+    
+    gap: 24px;
+    
+    }
+    
+    
+    }
+    
+    
+    </style>
+    
+    
+    <!--Final design 5 end-->
+
+<!--Footer start-->
+
+<div class="footer__main_container">
+
+    <!--Lines start-->
+    
+    <div class="lines__container--footer">
+    
+    <div class="line--footer"></div>
+    <div class="arrow__container--footer"><img class="arrow--footer" src="/sklep internetowy/Portfolio/assets/photos/Arrow_down.svg"/></div>
+    <div class="line--footer"></div>
+    
+    </div>
+    
+    <!--Lines end-->
+    
+    <!--Main title footer start-->
+    
+    <div class="footer__main_title">LET'S GET IN TOUCH</div>
+    
+    <!--Main title footer end-->
+    
+    <!--Contact details start-->
+    
+    <div class="contact_details__main_container">
+    
+    <!--Email and phone start-->
+    
+    <div class="details__container--footer">
+    
+    <!--Email start-->
+    
+    <div class="email__container--footer">
+    
+    <div class="email__label">EMAIL</div>
+    
+    <div class="email__address">jboryszewska953@gmail.com</div>
+    
+    </div>
+    
+    <!--Email end-->
+    
+    <!--Phone start-->
+    
+    <div class="email__container--footer">
+    
+        <div class="email__label">PHONE</div>
+    
+        <div class="email__address">+48 575 756 186</div>
+        
+        </div>
+        
+        <!--Phone end-->
+    </div>
+    
+    <!--Email and phone end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.linkedin.com/in/joanna-boryszewska-19443220a/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a class="link--footer" href="https://www.facebook.com/share/14bTbpF44R/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+        </div>
+        
+        <!--Links end-->
+    
+    <!--Links start-->
+    
+    <div class="links__container--footer">
+    
+        <a class="link--footer" href="https://www.behance.net/joannaboryszewska" target="_blank" rel="noopener noreferrer">BEHANCE</a>
+        <a class="link--footer" href="/sklep internetowy/Portfolio/assets/CV Joanna Boryszewska RODO.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+        
+        <!--Links end-->
+    
+    
+    </div>
+    
+    <!--Contact details end-->
+    
+    
+    </div>
+    
+  
+    <style>
+
+        body {
+        margin: 0px;
+        }
+        @font-face {
+          font-family: 'Picaflor';
+          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          font-weight: normal;
+          font-style: normal;
+          box-sizing: border-box;
+        }
+        :root {
+        --bright: #F8F3F3;
+        --dark: #190B0B;
+        }
+        :root {
+        --padding-desktop: 144px;
+        --padding-tablet: 72px;
+        --padding--phone: 48px;
+        }
+        
+        .footer__main_container {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        margin-top: 96px;
+        margin-bottom: 72px;
+        }
+        
+        
+        
+        .lines__container--footer {
+        
+        display: flex;
+        gap: 12px;
+        padding-left: 144px;
+        padding-right: 144px;
+        }
+        
+        .line--footer {
+        
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark);
+        flex-basis: calc(45% - 12px);
+        }
+        
+        .footer__main_title {
+        
+        font-size: 168px;
+        font-family: Picaflor;
+        display: flex;
+        justify-content: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        color: var(--dark);
+        }
+        
+        .contact_details__main_container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 144px;
+        padding-right: 144px;
+        gap: 72px;
+        
+        }
+        
+        .details__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(50% - 72px);
+        }
+        
+        .email__container--footer {
+        
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 48px;
+        font-family: Picaflor;
+        color: var(--dark);
+        
+        }
+        
+        
+        
+        .email__address {
+        
+        font-family: Jost;
+        color: var(--dark);
+        font-size: 20px;
+        flex-basis: calc(25% - 24px);
+        white-space: nowrap;
+        }
+        
+        .links__container--footer {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-basis: calc(25% - 72px);
+        }
+        
+        .link--footer {
+        
+        font-family: Picaflor;
+        font-size: 48px;
+        color: var(--dark);
+        text-decoration: underline;
+        }
+        
+        .arrow__container--footer {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-basis: calc(10% - 12px);
+        }
+        
+        
+        
+        
+        @media (max-width: 1440px) {
+        
+        .footer__main_title {
+        
+        font-size: 96px;
+        
+        }
+        
+        .email__line {
+        
+            flex-basis: calc(60% - 24px);
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 40px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 40px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+        gap: 48px;
+        
+        }
+        
+        .details__container--footer {
+        
+            flex-basis: calc(50% - 48px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 48px);
+        
+        }
+        
+        }
+        
+        @media (max-width: 1024px) {
+        
+        .lines__container--footer {
+        
+        padding-left: 72px;
+        padding-right: 72px;
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 72px;
+            padding-right: 72px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 32px;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 18px;
+        
+        }
+        
+        .contact_details__main_container {
+                gap: 32px;
+            }
+        
+        
+            .details__container--footer {
+        
+        flex-basis: calc(50% - 32px);
+        
+        }
+        
+        .links__container--footer {
+        
+        flex-basis: calc(25% - 32px);
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 72px;
+        
+        }
+        
+        .line--footer {
+        
+        flex-basis: calc(47% - 12px);
+        
+        }
+        
+        .arrow__container--footer {
+        
+        flex-basis: calc(6% - 12px);
+        
+        }
+        
+        .footer__main_container {
+        
+        margin-top: 72px;
+        margin-bottom: 48px;
+        }
+
+.arrow--footer {
+
+width: 100px;
+
+}
+
+
+        }
+        
+        @media (max-width: 744px) {
+        
+        .lines__container--footer {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .footer__main_title {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+        
+        }
+        
+        .contact_details__main_container {
+        
+            padding-left: 48px;
+            padding-right: 48px;
+            flex-direction: column;
+            align-items: flex-start;
+        
+        }
+        
+        .email__address {
+        
+        font-size: 16px;
+        
+        }
+        
+.arrow--footer {
+
+width: 87px;
+
+}
+
+
+        }
+        
+        @media (max-width: 560px) {
+        
+        .footer__main_title {
+        
+        font-size: 48px;
+        
+        }
+        
+        .email__label {
+        
+        font-size: 24px;
+        
+        }
+        
+        .link--footer {
+        
+        font-size: 24px;
+        
+        }
+        
+        .arrow--footer {
+
+width: 74px;
+
+}
+
+
+        }
+        
+        @media (max-width: 430px) {
+        
+        .email__container--footer {
+        
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        }
+        
+        .footer__main_title {
+        
+        font-size: 32px;
+        
+        }
+        
+        .footer__main_container {
+        
+        gap: 32px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        }
+        
+        .email__address {
+        
+        font-size: 14px;
+        
+        }
+        
+.arrow--footer {
+
+width: 62px;
+
+}
+        
+        }
+        
+        
+        </style>
+
+    <!--Footer end-->
+
+
+</body>
+</html>
