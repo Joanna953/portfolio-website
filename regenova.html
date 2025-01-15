@@ -3463,7 +3463,7 @@ gap: 12px;
 
 <!--Interactive image mockup start-->
 
-<div class="interactive_image__conteiner">
+<div class="interactive_image__container">
     <img class="mockup__image" src="assets/photos/Mockup__shopping_experience.png"/>
 
     <video muted loop>
@@ -3644,7 +3644,7 @@ font-weight: 500;
 font-family: Jost;
 }
 
-.interactive_image__conteiner {
+.interactive_image__container {
 
 display: flex;
 position: relative;
@@ -3675,6 +3675,7 @@ height: 100%;
 object-fit: cover; /* dodaj tę linię */
     top: 0; /* dodaj tę linię */
     left: 0; /* dodaj tę linię */
+    width: calc(100% - 1px) !important;
 }
 
 .mockup_photo__container {
@@ -4001,7 +4002,7 @@ gap: 8px;
     </style>
 
 <script>
-const container = document.querySelector('.interactive_image__conteiner');
+const container = document.querySelector('.interactive_image__container');
 const video = container.querySelector('video');  // znajdź element video wewnątrz kontenera
 
 // Odtwarzanie na hover
@@ -4031,7 +4032,7 @@ window.addEventListener('load', () => {
 
     <!--Interactive image mockup start-->
     
-    <div class="interactive_image__conteiner interactive_image__conteiner--favourites">
+    <div class="interactive_image__container interactive_image__container--favourites">
         <img class="mockup__image" src="assets/photos/Add to favourites__mockup.png"/>
     
         <video muted loop>
@@ -4117,7 +4118,7 @@ window.addEventListener('load', () => {
         
         <!--Interactive image mockup start-->
         
-        <div class="interactive_image__conteiner">
+        <div class="interactive_image__container">
             <img class="mockup__image" src="assets/photos/Filters_image_5.png"/>
         
             <video muted loop>
@@ -4300,7 +4301,7 @@ window.addEventListener('load', () => {
     font-family: Jost;
     }
     
-    .interactive_image__conteiner {
+    .interactive_image__container {
     
     display: flex;
     position: relative;
@@ -4391,7 +4392,7 @@ window.addEventListener('load', () => {
     align-items: center;
     }
     
-    .interactive_image__conteiner--favourites {
+    .interactive_image__container--favourites {
     
     order: 2;
         
@@ -4684,7 +4685,7 @@ window.addEventListener('load', () => {
 
     <!--Interactive image mockup start-->
     
-    <div class="interactive_image__conteiner interactive_image__conteiner--favourites">
+    <div class="interactive_image__container interactive_image__container--favourites">
         <img class="mockup__image" src="assets/photos/Add_review__mockup.png"/>
     
         <video muted loop>
@@ -4770,7 +4771,7 @@ window.addEventListener('load', () => {
         
         <!--Interactive image mockup start-->
         
-        <div class="interactive_image__conteiner">
+        <div class="interactive_image__container">
             <img class="mockup__image" src="assets/photos/Interactive_map__mockup.png"/>
         
             <video muted loop>
@@ -4953,7 +4954,7 @@ window.addEventListener('load', () => {
     font-family: Jost;
     }
     
-    .interactive_image__conteiner {
+    .interactive_image__container {
     
     display: flex;
     position: relative;
@@ -5044,7 +5045,7 @@ window.addEventListener('load', () => {
     align-items: center;
     }
     
-    .interactive_image__conteiner--favourites {
+    .interactive_image__container--favourites {
     
     order: 2;
         
@@ -5312,7 +5313,7 @@ window.addEventListener('load', () => {
     
     <script>
     // Znajdź wszystkie kontenery
-    const containers = document.querySelectorAll('.interactive_image__conteiner');
+    const containers = document.querySelectorAll('.interactive_image__container');
     
     // Dla każdego kontenera dodaj obsługę zdarzeń
     containers.forEach(container => {
