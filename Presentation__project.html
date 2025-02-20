@@ -2585,7 +2585,7 @@ font-size: 14px;
 
 <!--Video start-->
 
-<div class="mockup_photo__container"><video autoplay muted loop controls class="video--final_project">
+<div class="mockup_photo__container mockup_photo__container--first"><video autoplay muted loop controls class="video--final_project">
     <source src="/assets/photos/video_intro.mp4" type="video/mp4">
     Twoja przeglądarka nie obsługuje tego wideo.
 </video>
@@ -2827,6 +2827,12 @@ outline: none;
 .video--final_project::-webkit-media-controls {
 opacity: 0;
 }
+
+.mockup_photo__container--first {
+
+padding-top: 48px important;
+}
+
 
 @media (max-width: 1440px) {
 
