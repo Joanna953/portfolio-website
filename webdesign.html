@@ -20,7 +20,7 @@
     <a class="menu__logo" href="index.html">JOANNA BORYSZEWSKA</a>
     
     <!--Logo end-->
-    
+
     <!--Menu labels start-->
     
     <div class="menu__labels">
@@ -35,11 +35,7 @@
     <!--Menu labels end-->
     </div>
     
-    <!--Line start-->
-    
-    <div class="menu__line"></div>
-    
-    <!--Line end-->
+
     
     </div>
     
@@ -341,7 +337,16 @@ color: var(--dark);
 
 <div class="my_projects__main_container">
 
-    <div class="arrow__container--projects"><img class="main_arrow" src="assets/photos/arrow3_3pt.svg"/></div>
+    <!--Lines container start-->
+    
+    <div class="about_me__lines_container">
+    
+    
+    <div class="vertical_line"></div>
+    
+    </div>
+    
+    <!--Lines container end-->
     
     <div class="my_projects__title">MY PROJECTS</div>
     
@@ -643,8 +648,23 @@ display: none;
 
 }        
 
+        .about_me__lines_container {
+        
+        display: flex;
+        flex-direction: column;
+        padding-left: 144px;
+        padding-right: 144px;
+        justify-content: center;
+        align-items: center;
+        }
 
-
+        .vertical_line {
+        
+        width: 3px;
+        height: 120px;
+        background-color: var(--dark);
+        }
+        
         @media (max-width: 1024px) {
         
             .projects_box__container {
@@ -684,7 +704,20 @@ display: none;
         width: 80%;
         }
         
+
+        .about_me__lines_container {
         
+        padding-left: 72px;
+        padding-right: 72px;
+        
+        }
+
+        .vertical_line {
+        
+        height: 96px;
+        
+        }
+            
         }
         
         
@@ -726,7 +759,20 @@ display: none;
         gap: 32px;
         
         }
+
+      .about_me__lines_container {
         
+        padding-left: 48px;
+        padding-right: 48px;
+        
+        }
+
+      .vertical_line {
+        
+        height: 72px;
+        
+        }
+
         }
         
         @media (max-width: 560px) {
@@ -790,7 +836,12 @@ display: none;
             font-size: 14px;
         
         }
+            
+         .vertical_line {
         
+        height: 48px;
+        
+        }
         
         }
         
