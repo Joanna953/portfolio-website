@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
 <!--Menu top desktop start-->
 
 <div class="menu__main_container">
@@ -72,6 +72,270 @@
         <div class="menu__line"></div>
         
         <!--Line end-->
+        
+    <!--Drop down menu start-->
+    
+    <div class="drop_down_menu__container">
+    
+    <a class="drop_down_menu__label" style="padding-top: 48px;" href="index.html"><span class="highlight">Home</span></a>
+    <a class="drop_down_menu__label" href="projects.html"><span class="highlight">UX/UI</span></a>
+    <a class="drop_down_menu__label" href="branding.html"><span class="highlight">Branding</span></a>
+    <a class="drop_down_menu__label" href="about_me.html"><span class="highlight">About me</span></a>
+    <a class="drop_down_menu__label" href="contact.html"><span class="highlight">Contact</span></a>
+    
+    </div>
+    
+    
+    <!--Drop down menu end-->
+        </div>
+        
+    
+        <style>
+
+            body {
+            
+            margin: 0px;
+            
+            }
+            
+            
+            @font-face {
+              font-family: 'Picaflor';
+              src: url('assets/fonts/Picaflor-36pt.eot'); /* IE9 Compat Modes */
+              src: url('assets/fonts/Picaflor-36pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                   url('assets/fonts/Picaflor-36pt.woff') format('woff'), /* Modern Browsers */
+                   url('assets/fonts/Picaflor-36pt.woff2') format('woff2'), /* Super Modern Browsers */
+                   url('assets/fonts/Picaflor-36pt.ttf') format('truetype'); /* Safari, Android, iOS */
+              font-weight: normal;
+              font-style: normal;
+            }
+            
+            :root {
+            
+            --bright: #F8F3F3;
+            --dark: #190B0B;
+            
+            } 
+            
+            :root {
+            
+            --padding-desktop: 144px;
+            --padding-tablet: 72px;
+            --padding--phone: 48px;
+            
+            
+            }
+            
+            
+            .menu__main_container {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bright);
+            }
+            
+            .menu__container {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: 144px;
+            padding-right: 144px;
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            }
+            
+            
+            
+            .menu__logo {
+            
+            font-size: 24px;
+            line-height: 110%;
+            font-family: 'Picaflor', sans-serif;
+            color: var(--dark);
+            text-decoration: none;
+            }
+            
+            .menu__labels {
+            
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            font-family: Jost;
+            font-size: 20px;
+            line-height: 110%;
+            color: var(--dark) !important;
+            }
+            
+            .menu__line {
+            
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark)
+            }
+            
+            .menu__main_container--mobile {
+            
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bright);
+            
+            }
+            
+            .menu__container--mobile {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: var(--padding-tablet);
+            padding-right: var(--padding-tablet);
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-start;
+            padding-left: 72px;
+            padding-right: 72px;
+            background-color: var(--bright);
+            color: var(--dark);
+            font-size: 24px;
+            font-family: Jost;
+            max-height: 0; /* Początkowo ukryte */
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: max-height 0.6s ease; /* Płynne otwieranie/zamykanie */
+              position: absolute;
+              width: 100%;
+              top: 122.41px;
+              height: calc(100vh - 122px);
+              z-index: 2;
+             
+            }
+            
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 122px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            
+            
+            .drop_down_menu__label {
+            
+            transition: transform 0.6s ease-in-out;
+            cursor: pointer;
+            color: var(--dark);
+            }
+            
+            .highlight {
+              position: relative;
+              display: inline-block; /* Required for proper pseudo-element positioning */
+              cursor: pointer;
+              color: var(--dark);
+            }
+            
+            .highlight::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px; /* Thickness of the underline */
+              background-color: var(--dark); /* Color of the underline */
+              transition: width 0.5s ease;
+            }
+            
+            .highlight:hover::after {
+              width: 100%; /* Extends the underline on hover */
+            }
+            
+.labels__item {
+
+text-decoration: none;
+color: var(--dark);
+
+}
+
+
+            @media (min-width: 1024px) {
+            
+            .menu__main_container--mobile {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            @media (max-width: 1024px) {
+            
+            .menu__main_container {
+            
+            display: none;
+            
+            }
+            
+            }
+            
+            
+            
+            @media (max-width: 480px) {
+            
+                .menu__container--mobile {
+            
+            
+            padding-left: var(--padding--phone);
+            padding-right: var(--padding--phone);
+            
+            
+            }
+            
+            
+            .menu__logo {
+            
+            font-size: 18px;
+            
+            }
+            
+            .drop_down_menu__container {
+            
+                padding-left: var(--padding--phone);
+                padding-right: var(--padding--phone);
+            
+            }
+            
+            .drop_down_menu__container {
+            
+ 
+              height: calc(100vh - 115px);
+             
+             
+            }
+
+            .drop_down_menu__container.active {
+                max-height: calc(100vh - 115px); /* Dopasuj do maksymalnej wysokości menu */
+            }
+            }
+            
+        </style>
+    
+    <script>
+    
+    // script.js
+    document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
+      const menu = document.querySelector(".drop_down_menu__container");
+      menu.classList.toggle("active");
+    });
+    
+    
+    </script>
+    
+    <!--Menu top mobile end-->
+
 
 <!--My projects start-->
 
@@ -537,290 +801,8 @@ display: none;
     <!--My projects end-->
 
 
-        
-    <!--Drop down menu start-->
-    
-    <div class="drop_down_menu__container">
-    
-    <a class="drop_down_menu__label" style="padding-top: 48px;" href="index.html"><span class="highlight">Home</span></a>
-    <a class="drop_down_menu__label" href="projects.html"><span class="highlight">UX/UI</span></a>
-    <a class="drop_down_menu__label" href="branding.html"><span class="highlight">Branding</span></a>
-    <a class="drop_down_menu__label" href="about_me.html"><span class="highlight">About me</span></a>
-    <a class="drop_down_menu__label" href="contact.html"><span class="highlight">Contact</span></a>
-    
-    </div>
-    
-    
-    <!--Drop down menu end-->
-        </div>
-        
-    
-        <style>
-
-            body {
-            
-            margin: 0px;
-            
-            }
-            
-            
-            @font-face {
-              font-family: 'Picaflor';
-              src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
-              src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                   url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
-                   url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
-                   url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
-              font-weight: normal;
-              font-style: normal;
-            }
-            
-            :root {
-            
-            --bright: #F8F3F3;
-            --dark: #190B0B;
-            
-            } 
-            
-            :root {
-            
-            --padding-desktop: 144px;
-            --padding-tablet: 72px;
-            --padding--phone: 48px;
-            
-            
-            }
-            
-            
-            .menu__main_container {
-            
-            display: flex;
-            flex-direction: column;
-            background-color: var(--bright);
-            }
-            
-            .menu__container {
-            
-            display: flex;
-            justify-content: space-between;
-            padding-left: 144px;
-            padding-right: 144px;
-            align-items: center;
-            padding-top: 48px;
-            padding-bottom: 48px;
-            }
-            
-            
-            
-            .menu__logo {
-            
-            font-size: 24px;
-            line-height: 110%;
-            font-family: 'Picaflor', sans-serif;
-            color: var(--dark);
-            text-decoration: none;
-            }
-            
-            .menu__labels {
-            
-            display: flex;
-            gap: 48px;
-            align-items: center;
-            font-family: Jost;
-            font-size: 20px;
-            line-height: 110%;
-            color: var(--dark) !important;
-            }
-            
-            .menu__line {
-            
-            width: 100%;
-            height: 3px;
-            background-color: var(--dark)
-            }
-            
-            .menu__main_container--mobile {
-            
-            display: flex;
-            flex-direction: column;
-            background-color: var(--bright);
-            
-            }
-            
-            .menu__container--mobile {
-            
-            display: flex;
-            justify-content: space-between;
-            padding-left: var(--padding-tablet);
-            padding-right: var(--padding-tablet);
-            align-items: center;
-            padding-top: 48px;
-            padding-bottom: 48px;
-            
-            }
-            
-            .drop_down_menu__container {
-            
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: flex-start;
-            padding-left: 72px;
-            padding-right: 72px;
-            background-color: var(--bright);
-            color: var(--dark);
-            font-size: 24px;
-            font-family: Jost;
-            max-height: 0; /* Początkowo ukryte */
-            overflow: hidden;
-            box-sizing: border-box;
-            transition: max-height 0.6s ease; /* Płynne otwieranie/zamykanie */
-              position: absolute;
-              width: 100%;
-              top: 122.41px;
-              height: calc(100vh - 122px);
-              z-index: 2;
-             
-            }
-            
-            .drop_down_menu__container.active {
-                max-height: calc(100vh - 122px); /* Dopasuj do maksymalnej wysokości menu */
-            }
-            
-            
-            .drop_down_menu__label {
-            
-            transition: transform 0.6s ease-in-out;
-            cursor: pointer;
-            color: var(--dark);
-            }
-            
-            .highlight {
-              position: relative;
-              display: inline-block; /* Required for proper pseudo-element positioning */
-              cursor: pointer;
-              color: var(--dark);
-            }
-            
-            .highlight::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 0;
-              height: 2px; /* Thickness of the underline */
-              background-color: var(--dark); /* Color of the underline */
-              transition: width 0.5s ease;
-            }
-            
-            .highlight:hover::after {
-              width: 100%; /* Extends the underline on hover */
-            }
-            
-.labels__item {
-
-text-decoration: none;
-color: var(--dark);
-
-}
-
-
-            @media (min-width: 1024px) {
-            
-            .menu__main_container--mobile {
-            
-            display: none;
-            
-            }
-            
-            }
-            
-            
-            @media (max-width: 1024px) {
-            
-            .menu__main_container {
-            
-            display: none;
-            
-            }
-            
-            }
-            
-            
-            
-            @media (max-width: 480px) {
-            
-                .menu__container--mobile {
-            
-            
-            padding-left: var(--padding--phone);
-            padding-right: var(--padding--phone);
-            
-            
-            }
-            
-            
-            .menu__logo {
-            
-            font-size: 18px;
-            
-            }
-            
-            .drop_down_menu__container {
-            
-                padding-left: var(--padding--phone);
-                padding-right: var(--padding--phone);
-            
-            }
-            
-            .drop_down_menu__container {
-            
- 
-              height: calc(100vh - 115px);
-             
-             
-            }
-
-            .drop_down_menu__container.active {
-                max-height: calc(100vh - 115px); /* Dopasuj do maksymalnej wysokości menu */
-            }
-            }
-            
-        </style>
-    
-    <script>
-    
-    // script.js
-    document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
-      const menu = document.querySelector(".drop_down_menu__container");
-      menu.classList.toggle("active");
-    });
-    
-    
-    </script>
-    
-    <!--Menu top mobile end-->
-
-<!--About me start-->
-
-<div class="about_me__main_container">
-
-    <!--Lines container start-->
-    
-    <div class="about_me__lines_container">
-    
-    
-    <div class="vertical_line"></div>
-    
-    </div>
-    
-    <!--Lines container end-->
-    
   
-    
-    </div>
-    
-    <!--About me end-->
+
 
 
 <!--Footer start-->
@@ -916,11 +898,11 @@ color: var(--dark);
         }
         @font-face {
           font-family: 'Picaflor';
-          src: url('assets/fonts/Picaflor-96pt.eot'); /* IE9 Compat Modes */
-          src: url('assets/fonts/Picaflor-96pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-               url('assets/fonts/Picaflor-96pt.woff') format('woff'), /* Modern Browsers */
-               url('assets/fonts/Picaflor-96pt.woff2') format('woff2'), /* Super Modern Browsers */
-               url('assets/fonts/Picaflor-96pt.ttf') format('truetype'); /* Safari, Android, iOS */
+          src: url('assets/fonts/Picaflor-36pt.eot'); /* IE9 Compat Modes */
+          src: url('assets/fonts/Picaflor-36pt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('assets/fonts/Picaflor-36pt.woff') format('woff'), /* Modern Browsers */
+               url('assets/fonts/Picaflor-36pt.woff2') format('woff2'), /* Super Modern Browsers */
+               url('assets/fonts/Picaflor-36pt.ttf') format('truetype'); /* Safari, Android, iOS */
           font-weight: normal;
           font-style: normal;
           box-sizing: border-box;
