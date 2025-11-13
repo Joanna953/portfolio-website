@@ -20,7 +20,7 @@
     <a class="menu__logo" href="index.html">JOANNA BORYSZEWSKA</a>
     
     <!--Logo end-->
-
+    
     <!--Menu labels start-->
     
     <div class="menu__labels">
@@ -35,18 +35,11 @@
     <!--Menu labels end-->
     </div>
     
-<div class="menu__line"></div>
-
-    <!--Lines container start-->
+    <!--Line start-->
     
-    <div class="about_me__lines_container">
+    <div class="menu__line"></div>
     
-    
-    <div class="vertical_line"></div>
-    
-    </div>
-    
-    <!--Lines container end-->
+    <!--Line end-->
     
     </div>
     
@@ -348,7 +341,7 @@ color: var(--dark);
 
 <div class="my_projects__main_container">
 
-
+    <div class="arrow__container--projects"><img class="main_arrow" src="assets/photos/arrow3_3pt.svg"/></div>
     
     <div class="my_projects__title">MY PROJECTS</div>
     
@@ -394,27 +387,90 @@ color: var(--dark);
     </div>
     
     <!--Project end-->
+    
+   <!--Project start-->
+    
+    <div class="project__container">
+    <a class="project--I" href="Art_museum__app.html"><img class="project__main_photo" src="assets/photos/Main_page--app.png"/></a>
+    <div class="project__title">Art museum app - effortlessly explore the museum.</div>
+    
+    <div class="project__line"></div>
+    
+    
+    <div class="bottom_title__container">
+    <!--Tags start-->
+    
+    <div class="tags__container">
+    
+    <div class="project__tag">App</div>
+    <div class="project__tag">UI</div>
+    <div class="project__tag">UX</div>
+    
+    </div>
+    
+    <!--Tags end-->
+    
+    <!--Button start-->
+    
+    <a class="project_button__container" href="Art_museum__app.html">
+    
+    <div class="project_button__label">See case study</div>
+    
+    <img class="project_button__arrow" src="assets/icons/Arrow_right.svg"/>
+    
+    </a>
+    
+    <!--Button end-->
+    
+    
+    </div>
+    
+    </div>
+    
+    <!--Project end-->    
 
 
     <!--Project start-->
     
-    <div class="project__container">
-
-        <!--Carousel start-->
-
-        <div class="carousel__container">
-
-<div class="carousel_photo__container"><img class="carousel__photo" src="assets/photos/Rolety_webdesign.png/></div>
-<div class="carousel_photo__container"><img class="carousel__photo" src="assets/photos/Rolety_webdesign.png/></div>
-<div class="carousel_photo__container"><img class="carousel__photo" src="assets/photos/Rolety_webdesign.png/></div>
-<div class="carousel_photo__container"><img class="carousel__photo" src="assets/photos/Rolety_webdesign.png/></div>
-                                
-        </div>
+    <div class="project__container project__container--presentation">
+    <a class="project--I" href="Presentation__project.html"><img class="project__main_photo" src="assets/photos/Banner_presentation.png"/></a>
+    <div class="project__title">Sales presentation of a luxury apartment in the center of Warsaw.</div>
+    
+    <div class="project__line"></div>
+    
+    
+    <div class="bottom_title__container">
+    <!--Tags start-->
+    
+    <div class="tags__container">
+    
+    <div class="project__tag">Presentation</div>
+    <div class="project__tag">UI</div>
+    <div class="project__tag">Figma</div>
+    
+    </div>
+    
+    <!--Tags end-->
+    
+    <!--Button start-->
+    
+    <a class="project_button__container" href="regenova.html">
+    
+    <div class="project_button__label">See case study</div>
+    
+    <img class="project_button__arrow" src="assets/icons/Arrow_right.svg"/>
+    
+    </a>
+    
+    <!--Button end-->
+    
+    
+    </div>
     
     </div>
     
     <!--Project end-->
-        
+
 
     </div>
     
@@ -587,44 +643,8 @@ display: none;
 
 }        
 
-        .about_me__lines_container {
-        
-        display: flex;
-        flex-direction: column;
-        padding-left: 144px;
-        padding-right: 144px;
-        justify-content: center;
-        align-items: center;
-        }
 
-        .vertical_line {
-        
-        width: 3px;
-        height: 120px;
-        background-color: var(--dark);
-        }
 
-        
-.carousel__container {
-display: flex;
-gap: 12px;
-    
-}
-
-.carousel_photo__container {
-
-flex-basis: 25%;
-                                           
-}
-                                           
-.carousel__photo {
-width: 100%;
-height: 100%;
-aspect-ratio: 924 / 520;
-                                           
-}
-
-        
         @media (max-width: 1024px) {
         
             .projects_box__container {
@@ -664,20 +684,7 @@ aspect-ratio: 924 / 520;
         width: 80%;
         }
         
-
-        .about_me__lines_container {
         
-        padding-left: 72px;
-        padding-right: 72px;
-        
-        }
-
-        .vertical_line {
-        
-        height: 96px;
-        
-        }
-            
         }
         
         
@@ -719,20 +726,7 @@ aspect-ratio: 924 / 520;
         gap: 32px;
         
         }
-
-      .about_me__lines_container {
         
-        padding-left: 48px;
-        padding-right: 48px;
-        
-        }
-
-      .vertical_line {
-        
-        height: 72px;
-        
-        }
-
         }
         
         @media (max-width: 560px) {
@@ -796,12 +790,7 @@ aspect-ratio: 924 / 520;
             font-size: 14px;
         
         }
-            
-         .vertical_line {
         
-        height: 48px;
-        
-        }
         
         }
         
@@ -1289,3 +1278,6 @@ width: 62px;
 
 </body>
 </html>
+
+
+
