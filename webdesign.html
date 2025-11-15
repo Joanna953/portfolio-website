@@ -401,10 +401,8 @@ color: var(--dark);
     
     <a class="project_button__container" href="Presentation__project.html">
     
-    <div class="project_button__label">See case study</div>
-    
+    <img class="project_button__arrow project_button__arrow--left" src="assets/icons/Arrow_right.svg"/>
     <img class="project_button__arrow" src="assets/icons/Arrow_right.svg"/>
-    
     </a>
     
     <!--Button end-->
@@ -634,6 +632,13 @@ width: 4px;
 stroke: var(--dark);
     
 }
+
+.project_button__arrow--left {
+
+transform: rotate(180deg);
+    
+}
+        
         @media (max-width: 1024px) {
         
             .projects_box__container {
