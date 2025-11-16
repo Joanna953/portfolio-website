@@ -345,88 +345,47 @@ color: var(--dark);
     
     <div class="my_projects__title">MY PROJECTS</div>
     
-    <div class="projects_box__container">
-    
-    <!--Project start-->
-    
+<div class="projects_box__container">
+
     <div class="project__container">
-    <a class="project--I" href="regenova.html"><img class="project__main_photo" src="assets/photos/Rolety_webdesign.png"/></a>
-    
+        <a class="project--I" href="regenova.html">
+            <img class="project__main_photo" id="mainProjectPhoto" src="assets/photos/Rolety_webdesign.png" alt="Główne zdjęcie projektu"/>
+        </a>
 
-    <!--Bottom title container start-->
-        
-    <div class="bottom_title__container">
-        
-    <!--Title start-->
-    
-<div class="project__title">Design of the Regenova Therapeutics website: User shopping experience.</div>
-    
-    <!--Title end-->
-    
-    <!--Tags start-->
-    
-    <div class="tags__container">
-    
-    <div class="project__tag">Website</div>
-    <div class="project__tag">UI</div>
-    <div class="project__tag">Responsive</div>
-    
-    </div>
-    
-    <!--Tags end-->
-    
-    
-    </div>
 
- <!--Bottom title container end-->
+        <div class="bottom_title__container">
 
-        
-    <div class="project__line"></div>
-    
-    <!--Bottom title container start-->
-        
-    <div class="bottom_title__container">
-        
-    <!--Dots start-->
-    
-<div class="dots_carousel__container">
-<div class="dot_carousel dot_carousel--active"></div>
-<div class="dot_carousel"></div>
-<div class="dot_carousel"></div>  
-</div>   
-    
-    <!--Dots end-->
-    
-    <!--Button start-->
-    
-    <a class="project_button__container" href="Presentation__project.html">
-    
-    <img class="project_button__arrow project_button__arrow--left" src="assets/icons/Arrow_right.svg"/>
-    <img class="project_button__arrow" src="assets/icons/Arrow_right.svg"/>
-    </a>
-    
-    <!--Button end-->
-    
-    
+            <div class="project__title">Design of the Regenova Therapeutics website: User shopping experience.</div>
+            <div class="tags__container">
+                <div class="project__tag">Website</div>
+                <div class="project__tag">UI</div>
+                <div class="project__tag">Responsive</div>
+            </div>
+            </div>
+        <div class="project__line"></div>
+
+        <div class="bottom_title__container">
+
+            <div class="dots_carousel__container" id="dotContainer">
+                <div class="dot_carousel dot_carousel--active"></div>
+                <div class="dot_carousel"></div>
+                <div class="dot_carousel"></div>
+            </div>
+            <div class="project_button__container">
+                <img class="project_button__arrow project_button__arrow--left prev-arrow" src="assets/icons/Arrow_right.svg" alt="Poprzednie"/>
+                <img class="project_button__arrow next-arrow" src="assets/icons/Arrow_right.svg" alt="Następne"/>
+            </div>
+            </div>
+        </div>
+    <div class="carousel_container" id="carouselContainer" style="display:none;">
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" data-index="0"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club.png" data-index="1"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
     </div>
 
- <!--Bottom title container end-->
-        
-    </div>
-    
-    <!--Project end-->
-    
- 
-<div class="carousel_container">
-<div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png"></div>
-<div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club.png"></div>
-<div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png"></div>
-<div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png"></div>
 
 </div>
-        
-
-    </div>
     
     
     </div>
@@ -1277,6 +1236,75 @@ width: 62px;
 
     <!--Footer end-->
 
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Pobieramy wszystkie potrzebne elementy
+    const mainPhoto = document.getElementById('mainProjectPhoto');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    const carouselContainer = document.getElementById('carouselContainer');
+    const dots = document.querySelectorAll('.dot_carousel');
+
+    // 2. Pobieramy listę wszystkich adresów URL ze zdjęć w karuzeli
+    // Używamy Array.from, aby przekształcić NodeList w tablicę i map, aby pobrać src
+    const photoElements = carouselContainer.querySelectorAll('.carouusel__photo');
+    const photoSources = Array.from(photoElements).map(img => img.src);
+    
+    // 3. Ustawiamy początkowy indeks aktywnego zdjęcia
+    let currentIndex = 0;
+
+    /**
+     * Aktualizuje główne zdjęcie i kropki (dots)
+     * @param {number} newIndex - Nowy indeks zdjęcia
+     */
+    function updatePhoto(newIndex) {
+        // Zapewnienie, że indeks pozostaje w granicach tablicy (pętla)
+        if (newIndex >= photoSources.length) {
+            newIndex = 0; // Powrót na początek
+        } else if (newIndex < 0) {
+            newIndex = photoSources.length - 1; // Przejście na koniec
+        }
+        
+        currentIndex = newIndex;
+        
+        // Zmiana źródła głównego zdjęcia
+        mainPhoto.src = photoSources[currentIndex];
+        
+        // Aktualizacja kropek (dots)
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('dot_carousel--active');
+            } else {
+                dot.classList.remove('dot_carousel--active');
+            }
+        });
+    }
+
+    // 4. Dodajemy listenery do przycisków
+    
+    // Strzałka w lewo (poprzednie)
+    prevArrow.addEventListener('click', () => {
+        updatePhoto(currentIndex - 1);
+    });
+
+    // Strzałka w prawo (następne)
+    nextArrow.addEventListener('click', () => {
+        updatePhoto(currentIndex + 1);
+    });
+
+    // Opcjonalnie: Zmiana zdjęcia po kliknięciu w kropkę
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            updatePhoto(index);
+        });
+    });
+});
+
+    
+</script>
+
+    
 </body>
 </html>
 
