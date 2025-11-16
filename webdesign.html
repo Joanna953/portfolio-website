@@ -377,7 +377,7 @@ color: var(--dark);
             </div>
             </div>
         </div>
-    <div class="carousel_container" id="carouselContainer" style="display:none;">
+    <div class="carousel_container" id="carouselContainer"">
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" data-index="0"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club.png" data-index="1"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
@@ -1239,26 +1239,28 @@ width: 62px;
 <script>
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Pobieramy wszystkie potrzebne elementy
+    // 1. Pobieranie elementów
     const mainPhoto = document.getElementById('mainProjectPhoto');
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
     const carouselContainer = document.getElementById('carouselContainer');
+    
+    // Pobranie wszystkich kropek i elementów zdjęć w karuzeli
     const dots = document.querySelectorAll('.dot_carousel');
-
-    // 2. Pobieramy listę wszystkich adresów URL ze zdjęć w karuzeli
-    // Używamy Array.from, aby przekształcić NodeList w tablicę i map, aby pobrać src
     const photoElements = carouselContainer.querySelectorAll('.carouusel__photo');
+
+    // 2. Pobieranie ścieżek do zdjęć (źródeł)
     const photoSources = Array.from(photoElements).map(img => img.src);
     
-    // 3. Ustawiamy początkowy indeks aktywnego zdjęcia
+    // 3. Ustawienie początkowego indeksu
     let currentIndex = 0;
 
     /**
-     * Aktualizuje główne zdjęcie i kropki (dots)
-     * @param {number} newIndex - Nowy indeks zdjęcia
+     * Aktualizuje główne zdjęcie, kropki i bieżący indeks.
+     * @param {number} newIndex - Nowy indeks zdjęcia do wyświetlenia.
      */
     function updatePhoto(newIndex) {
+        
         // Zapewnienie, że indeks pozostaje w granicach tablicy (pętla)
         if (newIndex >= photoSources.length) {
             newIndex = 0; // Powrót na początek
@@ -1279,28 +1281,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 dot.classList.remove('dot_carousel--active');
             }
         });
+        
+        // Opcjonalnie: Dodatkowa klasa na aktywną miniaturę (jeśli chcesz ją podświetlić)
+        photoElements.forEach((photo, index) => {
+             photo.classList.toggle('carouusel__photo--active', index === currentIndex);
+        });
     }
 
-    // 4. Dodajemy listenery do przycisków
+    // 4. Listenery dla strzałek (nawigacja lewo/prawo)
     
     // Strzałka w lewo (poprzednie)
-    prevArrow.addEventListener('click', () => {
+    prevArrow.addEventListener('click', (e) => {
+        // Zapobieganie domyślnej akcji (jeśli byłoby to <a>)
+        e.preventDefault(); 
         updatePhoto(currentIndex - 1);
     });
 
     // Strzałka w prawo (następne)
-    nextArrow.addEventListener('click', () => {
+    nextArrow.addEventListener('click', (e) => {
+        e.preventDefault();
         updatePhoto(currentIndex + 1);
     });
 
-    // Opcjonalnie: Zmiana zdjęcia po kliknięciu w kropkę
+    // 5. Listenery dla kliknięć na miniatury (nawigacja bezpośrednia)
+    photoElements.forEach((photo, index) => {
+        photo.addEventListener('click', () => {
+            updatePhoto(index); 
+        });
+    });
+    
+    // 6. Listenery dla kliknięć na kropki (nawigacja bezpośrednia)
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             updatePhoto(index);
         });
     });
 });
-
     
 </script>
 
