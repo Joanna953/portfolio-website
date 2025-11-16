@@ -355,7 +355,7 @@ color: var(--dark);
 
         <div class="bottom_title__container">
 
-            <div class="project__title">Design of the Regenova Therapeutics website: User shopping experience.</div>
+            <div class="project__title" id="projectTitle">Design of the Regenova Therapeutics website: User shopping experience.</div>
             <div class="tags__container">
                 <div class="project__tag">Website</div>
                 <div class="project__tag">UI</div>
@@ -1239,83 +1239,107 @@ width: 62px;
 <script>
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Pobieranie elementów
+    // 1. POBIERANIE ELEMENTÓW
     const mainPhoto = document.getElementById('mainProjectPhoto');
+    const projectTitleElement = document.getElementById('projectTitle'); // Element, który będzie wyświetlał tytuł
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
     const carouselContainer = document.getElementById('carouselContainer');
     
-    // Pobranie wszystkich kropek i elementów zdjęć w karuzeli
+    // Lista wszystkich elementów karuzeli
     const dots = document.querySelectorAll('.dot_carousel');
     const photoElements = carouselContainer.querySelectorAll('.carouusel__photo');
 
-    // 2. Pobieranie ścieżek do zdjęć (źródeł)
+    // 2. DEFINICJA DANYCH
+    
+    // Tablica ze ścieżkami do zdjęć (pobierana automatycznie)
     const photoSources = Array.from(photoElements).map(img => img.src);
+    
+    // TABLICA OPISÓW: TUTAJ EDYTUJESZ TYTUŁY!
+    const projectDescriptions = [
+        "Design of the Regenova Therapeutics website: User shopping experience.", // TYTUŁ DLA ZDJĘCIA 1 (INDEKS 0)
+        "E-commerce concept for Business Club: Redesign and user flow.",           // TYTUŁ DLA ZDJĘCIA 2 (INDEKS 1)
+        "Rational Therapy project: Health app UI/UX design.",                     // TYTUŁ DLA ZDJĘCIA 3 (INDEKS 2)
+        "Main page redesign concept: Minimalist and modern layout."              // TYTUŁ DLA ZDJĘCIA 4 (INDEKS 3)
+        // DLA KOLEJNYCH ZDJĘĆ, DODAJ TUTAJ KOLEJNE TYTUŁY
+    ];
     
     // 3. Ustawienie początkowego indeksu
     let currentIndex = 0;
 
     /**
-     * Aktualizuje główne zdjęcie, kropki i bieżący indeks.
-     * @param {number} newIndex - Nowy indeks zdjęcia do wyświetlenia.
+     * Aktualizuje całą zawartość bloku projektu.
+     * @param {number} newIndex - Nowy indeks zdjęcia/opisu do wyświetlenia.
      */
     function updatePhoto(newIndex) {
         
-        // Zapewnienie, że indeks pozostaje w granicach tablicy (pętla)
+        // Zapewnienie pętli (cykliczne przewijanie)
         if (newIndex >= photoSources.length) {
-            newIndex = 0; // Powrót na początek
+            newIndex = 0;
         } else if (newIndex < 0) {
-            newIndex = photoSources.length - 1; // Przejście na koniec
+            newIndex = photoSources.length - 1;
         }
         
         currentIndex = newIndex;
         
-        // Zmiana źródła głównego zdjęcia
+        // 1. Zmiana głównego zdjęcia
         mainPhoto.src = photoSources[currentIndex];
         
-        // Aktualizacja kropek (dots)
+        // 2. ZMIANA OPISU PROJEKTU
+        if (projectTitleElement && projectDescriptions[currentIndex]) {
+            projectTitleElement.textContent = projectDescriptions[currentIndex];
+        }
+        
+        // 3. Aktualizacja stanu kropek
         dots.forEach((dot, index) => {
-            if (index === currentIndex) {
-                dot.classList.add('dot_carousel--active');
-            } else {
-                dot.classList.remove('dot_carousel--active');
-            }
+            dot.classList.toggle('dot_carousel--active', index === currentIndex);
         });
         
-        // Opcjonalnie: Dodatkowa klasa na aktywną miniaturę (jeśli chcesz ją podświetlić)
+        // 4. Aktualizacja stanu miniatur (jeśli chcesz je podświetlać)
         photoElements.forEach((photo, index) => {
              photo.classList.toggle('carouusel__photo--active', index === currentIndex);
         });
     }
 
-    // 4. Listenery dla strzałek (nawigacja lewo/prawo)
+    // 4. LISTENERY DLA NAWIGACJI
     
-    // Strzałka w lewo (poprzednie)
+    // Strzałki
     prevArrow.addEventListener('click', (e) => {
-        // Zapobieganie domyślnej akcji (jeśli byłoby to <a>)
         e.preventDefault(); 
         updatePhoto(currentIndex - 1);
     });
 
-    // Strzałka w prawo (następne)
     nextArrow.addEventListener('click', (e) => {
         e.preventDefault();
         updatePhoto(currentIndex + 1);
     });
 
-    // 5. Listenery dla kliknięć na miniatury (nawigacja bezpośrednia)
-    photoElements.forEach((photo, index) => {
-        photo.addEventListener('click', () => {
-            updatePhoto(index); 
+    // Miniatury i Kropki
+    // Łączymy NodeListy, aby dodać event listener do każdego z nich
+    const clickableElements = [...photoElements, ...dots];
+    
+    clickableElements.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            // Ponieważ elementami są miniatury (4) i kropki (3), musimy uzyskać właściwy indeks.
+            // Najprostsza metoda: użyj .findIndex na oryginalnych listach, aby uzyskać indeks klikniętego elementu.
+            let photoIndex;
+            
+            if (element.classList.contains('carouusel__photo')) {
+                // To jest miniatura
+                photoIndex = Array.from(photoElements).findIndex(p => p === element);
+            } else {
+                // To jest kropka
+                photoIndex = Array.from(dots).findIndex(d => d === element);
+            }
+            
+            if (photoIndex !== -1) {
+                updatePhoto(photoIndex);
+            }
         });
     });
     
-    // 6. Listenery dla kliknięć na kropki (nawigacja bezpośrednia)
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            updatePhoto(index);
-        });
-    });
+    // Upewnienie się, że pierwszy stan jest poprawnie załadowany
+    updatePhoto(0);
 });
     
 </script>
