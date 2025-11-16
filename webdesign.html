@@ -1333,7 +1333,7 @@ document.addEventListener('DOMContentLoaded', () => {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
         } else if (media.type === 'video') {
             html = `
-                <video class="project__main_photo" controls autoplay loop muted playsinline width="100%">
+                <video class="project__main_photo" autoplay loop muted playsinline width="100%">
                     <source src="${media.src}" type="video/mp4">
                     Twoja przeglądarka nie obsługuje wideo.
                 </video>
