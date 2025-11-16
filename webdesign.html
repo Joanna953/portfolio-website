@@ -348,9 +348,10 @@ color: var(--dark);
 <div class="projects_box__container">
 
     <div class="project__container">
-        <a class="project--I" href="regenova.html">
-            <img class="project__main_photo" id="mainProjectPhoto" src="assets/photos/Rolety_webdesign.png" alt="Główne zdjęcie projektu"/>
-        </a>
+<a class="project--I">
+    <div class="project__main_media_wrapper" id="mainMediaContainer">
+        </div>
+</a>
 
 
         <div class="bottom_title__container">
@@ -377,10 +378,13 @@ color: var(--dark);
             </div>
             </div>
         </div>
-    <div class="carousel_container" id="carouselContainer"">
+    <div class="carousel_container" id="carouselContainer">
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" data-index="0"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club.png" data-index="1"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/video Recjonalna Terapia.jpg" data-index="1"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
+        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
     </div>
 
@@ -615,6 +619,13 @@ background-color: var(--dark);
 .project_button__arrow--left {
 
 transform: rotate(180deg);
+    
+}
+
+.carouselContainer {
+
+overflow: hidden;
+width: 100%;
     
 }
         
@@ -1253,68 +1264,134 @@ width: 62px;
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. POBIERANIE ELEMENTÓW
-    const mainPhoto = document.getElementById('mainProjectPhoto');
-    const projectTitleElement = document.getElementById('projectTitle'); // Element, który będzie wyświetlał tytuł
+    const projectMediaContainer = document.getElementById('mainMediaContainer'); 
+    const projectTitleElement = document.getElementById('projectTitle');
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
+    
+    // NOWE ELEMENTY DLA PRZEWIJANIA KARUZELI MINIATUR
     const carouselContainer = document.getElementById('carouselContainer');
+    const carouselInner = document.getElementById('carouselInner'); 
     
-    // Lista wszystkich elementów karuzeli
+    // Lista wszystkich elementów
     const dots = document.querySelectorAll('.dot_carousel');
-    const photoElements = carouselContainer.querySelectorAll('.carouusel__photo');
-
+    const photoElements = carouselInner.querySelectorAll('.carouusel__photo');
+    
     // 2. DEFINICJA DANYCH
+    // !!! ZAKTUALIZUJ TE TABLICE ZGODNIE Z LICZBĄ ZDJĘĆ/WIDEO !!!
     
-    // Tablica ze ścieżkami do zdjęć (pobierana automatycznie)
-    const photoSources = Array.from(photoElements).map(img => img.src);
-    
-    // TABLICA OPISÓW: TUTAJ EDYTUJESZ TYTUŁY!
-    const projectDescriptions = [
-        "Design of the Regenova Therapeutics website: User shopping experience.", // TYTUŁ DLA ZDJĘCIA 1 (INDEKS 0)
-        "E-commerce concept for Business Club: Redesign and user flow.",           // TYTUŁ DLA ZDJĘCIA 2 (INDEKS 1)
-        "Rational Therapy project: Health app UI/UX design.",                     // TYTUŁ DLA ZDJĘCIA 3 (INDEKS 2)
-        "Main page redesign concept: Minimalist and modern layout."              // TYTUŁ DLA ZDJĘCIA 4 (INDEKS 3)
-        // DLA KOLEJNYCH ZDJĘĆ, DODAJ TUTAJ KOLEJNE TYTUŁY
+    const mediaData = [
+        { type: 'image', src: 'assets/photos/Rolety_webdesign.png' }, 
+        { type: 'video', src: 'assets/video/video Racjonalna Terapia.mp4' }, 
+        { type: 'image', src: 'assets/photos/Racjonalna_terapia.png' }, 
+        { type: 'image', src: 'assets/photos/Main_page--III.png' },
+        { type: 'image', src: 'assets/photos/other_photo_5.png' }, 
+        { type: 'image', src: 'assets/photos/other_photo_6.png' } 
     ];
+
+    const projectDescriptions = [
+        "Design of the Regenova Therapeutics website: User shopping experience.", 
+        "Krótki klip wideo prezentujący funkcjonalności strony.",                  
+        "Rational Therapy project: Health app UI/UX design.",                     
+        "Main page redesign concept: Minimalist and modern layout.",
+        "Piąte zdjęcie projektu: Nowy interfejs.",
+        "Szóste zdjęcie projektu: Przewijanie mobilne."
+    ];
+    // KONIEC DEFINICJI DANYCH
     
-    // 3. Ustawienie początkowego indeksu
-    let currentIndex = 0;
+    
+    // 3. ZMIENNE INDEKSÓW
+    let currentIndex = 0; // Indeks aktywnego głównego zdjęcia
+
+    // Funkcja do tworzenia elementu medialnego (IMG lub VIDEO) - BEZ ZMIAN
+    function createMediaElement(media) {
+        let html = '';
+        if (media.type === 'image') {
+            html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
+        } else if (media.type === 'video') {
+            html = `
+                <video class="project__main_photo" controls autoplay loop muted playsinline width="100%">
+                    <source src="${media.src}" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje wideo.
+                </video>
+            `;
+        }
+        return html;
+    }
+
+    /**
+     * Oblicza przesunięcie i przewija karuzelę miniatur.
+     */
+    function updateCarouselScroll() {
+        if (photoElements.length === 0 || !carouselContainer) return;
+
+        // 1. Obliczanie szerokości pojedynczego elementu miniatury (z uwzględnieniem marginesów)
+        // Używamy getBoundingClientRect.width, aby pobrać faktyczną szerokość po responsywnym skalowaniu.
+        const firstPhotoRect = photoElements[0].getBoundingClientRect();
+        const itemWidth = firstPhotoRect.width; 
+        
+        // 2. Pobieranie szerokości widocznego kontenera (viewport)
+        const containerWidth = carouselContainer.getBoundingClientRect().width;
+        
+        // 3. Obliczanie, ile elementów jest widocznych (zaokrąglone w dół)
+        const itemsVisible = Math.floor(containerWidth / itemWidth);
+
+        // 4. Obliczanie indeksu początkowego przewijania
+        let scrollStart = 0;
+        
+        // Jeśli aktualne zdjęcie znajduje się poza widocznym obszarem (np. jest to 5. z 4 widocznych)
+        if (currentIndex >= itemsVisible) {
+            // Przewiń tak, aby aktualny element był widoczny jako ostatni w rzędzie
+            scrollStart = currentIndex - itemsVisible + 1;
+        }
+
+        // Zapewnienie, że scrollStart nie jest ujemny i nie przewija zbyt daleko
+        scrollStart = Math.max(0, Math.min(scrollStart, photoElements.length - itemsVisible));
+
+        // 5. Obliczanie i stosowanie przesunięcia
+        const offset = scrollStart * itemWidth;
+
+        // Użycie transform do płynnego przewijania
+        carouselInner.style.transform = `translateX(-${offset}px)`;
+    }
 
     /**
      * Aktualizuje całą zawartość bloku projektu.
-     * @param {number} newIndex - Nowy indeks zdjęcia/opisu do wyświetlenia.
      */
     function updatePhoto(newIndex) {
         
         // Zapewnienie pętli (cykliczne przewijanie)
-        if (newIndex >= photoSources.length) {
+        if (newIndex >= mediaData.length) {
             newIndex = 0;
         } else if (newIndex < 0) {
-            newIndex = photoSources.length - 1;
+            newIndex = mediaData.length - 1;
         }
         
         currentIndex = newIndex;
+        const currentMedia = mediaData[currentIndex];
         
-        // 1. Zmiana głównego zdjęcia
-        mainPhoto.src = photoSources[currentIndex];
+        // 1. Zmiana głównego elementu medialnego
+        projectMediaContainer.innerHTML = createMediaElement(currentMedia);
         
         // 2. ZMIANA OPISU PROJEKTU
         if (projectTitleElement && projectDescriptions[currentIndex]) {
             projectTitleElement.textContent = projectDescriptions[currentIndex];
         }
         
-        // 3. Aktualizacja stanu kropek
+        // 3. Aktualizacja stanu kropek i miniatur
         dots.forEach((dot, index) => {
             dot.classList.toggle('dot_carousel--active', index === currentIndex);
         });
         
-        // 4. Aktualizacja stanu miniatur (jeśli chcesz je podświetlać)
         photoElements.forEach((photo, index) => {
              photo.classList.toggle('carouusel__photo--active', index === currentIndex);
         });
+
+        // 4. PRZEWIJANIE KARUZELI MINIATUR (Responsywnie!)
+        updateCarouselScroll();
     }
 
-    // 4. LISTENERY DLA NAWIGACJI
+    // 5. LISTENERY DLA NAWIGACJI
     
     // Strzałki
     prevArrow.addEventListener('click', (e) => {
@@ -1328,20 +1405,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Miniatury i Kropki
-    // Łączymy NodeListy, aby dodać event listener do każdego z nich
-    const clickableElements = [...photoElements, ...dots];
-    
-    clickableElements.forEach((element, index) => {
+    [...photoElements, ...dots].forEach((element) => {
         element.addEventListener('click', () => {
-            // Ponieważ elementami są miniatury (4) i kropki (3), musimy uzyskać właściwy indeks.
-            // Najprostsza metoda: użyj .findIndex na oryginalnych listach, aby uzyskać indeks klikniętego elementu.
             let photoIndex;
             
             if (element.classList.contains('carouusel__photo')) {
-                // To jest miniatura
                 photoIndex = Array.from(photoElements).findIndex(p => p === element);
-            } else {
-                // To jest kropka
+            } else if (element.classList.contains('dot_carousel')) {
                 photoIndex = Array.from(dots).findIndex(d => d === element);
             }
             
@@ -1351,8 +1421,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Upewnienie się, że pierwszy stan jest poprawnie załadowany
+    // Inicjalizacja
     updatePhoto(0);
+
+    // Dodatkowy listener na zmianę rozmiaru okna, aby ponownie obliczyć przewijanie
+    window.addEventListener('resize', updateCarouselScroll);
 });
     
 </script>
