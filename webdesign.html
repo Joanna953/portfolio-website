@@ -379,6 +379,7 @@ color: var(--dark);
             </div>
         </div>
     <div class="carousel_container" id="carouselContainer">
+        <div id="carouselInner">
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" data-index="0"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/video Recjonalna Terapia.jpg" data-index="1"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
@@ -386,6 +387,7 @@ color: var(--dark);
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" data-index="2"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
         <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" data-index="3"></div>
+        </div>
     </div>
 
 
@@ -627,6 +629,26 @@ transform: rotate(180deg);
 overflow: hidden;
 width: 100%;
     
+}
+
+/* 1. Kontener zewnętrzny (widoczny obszar) */
+#carouselContainer {
+    width: 100%; /* LUB stała szerokość, np. 800px */
+    overflow: hidden; /* KLUCZ: Ukrywa zdjęcia wystające poza kontener */
+    white-space: nowrap; /* Zapobiega łamaniu wierszy */
+}
+
+/* 2. Kontener wewnętrzny (cały wiersz miniatur) */
+#carouselInner {
+    display: flex; /* Ustawia miniatury w rzędzie */
+    transition: transform 0.3s ease-in-out; /* Opcjonalnie: dla płynnej animacji */
+}
+
+/* 3. Pojedyncza miniatura */
+.photo_carousel__container {
+    /* Ustaw szerokość, np. 25%, jeśli chcesz, aby 4 miniatury były widoczne na raz */
+    flex-shrink: 0; /* Zapobiega kurczeniu się */
+    width: 25%; 
 }
         
         @media (max-width: 1024px) {
