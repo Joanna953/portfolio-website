@@ -16,7 +16,7 @@
     <div class="menu__container">
     
     <!--Logo start-->
-    
+
     <a class="menu__logo" href="index.html">JOANNA BORYSZEWSKA</a>
     
     <!--Logo end-->
@@ -341,60 +341,61 @@ color: var(--dark);
 
 <div class="my_projects__main_container">
 
-    <div class="arrow__container--projects"><img class="main_arrow" src="assets/photos/arrow3_3pt.svg"/></div>
+    <div class="arrow__container--projects"><img class="main_arrow" src="assets/photos/arrow3_3pt.svg" alt="Strzałka"/></div>
     
     <div class="my_projects__title">MY PROJECTS</div>
     
-<div class="projects_box__container">
+    <div class="projects_box__container">
 
-    <div class="project__container">
-<a class="project--I">
-    <div class="project__main_media_wrapper" id="mainMediaContainer">
+        <div class="project__container">
+            <a class="project--I">
+                <div class="project__main_media_wrapper" id="mainMediaContainer">
+                </div>
+            </a>
+
+            <div class="bottom_title__container">
+                <div class="project__title" id="projectTitle"></div>
+                
+                <div class="tags__container">
+                    <div class="project__tag">Website</div>
+                    <div class="project__tag">UI</div>
+                    <div class="project__tag">Responsive</div>
+                </div>
+            </div>
+            
+            <div class="project__line"></div>
+
+            <div class="bottom_title__container">
+                <div class="dots_carousel__container" id="dotContainer">
+                    <div class="dot_carousel dot_carousel--active"></div>
+                    <div class="dot_carousel"></div>
+                    <div class="dot_carousel"></div>
+                    <div class="dot_carousel"></div>
+                    <div class="dot_carousel"></div>
+                    <div class="dot_carousel"></div>
+                    <div class="dot_carousel"></div>
+                </div>
+                
+                <div class="project_button__container">
+                    <img class="project_button__arrow project_button__arrow--left prev-arrow" src="assets/icons/Arrow_right.svg" alt="Poprzednie"/>
+                    <img class="project_button__arrow next-arrow" src="assets/icons/Arrow_right.svg" alt="Następne"/>
+                </div>
+            </div>
         </div>
-</a>
-
-
-        <div class="bottom_title__container">
-
-            <div class="project__title" id="projectTitle">Design of the Regenova Therapeutics website: User shopping experience.</div>
-            <div class="tags__container">
-                <div class="project__tag">Website</div>
-                <div class="project__tag">UI</div>
-                <div class="project__tag">Responsive</div>
+        
+        <div class="carousel_container" id="carouselContainer">
+            <div id="carouselInner">
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" alt="Miniatura 1"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/video Recjonalna Terapia.jpg" alt="Miniatura 2 (Wideo)"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" alt="Miniatura 3"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png" alt="Miniatura 4"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club_Mini.jpg" alt="Miniatura 5"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Video_BC_Mini.jpg" alt="Miniatura 6 (Wideo)"></div>
+                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Final_Project_Mini.jpg" alt="Miniatura 7"></div>
             </div>
-            </div>
-        <div class="project__line"></div>
-
-        <div class="bottom_title__container">
-
-            <div class="dots_carousel__container" id="dotContainer">
-                <div class="dot_carousel dot_carousel--active"></div>
-                <div class="dot_carousel"></div>
-                <div class="dot_carousel"></div>
-            </div>
-            <div class="project_button__container">
-                <img class="project_button__arrow project_button__arrow--left prev-arrow" src="assets/icons/Arrow_right.svg" alt="Poprzednie"/>
-                <img class="project_button__arrow next-arrow" src="assets/icons/Arrow_right.svg" alt="Następne"/>
-            </div>
-            </div>
-        </div>
-    <div class="carousel_container" id="carouselContainer">
-        <div id="carouselInner">
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/video Recjonalna Terapia.jpg"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png"></div>
-        <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Main_page--III.png"></div>
         </div>
     </div>
-
-
 </div>
-    
-    
-    </div>
     
     <style>
 
@@ -1283,6 +1284,8 @@ width: 62px;
 
     <!--Footer end-->
 
+
+
 <script>
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1296,43 +1299,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselContainer = document.getElementById('carouselContainer');
     const carouselInner = document.getElementById('carouselInner'); 
     
-    // Lista wszystkich elementów
+    // UWAGA: photoElements i dots muszą mieć 7 elementów!
     const dots = document.querySelectorAll('.dot_carousel');
     const photoElements = carouselInner.querySelectorAll('.carouusel__photo');
     
     // 2. DEFINICJA DANYCH
-    // !!! ZAKTUALIZUJ TE TABLICE ZGODNIE Z LICZBĄ ZDJĘĆ/WIDEO !!!
+    // !!! WAŻNE: W TYCH TABLICACH MUSI BYĆ DOKŁADNIE 7 ELEMENTÓW !!!
     
     const mediaData = [
         { type: 'image', src: 'assets/photos/Racjonalna_terapia.png' },
         { type: 'video', src: 'assets/photos/Video_Racjonalna_Terapia_2.mp4' }, 
-         { type: 'image', src: 'assets/photos/Rolety_webdesign.png' },
+        { type: 'image', src: 'assets/photos/Rolety_webdesign.png' },
         { type: 'image', src: 'assets/photos/Main_page--III.png' },
-        { type: 'image', src: 'assets/photos/Business_Club.png' }
+        { type: 'image', src: 'assets/photos/Business_Club.png' }, // Poprawiony przecinek
         { type: 'video', src: 'assets/photos/Video Business Club.mp4' }, 
-         
+        { type: 'image', src: 'assets/photos/Final_Project.png' } // Uzupełniony 7. element (Indeks 6)
     ];
 
     const projectDescriptions = [
-        "Design of the Regenova Therapeutics website: User shopping experience.", 
-        "Krótki klip wideo prezentujący funkcjonalności strony.",                  
-        "Rational Therapy project: Health app UI/UX design.",                     
-        "Main page redesign concept: Minimalist and modern layout.",
-        "Piąte zdjęcie projektu: Nowy interfejs.",
-        "Szóste zdjęcie projektu: Przewijanie mobilne."
+        "Projekt 1: Design of the Regenova Therapeutics website.", 
+        "Projekt 2: Krótki klip wideo prezentujący funkcjonalności Racjonalnej Terapii.",                  
+        "Projekt 3: Rational Therapy project: Health app UI/UX design.",                     
+        "Projekt 4: Main page redesign concept: Minimalist and modern layout.",
+        "Projekt 5: Piąte zdjęcie - Business Club (statyczny obraz).",
+        "Projekt 6: Szóste wideo - prezentacja Business Club.", 
+        "Projekt 7: Ostatni projekt w portfolio." // Uzupełniony 7. element (Indeks 6)
     ];
     // KONIEC DEFINICJI DANYCH
     
     
     // 3. ZMIENNE INDEKSÓW
-    let currentIndex = 0; // Indeks aktywnego głównego zdjęcia
+    let currentIndex = 0; 
 
-    // Funkcja do tworzenia elementu medialnego (IMG lub VIDEO) - BEZ ZMIAN
+    // Funkcja do tworzenia elementu medialnego (IMG lub VIDEO)
     function createMediaElement(media) {
         let html = '';
-        if (media.type === 'image') {
+        if (media && media.type === 'image') {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
-        } else if (media.type === 'video') {
+        } else if (media && media.type === 'video') {
+            // Bez 'controls', z autoplay, loop i muted
             html = `
                 <video class="project__main_photo" autoplay loop muted playsinline width="100%">
                     <source src="${media.src}" type="video/mp4">
@@ -1349,33 +1354,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCarouselScroll() {
         if (photoElements.length === 0 || !carouselContainer) return;
 
-        // 1. Obliczanie szerokości pojedynczego elementu miniatury (z uwzględnieniem marginesów)
-        // Używamy getBoundingClientRect.width, aby pobrać faktyczną szerokość po responsywnym skalowaniu.
+        // Pamiętaj: itemsVisible zależy od CSS i szerokości kontenera!
         const firstPhotoRect = photoElements[0].getBoundingClientRect();
-        const itemWidth = firstPhotoRect.width; 
-        
-        // 2. Pobieranie szerokości widocznego kontenera (viewport)
+        const itemWidth = firstPhotoRect.width || 1; 
         const containerWidth = carouselContainer.getBoundingClientRect().width;
         
-        // 3. Obliczanie, ile elementów jest widocznych (zaokrąglone w dół)
         const itemsVisible = Math.floor(containerWidth / itemWidth);
 
-        // 4. Obliczanie indeksu początkowego przewijania
         let scrollStart = 0;
         
-        // Jeśli aktualne zdjęcie znajduje się poza widocznym obszarem (np. jest to 5. z 4 widocznych)
         if (currentIndex >= itemsVisible) {
-            // Przewiń tak, aby aktualny element był widoczny jako ostatni w rzędzie
             scrollStart = currentIndex - itemsVisible + 1;
         }
 
-        // Zapewnienie, że scrollStart nie jest ujemny i nie przewija zbyt daleko
         scrollStart = Math.max(0, Math.min(scrollStart, photoElements.length - itemsVisible));
 
-        // 5. Obliczanie i stosowanie przesunięcia
         const offset = scrollStart * itemWidth;
-
-        // Użycie transform do płynnego przewijania
         carouselInner.style.transform = `translateX(-${offset}px)`;
     }
 
@@ -1384,7 +1378,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function updatePhoto(newIndex) {
         
-        // Zapewnienie pętli (cykliczne przewijanie)
+        // Pętla cykliczna
         if (newIndex >= mediaData.length) {
             newIndex = 0;
         } else if (newIndex < 0) {
@@ -1397,9 +1391,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Zmiana głównego elementu medialnego
         projectMediaContainer.innerHTML = createMediaElement(currentMedia);
         
-        // 2. ZMIANA OPISU PROJEKTU
+        // 2. Zmiana opisu projektu
         if (projectTitleElement && projectDescriptions[currentIndex]) {
             projectTitleElement.textContent = projectDescriptions[currentIndex];
+        } else if (projectTitleElement) {
+             projectTitleElement.textContent = "Brak opisu dla tego projektu.";
         }
         
         // 3. Aktualizacja stanu kropek i miniatur
@@ -1411,7 +1407,7 @@ document.addEventListener('DOMContentLoaded', () => {
              photo.classList.toggle('carouusel__photo--active', index === currentIndex);
         });
 
-        // 4. PRZEWIJANIE KARUZELI MINIATUR (Responsywnie!)
+        // 4. PRZEWIJANIE KARUZELI MINIATUR
         updateCarouselScroll();
     }
 
@@ -1429,30 +1425,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Miniatury i Kropki
-    [...photoElements, ...dots].forEach((element) => {
+    [...photoElements, ...dots].forEach((element, elementIndex) => {
         element.addEventListener('click', () => {
-            let photoIndex;
-            
-            if (element.classList.contains('carouusel__photo')) {
-                photoIndex = Array.from(photoElements).findIndex(p => p === element);
-            } else if (element.classList.contains('dot_carousel')) {
-                photoIndex = Array.from(dots).findIndex(d => d === element);
-            }
-            
-            if (photoIndex !== -1) {
-                updatePhoto(photoIndex);
-            }
+            // Miniatury i kropki są pobierane w tej samej kolejności
+            // i mają taką samą liczbę, więc można użyć elementIndex
+            updatePhoto(elementIndex);
         });
     });
     
     // Inicjalizacja
     updatePhoto(0);
 
-    // Dodatkowy listener na zmianę rozmiaru okna, aby ponownie obliczyć przewijanie
+    // Dodatkowy listener na zmianę rozmiaru okna
     window.addEventListener('resize', updateCarouselScroll);
 });
-    
 </script>
+    
+
 
     
 </body>
