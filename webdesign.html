@@ -323,7 +323,7 @@ color: var(--dark);
             
         </style>
     
-    <>
+    <script>
     
     // .js
     document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
@@ -332,7 +332,7 @@ color: var(--dark);
     });
     
     
-    </>
+    </script>
     
     <!--Menu top mobile end-->
 
@@ -1296,13 +1296,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.getElementById('dotsContainer');
 
     // 2. DEFINICJA DANYCH
+    // WAŻNA ZMIANA: Dodano pole 'thumbnail' do obiektów typu 'video'
     const mediaData = [
         { type: 'image', src: 'assets/photos/Racjonalna_terapia.png' },
-        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4' },
+        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4', thumbnail: 'assets/photos/video Recjonalna Terapia.jpg' }, // Pamiętaj, aby utworzyć ten plik!
         { type: 'image', src: 'assets/photos/Rolety_webdesign.png' },
-        { type: 'video', src: 'assets/photos/Rolety_video.mp4' },
+        { type: 'video', src: 'assets/photos/Rolety_video.mp4', thumbnail: 'assets/photos/Rolety.jpg' }, // Pamiętaj, aby utworzyć ten plik!
         { type: 'image', src: 'assets/photos/Business_Club.png' },
-        { type: 'video', src: 'assets/photos/Video Business Club.mp4' },
+        { type: 'video', src: 'assets/photos/Video Business Club.mp4', thumbnail: 'assets/photos/business_club.jpg' }, // Pamiętaj, aby utworzyć ten plik!
         { type: 'image', src: 'assets/photos/Amigo_Espanol.jpg' },
         // ... możesz dodawać więcej elementów
     ];
@@ -1328,21 +1329,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funkcja do generowania elementów karuzeli i kropek
     function generateCarouselElements() {
-        // Czyści dynamiczne kontenery na wypadek ponownego wywołania lub statycznych elementów w HTML (choć zakładamy, że są puste)
         if (carouselInner) carouselInner.innerHTML = '';
         if (dotsContainer) dotsContainer.innerHTML = '';
 
-
         mediaData.forEach((media, index) => {
-            // Użyj placeholderu dla wideo, jeśli nie ma zdefiniowanego obrazka podglądu
-            const thumbnailSrc = media.type === 'image' ? media.src : 'assets/icons/video-placeholder.svg';
-            
+            // ZMODYFIKOWANA LOGIKA POBIERANIA ŹRÓDŁA MINIATURY:
+            // 1. Jeśli zdefiniowano 'thumbnail', użyj go (dla wideo).
+            // 2. Jeśli to 'image', użyj 'src'.
+            // 3. W przeciwnym razie użyj 'placeholder'.
+            const finalThumbnailSrc = media.thumbnail || (media.type === 'image' ? media.src : 'assets/icons/video-placeholder.svg');
+
             // 1. GENEROWANIE MINIATUR (photoElements)
             const photoElement = document.createElement('div');
             photoElement.classList.add('carouusel__photo');
             
-            // POPRAWKA: Dodanie klasy CSS do elementu <img>
-            photoElement.innerHTML = `<img src="${thumbnailSrc}" alt="Miniatura projektu ${index + 1}" class="carouusel__thumbnail_img">`; 
+            // WSTAWIANIE ŹRÓDŁA Z NOWĄ LOGIKĄ
+            photoElement.innerHTML = `<img src="${finalThumbnailSrc}" alt="Miniatura projektu ${index + 1}" class="carouusel__thumbnail_img">`;
             
             photoElement.dataset.index = index;
             if (carouselInner) carouselInner.appendChild(photoElement);
@@ -1372,8 +1374,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (media && media.type === 'image') {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
         } else if (media && media.type === 'video') {
+            // Użycie miniatury jako 'poster' dla głównego odtwarzacza wideo
+            const posterSrc = media.thumbnail || '';
+            
             html = `
-                <video class="project__main_photo" autoplay loop muted playsinline width="100%">
+                <video class="project__main_photo" autoplay loop muted playsinline width="100%" poster="${posterSrc}">
                     <source src="${media.src}" type="video/mp4">
                     Twoja przeglądarka nie obsługuje wideo.
                 </video>
@@ -1388,23 +1393,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCarouselScroll() {
         if (photoElements.length === 0 || !carouselContainer || !carouselInner) return;
 
-        // Sprawdzenie, czy elementy karuzeli mają już szerokość (dane Rect)
         const firstPhotoRect = photoElements[0].getBoundingClientRect();
-        // Użycie 1 jako wartości awaryjnej, aby uniknąć dzielenia przez zero
-        const itemWidth = firstPhotoRect.width || 1; 
+        const itemWidth = firstPhotoRect.width || 1;
         const containerWidth = carouselContainer.getBoundingClientRect().width;
 
-        // Obliczenie, ile elementów widać
         const itemsVisible = Math.floor(containerWidth / itemWidth);
 
         let scrollStart = 0;
 
         if (currentIndex >= itemsVisible) {
-            // Utrzymywanie aktywnej miniatury widocznej, ale nie całkiem przy lewej krawędzi (przewija się w lewo)
             scrollStart = currentIndex - itemsVisible + 1;
         }
 
-        // Zabezpieczenie przed przewinięciem poza ostatni element
         scrollStart = Math.max(0, Math.min(scrollStart, photoElements.length - itemsVisible));
 
         const offset = scrollStart * itemWidth;
