@@ -1296,17 +1296,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.getElementById('dotsContainer');
 
     // 2. DEFINICJA DANYCH
-    // WAŻNA ZMIANA: Dodano pole 'thumbnail' do obiektów typu 'video'
+    // PAMIĘTAJ: ZAPISANE W TYM MIEJSCU NAZWY MUSZĄ DOKŁADNIE ODPOWIADAĆ NAZWOM PLIKÓW W FOLDERZE ASSETS/PHOTOS!
     const mediaData = [
         { type: 'image', src: 'assets/photos/Racjonalna_terapia.png' },
-        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4', thumbnail: 'assets/photos/video Recjonalna Terapia.jpg' }, // Pamiętaj, aby utworzyć ten plik!
+        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4', thumbnail: 'assets/photos/video Recjonalna Terapia.jpg' }, 
         { type: 'image', src: 'assets/photos/Rolety_webdesign.png' },
-        { type: 'video', src: 'assets/photos/Rolety_video.mp4', thumbnail: 'assets/photos/Rolety.jpg' }, // Pamiętaj, aby utworzyć ten plik!
+        { type: 'video', src: 'assets/photos/Rolety_video.mp4', thumbnail: 'assets/photos/Rolety.jpg' }, 
         { type: 'image', src: 'assets/photos/Business_Club.png' },
-        { type: 'video', src: 'assets/photos/Video Business Club.mp4', thumbnail: 'assets/photos/business_club.jpg' }, // Pamiętaj, aby utworzyć ten plik!
+        { type: 'video', src: 'assets/photos/Video Business Club.mp4', thumbnail: 'assets/photos/business_club.jpg' }, 
         { type: 'image', src: 'assets/photos/Amigo_Espanol.jpg' },
-        { type: 'video', src: 'assets/photos/Amigos Espanol.mp4', thumbnail: 'assets/photos/Amigos Espanol.jpg' }, // Pamiętaj, aby utworzyć ten plik!
-        // ... możesz dodawać więcej elementów
+        { type: 'video', src: 'assets/photos/Amigos Espanol.mp4', thumbnail: 'assets/photos/Amigos Espanol.jpg' }, 
     ];
 
     const projectDescriptions = [
@@ -1317,7 +1316,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Web design project for a Business Club located on Piotrkowska Street in Łódź. The club brings together prominent figures from artistic, political, and business backgrounds.",
         "Web design project for a Business Club located on Piotrkowska Street in Łódź. The club brings together prominent figures from artistic, political, and business backgrounds.",
         "Branding and web design for the Spanish language school 'Amigos Español'." ,
-        // ... możesz dodawać więcej opisów
     ];
 
     // Sprawdzenie spójności danych
@@ -1328,23 +1326,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. GENEROWANIE ELEMENTÓW DOM I ZMIENNE INDEKSÓW
 
-    // Funkcja do generowania elementów karuzeli i kropek
     function generateCarouselElements() {
         if (carouselInner) carouselInner.innerHTML = '';
         if (dotsContainer) dotsContainer.innerHTML = '';
 
         mediaData.forEach((media, index) => {
-            // ZMODYFIKOWANA LOGIKA POBIERANIA ŹRÓDŁA MINIATURY:
-            // 1. Jeśli zdefiniowano 'thumbnail', użyj go (dla wideo).
-            // 2. Jeśli to 'image', użyj 'src'.
-            // 3. W przeciwnym razie użyj 'placeholder'.
+            
+            // LOGIKA POBIERANIA ŹRÓDŁA MINIATURY
             const finalThumbnailSrc = media.thumbnail || (media.type === 'image' ? media.src : 'assets/icons/video-placeholder.svg');
 
             // 1. GENEROWANIE MINIATUR (photoElements)
             const photoElement = document.createElement('div');
             photoElement.classList.add('carouusel__photo');
             
-            // WSTAWIANIE ŹRÓDŁA Z NOWĄ LOGIKĄ
             photoElement.innerHTML = `<img src="${finalThumbnailSrc}" alt="Miniatura projektu ${index + 1}" class="carouusel__thumbnail_img">`;
             
             photoElement.dataset.index = index;
@@ -1375,7 +1369,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (media && media.type === 'image') {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
         } else if (media && media.type === 'video') {
-            // Użycie miniatury jako 'poster' dla głównego odtwarzacza wideo
             const posterSrc = media.thumbnail || '';
             
             html = `
@@ -1491,7 +1484,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateCarouselScroll);
 });
 </script>
-    
 
 
     
