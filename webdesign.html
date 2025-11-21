@@ -323,16 +323,16 @@ color: var(--dark);
             
         </style>
     
-    <script>
+    <>
     
-    // script.js
+    // .js
     document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
       const menu = document.querySelector(".drop_down_menu__container");
       menu.classList.toggle("active");
     });
     
     
-    </script>
+    </>
     
     <!--Menu top mobile end-->
 
@@ -366,14 +366,8 @@ color: var(--dark);
             <div class="project__line"></div>
 
             <div class="bottom_title__container">
-                <div class="dots_carousel__container" id="dotContainer">
-                    <div class="dot_carousel dot_carousel--active"></div>
-                    <div class="dot_carousel"></div>
-                    <div class="dot_carousel"></div>
-                    <div class="dot_carousel"></div>
-                    <div class="dot_carousel"></div>
-                    <div class="dot_carousel"></div>
-                    <div class="dot_carousel"></div>
+                <div class="dots_carousel__container" id="dotsContainer">
+             
                 </div>
                 
                 <div class="project_button__container">
@@ -385,13 +379,7 @@ color: var(--dark);
         
         <div class="carousel_container" id="carouselContainer">
             <div id="carouselInner">
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Racjonalna_terapia.png" alt="Miniatura 1"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/video Recjonalna Terapia.jpg" alt="Miniatura 2 (Wideo)"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety_webdesign.png" alt="Miniatura 3"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Rolety.jpg" alt="Miniatura 4"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/business_club.jpg" alt="Miniatura 5"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Business_Club.png" alt="Miniatura 6 (Wideo)"></div>
-                <div class="photo_carousel__container"><img class="carouusel__photo" src="assets/photos/Amigo_Espanol.jpg" alt="Miniatura 7"></div>
+
             </div>
         </div>
     </div>
@@ -1287,49 +1275,89 @@ width: 62px;
 
 
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. POBIERANIE ELEMENTÓW
-    const projectMediaContainer = document.getElementById('mainMediaContainer'); 
+    const projectMediaContainer = document.getElementById('mainMediaContainer');
     const projectTitleElement = document.getElementById('projectTitle');
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
-    
-    // NOWE ELEMENTY DLA PRZEWIJANIA KARUZELI MINIATUR
+
+    // ELEMENTY DLA PRZEWIJANIA KARUZELI MINIATUR
     const carouselContainer = document.getElementById('carouselContainer');
-    const carouselInner = document.getElementById('carouselInner'); 
-    
-    // UWAGA: photoElements i dots muszą mieć 7 elementów!
-    const dots = document.querySelectorAll('.dot_carousel');
-    const photoElements = carouselInner.querySelectorAll('.carouusel__photo');
-    
+    const carouselInner = document.getElementById('carouselInner');
+    const dotsContainer = document.getElementById('dotsContainer'); // Dodany ID dla kontenera kropek
+
     // 2. DEFINICJA DANYCH
-    // !!! WAŻNE: W TYCH TABLICACH MUSI BYĆ DOKŁADNIE 7 ELEMENTÓW !!!
-    
+    // TERAZ MOŻESZ DODAĆ DOWOLNĄ LICZBĘ ELEMENTÓW DO TABLIC
     const mediaData = [
         { type: 'image', src: 'assets/photos/Racjonalna_terapia.png' },
-        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4' }, 
+        { type: 'video', src: 'assets/photos/Racjonalna Terapia_video.mp4' },
         { type: 'image', src: 'assets/photos/Rolety_webdesign.png' },
         { type: 'video', src: 'assets/photos/Rolety_video.mp4' },
-        { type: 'image', src: 'assets/photos/Business_Club.png' }, // Poprawiony przecinek
-        { type: 'video', src: 'assets/photos/Video Business Club.mp4' }, 
-        { type: 'image', src: 'assets/photos/Amigo_Espanol.jpg' } // Uzupełniony 7. element (Indeks 6)
+        { type: 'image', src: 'assets/photos/Business_Club.png' },
+        { type: 'video', src: 'assets/photos/Video Business Club.mp4' },
+        { type: 'image', src: 'assets/photos/Amigo_Espanol.jpg' },
+        // TUTAJ MOŻESZ DODAĆ KOLEJNE ELEMENTY:
+        // { type: 'image', src: 'assets/photos/New_Project_8.jpg' }, 
+        // { type: 'image', src: 'assets/photos/New_Project_9.jpg' } 
     ];
 
     const projectDescriptions = [
-        "Projekt 1: Web design project for the Rational Antimicrobial Therapy conference, organized by the Medical University of Lodz and the FUMED Foundation.", 
-        "Projekt 2: Web design project for the Rational Antimicrobial Therapy conference, organized by the Medical University of Lodz and the FUMED Foundation.",                  
-        "Projekt 3: Website design for Solar, a Kraków-based company specializing in shades, blinds, and pleated blinds.",                     
+        "Projekt 1: Web design project for the Rational Antimicrobial Therapy conference, organized by the Medical University of Lodz and the FUMED Foundation.",
+        "Projekt 2: Web design project for the Rational Antimicrobial Therapy conference, organized by the Medical University of Lodz and the FUMED Foundation.",
+        "Projekt 3: Website design for Solar, a Kraków-based company specializing in shades, blinds, and pleated blinds.",
         "Projekt 4: Website design for Solar, a Kraków-based company specializing in shades, blinds, and pleated blinds.",
         "Projekt 5: Web design project for a Business Club located on Piotrkowska Street in Łódź. The club brings together prominent figures from artistic, political, and business backgrounds.",
-        "Projekt 6: Web design project for a Business Club located on Piotrkowska Street in Łódź. The club brings together prominent figures from artistic, political, and business backgrounds.", 
-        "Projekt 7: Branding and web design for the Spanish language school 'Amigos Español'." // Uzupełniony 7. element (Indeks 6)
+        "Projekt 6: Web design project for a Business Club located on Piotrkowska Street in Łódź. The club brings together prominent figures from artistic, political, and business backgrounds.",
+        "Projekt 7: Branding and web design for the Spanish language school 'Amigos Español'." ,
+        // TUTAJ MOŻESZ DODAĆ OPISY DLA NOWYCH ELEMENTÓW
+        // "Projekt 8: Nowy opis dla ósmego projektu.",
+        // "Projekt 9: Nowy opis dla dziewiątego projektu."
     ];
-    // KONIEC DEFINICJI DANYCH
+
+    // Sprawdzenie spójności danych
+    if (mediaData.length !== projectDescriptions.length) {
+        console.error("Błąd: Liczba elementów w mediaData i projectDescriptions jest różna!");
+        return;
+    }
+
+    // 3. GENEROWANIE ELEMENTÓW DOM I ZMIENNE INDEKSÓW
     
+    // Funkcja do generowania elementów karuzeli i kropek
+    function generateCarouselElements() {
+        // Usuń stare elementy (zakładamy, że HTML jest pusty lub opcjonalnie:
+        // carouselInner.innerHTML = '';
+        // dotsContainer.innerHTML = '';
+
+        mediaData.forEach((media, index) => {
+            // 1. GENEROWANIE MINIATUR (photoElements)
+            const thumbnailSrc = media.type === 'image' ? media.src : 'assets/icons/video-placeholder.svg'; // Użyj placeholderu dla wideo
+            const photoElement = document.createElement('div');
+            photoElement.classList.add('carouusel__photo');
+            photoElement.innerHTML = `<img src="${thumbnailSrc}" alt="Miniatura projektu ${index + 1}">`;
+            
+            // Dodaj atrybut data-index do łatwiejszego identyfikowania
+            photoElement.dataset.index = index;
+            carouselInner.appendChild(photoElement);
+
+            // 2. GENEROWANIE KROPEK (dots)
+            const dotElement = document.createElement('span');
+            dotElement.classList.add('dot_carousel');
+            dotElement.dataset.index = index;
+            if (dotsContainer) {
+                dotsContainer.appendChild(dotElement);
+            }
+        });
+    }
+
+    // Wywołanie funkcji generującej przed pobraniem elementów
+    generateCarouselElements();
     
-    // 3. ZMIENNE INDEKSÓW
-    let currentIndex = 0; 
+    // POBRANIE DYNAMICZNIE WYGENEROWANYCH ELEMENTÓW
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot_carousel') : [];
+    const photoElements = carouselInner.querySelectorAll('.carouusel__photo');
+
+    let currentIndex = 0;
 
     // Funkcja do tworzenia elementu medialnego (IMG lub VIDEO)
     function createMediaElement(media) {
@@ -1337,7 +1365,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (media && media.type === 'image') {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
         } else if (media && media.type === 'video') {
-            // Bez 'controls', z autoplay, loop i muted
             html = `
                 <video class="project__main_photo" autoplay loop muted playsinline width="100%">
                     <source src="${media.src}" type="video/mp4">
@@ -1352,18 +1379,19 @@ document.addEventListener('DOMContentLoaded', () => {
      * Oblicza przesunięcie i przewija karuzelę miniatur.
      */
     function updateCarouselScroll() {
+        // Używamy photoElements.length (liczba jest teraz dynamiczna)
         if (photoElements.length === 0 || !carouselContainer) return;
 
-        // Pamiętaj: itemsVisible zależy od CSS i szerokości kontenera!
         const firstPhotoRect = photoElements[0].getBoundingClientRect();
-        const itemWidth = firstPhotoRect.width || 1; 
+        const itemWidth = firstPhotoRect.width || 1;
         const containerWidth = carouselContainer.getBoundingClientRect().width;
-        
+
         const itemsVisible = Math.floor(containerWidth / itemWidth);
 
         let scrollStart = 0;
-        
+
         if (currentIndex >= itemsVisible) {
+            // Utrzymywanie aktywnej miniatury widocznej (przewija się w lewo)
             scrollStart = currentIndex - itemsVisible + 1;
         }
 
@@ -1377,32 +1405,32 @@ document.addEventListener('DOMContentLoaded', () => {
      * Aktualizuje całą zawartość bloku projektu.
      */
     function updatePhoto(newIndex) {
-        
+
         // Pętla cykliczna
         if (newIndex >= mediaData.length) {
             newIndex = 0;
         } else if (newIndex < 0) {
             newIndex = mediaData.length - 1;
         }
-        
+
         currentIndex = newIndex;
         const currentMedia = mediaData[currentIndex];
-        
+
         // 1. Zmiana głównego elementu medialnego
         projectMediaContainer.innerHTML = createMediaElement(currentMedia);
-        
+
         // 2. Zmiana opisu projektu
         if (projectTitleElement && projectDescriptions[currentIndex]) {
             projectTitleElement.textContent = projectDescriptions[currentIndex];
         } else if (projectTitleElement) {
              projectTitleElement.textContent = "Brak opisu dla tego projektu.";
         }
-        
+
         // 3. Aktualizacja stanu kropek i miniatur
         dots.forEach((dot, index) => {
             dot.classList.toggle('dot_carousel--active', index === currentIndex);
         });
-        
+
         photoElements.forEach((photo, index) => {
              photo.classList.toggle('carouusel__photo--active', index === currentIndex);
         });
@@ -1412,29 +1440,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. LISTENERY DLA NAWIGACJI
-    
+
     // Strzałki
-    prevArrow.addEventListener('click', (e) => {
-        e.preventDefault(); 
-        updatePhoto(currentIndex - 1);
-    });
+    if (prevArrow) {
+        prevArrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            updatePhoto(currentIndex - 1);
+        });
+    }
 
-    nextArrow.addEventListener('click', (e) => {
-        e.preventDefault();
-        updatePhoto(currentIndex + 1);
-    });
+    if (nextArrow) {
+        nextArrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            updatePhoto(currentIndex + 1);
+        });
+    }
 
-    // Miniatury i Kropki
-    [...photoElements, ...dots].forEach((element, elementIndex) => {
-        element.addEventListener('click', () => {
-            // Miniatury i kropki są pobierane w tej samej kolejności
-            // i mają taką samą liczbę, więc można użyć elementIndex
-            updatePhoto(elementIndex);
+    // Miniatury i Kropki (dodajemy dynamicznie)
+    const interactiveElements = [...photoElements, ...dots];
+
+    interactiveElements.forEach((element) => {
+        element.addEventListener('click', (e) => {
+            // Odczytujemy indeks z atrybutu 'data-index'
+            const index = parseInt(element.dataset.index);
+            updatePhoto(index);
         });
     });
-    
+
     // Inicjalizacja
-    updatePhoto(0);
+    if (mediaData.length > 0) {
+        updatePhoto(0);
+    } else {
+         projectTitleElement.textContent = "Brak projektów do wyświetlenia.";
+    }
 
     // Dodatkowy listener na zmianę rozmiaru okna
     window.addEventListener('resize', updateCarouselScroll);
