@@ -1289,26 +1289,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     // 1. OBSŁUGA MENU MOBILNEGO
     // ----------------------------------------------------
-    document.querySelector(".hamburger_menu__icon").addEventListener("click", function() {
-        const menu = document.querySelector(".drop_down_menu__container");
-        menu.classList.toggle("active");
-    });
+    const hamburgerIcon = document.querySelector(".hamburger_menu__icon");
+    const dropDownMenu = document.querySelector(".drop_down_menu__container");
+
+    if (hamburgerIcon && dropDownMenu) {
+        hamburgerIcon.addEventListener("click", function() {
+            dropDownMenu.classList.toggle("active");
+        });
+    }
 
     // ----------------------------------------------------
     // 2. OBSŁUGA KARUZELI PROJEKTÓW
     // ----------------------------------------------------
-    
-    // 2.1 POBIERANIE ELEMENTÓW
+
+    // 2.1 POBIERANIE ELEMENTÓW KONTENERÓW
     const projectMediaContainer = document.getElementById('mainMediaContainer');
     const projectTitleElement = document.getElementById('projectTitle');
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
-
     const carouselContainer = document.getElementById('carouselContainer');
     const carouselInner = document.getElementById('carouselInner');
     const dotsContainer = document.getElementById('dotsContainer');
 
-    // 2.2 DEFINICJA DANYCH
+    // 2.2 DEFINICJA DANYCH (Zakładam, że ścieżki są poprawne!)
     const mediaData = [
         { type: 'image', src: 'assets/photos/Dotyk_2.png' },
         { type: 'image', src: 'assets/photos/Dotyk__1.png' },
@@ -1316,8 +1319,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'assets/photos/Dobrze_cie_widziec_3.png' },
         { type: 'image', src: 'assets/photos/Fizjokomunikacja__1.png' },
         { type: 'image', src: 'assets/photos/Fizjokomunikacja__2.png' },
-        { type: 'image', src: 'assets/photos/Flower Cake Cafe__1.png' },
-        { type: 'image', src: 'assets/photos/Flower Cake Cafe__2.png' },
+        { type: 'image', src: 'assets/photos/Flower_Cake_Cafe__1.png' },
+        { type: 'image', src: 'assets/photos/Flower_Cake_Cafe__2.png' },
         { type: 'image', src: 'assets/photos/Flytopia__2.png' },
         { type: 'image', src: 'assets/photos/Flytopia__3.png' },
     ];
@@ -1331,32 +1334,29 @@ document.addEventListener('DOMContentLoaded', () => {
         "Logo design brief for the Physiotherapy Clinic. The symbol needs to incorporate a combination of a spine and puzzle pieces, according to the client's wishes.",
         "Logo design project for the Flower Cake Cafe, specializing in artistic cakes and sugar floristry.",
         "Logo design project for the Flower Cake Cafe, specializing in artistic cakes and sugar floristry.",
-        "Logo design project for the travel agency "Flytopia.pl".",
-        "Logo design project for the travel agency "Flytopia.pl".",
+        "Logo design project for the travel agency \"Flytopia.pl\".",
+        "Logo design project for the travel agency \"Flytopia.pl\".",
     ];
 
-    // Weryfikacja spójności danych
-    if (mediaData.length !== projectDescriptions.length) {
-        console.error("Błąd: Liczba elementów w mediaData i projectDescriptions jest różna!");
-        return;
-    }
+    let currentIndex = 0;
+    let dots = [];
+    let photoElements = [];
 
-    // 2.3 GENEROWANIE ELEMENTÓW
+    // Funkcja generująca strukturę HTML dla karuzeli i kropek
     function generateCarouselElements() {
         if (carouselInner) carouselInner.innerHTML = '';
         if (dotsContainer) dotsContainer.innerHTML = '';
 
         mediaData.forEach((media, index) => {
-            
             const finalThumbnailSrc = media.thumbnail || (media.type === 'image' ? media.src : 'assets/icons/video-placeholder.svg');
 
             // GENEROWANIE MINIATUR
             const photoElement = document.createElement('div');
-            photoElement.classList.add('photo_carousel__container'); 
-            
-            photoElement.innerHTML = `<img src="${finalThumbnailSrc}" alt="Miniatura projektu ${index + 1}" class="carouusel__thumbnail_img">`;
-            
+            photoElement.classList.add('photo_carousel__container');
             photoElement.dataset.index = index;
+            // Dodajemy element klikalny (a) lub sam obrazek
+            photoElement.innerHTML = `<img src="${finalThumbnailSrc}" alt="Miniatura projektu ${index + 1}" class="carouusel__thumbnail_img">`;
+
             if (carouselInner) carouselInner.appendChild(photoElement);
 
             // GENEROWANIE KROPEK
@@ -1367,23 +1367,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 dotsContainer.appendChild(dotElement);
             }
         });
+
+        // PO GENEROWANIU: POBIERAMY ZDOMINOWANE ELEMENTY DO ZMIENNYCH GLOBALNYCH
+        dots = dotsContainer ? dotsContainer.querySelectorAll('.dot_carousel') : [];
+        photoElements = carouselInner ? carouselInner.querySelectorAll('.photo_carousel__container') : [];
     }
-
-    generateCarouselElements();
-
-    // POBRANIE DYNAMICZNIE WYGENEROWANYCH ELEMENTÓW
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot_carousel') : [];
-    const photoElements = carouselInner ? carouselInner.querySelectorAll('.photo_carousel__container') : []; 
-
-    let currentIndex = 0;
-
+    
+    // Tworzy HTML dla głównego obszaru media
     function createMediaElement(media) {
         let html = '';
         if (media && media.type === 'image') {
             html = `<img class="project__main_photo" src="${media.src}" alt="Główne zdjęcie projektu"/>`;
         } else if (media && media.type === 'video') {
             const posterSrc = media.thumbnail || '';
-            
+
             html = `
                 <video class="project__main_photo" autoplay loop muted playsinline width="100%" poster="${posterSrc}">
                     <source src="${media.src}" type="video/mp4">
@@ -1394,37 +1391,48 @@ document.addEventListener('DOMContentLoaded', () => {
         return html;
     }
 
+    // Oblicza, ile elementów jest widocznych w karuzeli miniatur
     function getItemsVisible() {
         if (!carouselContainer || photoElements.length === 0) return 1;
 
         const containerWidth = carouselContainer.getBoundingClientRect().width;
+        // Wymaga, aby photoElements[0] miał już wymiary (czyli musi być załadowany)
         const firstPhotoRect = photoElements[0].getBoundingClientRect();
-        const itemWidth = firstPhotoRect.width + 12; 
+        // 12px to gap
+        const itemWidth = firstPhotoRect.width > 0 ? firstPhotoRect.width + 12 : containerWidth; 
         
+        // Zabezpieczenie przed dzieleniem przez zero/pusty element
+        if (itemWidth === 0) return 1;
+        
+        // Wymuszamy minimum 1 element
         return Math.max(1, Math.floor(containerWidth / itemWidth));
     }
 
+    // Przewija kontener miniatur (carouselInner)
     function updateCarouselScroll() {
-        if (photoElements.length === 0 || !carouselInner) return;
+        if (photoElements.length === 0 || !carouselInner || !carouselContainer) return;
 
         const itemsVisible = getItemsVisible();
-        const firstPhotoRect = photoElements[0].getBoundingClientRect();
-        const itemWidth = firstPhotoRect.width + 12;
+        
+        // Upewniamy się, że element ma wymiary
+        const itemWidth = photoElements[0].getBoundingClientRect().width + 12;
 
-        let scrollStart = 0;
-
-        if (currentIndex >= itemsVisible) {
-            scrollStart = currentIndex - itemsVisible + 1;
+        let scrollStart = currentIndex;
+        
+        // Jeśli aktywny element jest dalej niż widoczny zakres, przesuwamy początek
+        if (currentIndex > photoElements.length - itemsVisible) {
+             scrollStart = photoElements.length - itemsVisible;
+        } else if (currentIndex < 0) {
+             scrollStart = 0;
         }
 
-        scrollStart = Math.max(0, Math.min(scrollStart, photoElements.length - itemsVisible));
-        
         const offset = scrollStart * itemWidth;
         carouselInner.style.transform = `translateX(-${offset}px)`;
     }
-
+    
+    // Główna funkcja aktualizująca zawartość projektu
     function updatePhoto(newIndex) {
-        
+        // Logika zawijania indeksu
         if (newIndex >= mediaData.length) {
             newIndex = 0;
         } else if (newIndex < 0) {
@@ -1434,29 +1442,40 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = newIndex;
         const currentMedia = mediaData[currentIndex];
 
+        // 1. Aktualizacja głównego obszaru
         if (projectMediaContainer) {
             projectMediaContainer.innerHTML = createMediaElement(currentMedia);
         }
 
+        // 2. Aktualizacja tytułu/opisu
         if (projectTitleElement && projectDescriptions[currentIndex]) {
             projectTitleElement.textContent = projectDescriptions[currentIndex];
         } else if (projectTitleElement) {
             projectTitleElement.textContent = "Brak opisu dla tego projektu.";
         }
 
+        // 3. Aktualizacja kropek i miniatur
         dots.forEach((dot, index) => {
             dot.classList.toggle('dot_carousel--active', index === currentIndex);
         });
 
         photoElements.forEach((photo, index) => {
-            photo.classList.toggle('photo_carousel__container--active', index === currentIndex); 
+            // Dodanie klasy, którą sugerowałem w poprzedniej wiadomości, dla aktywnego elementu
+            photo.classList.toggle('photo_carousel__container--active', index === currentIndex);
         });
 
+        // 4. Aktualizacja przewinięcia karuzeli miniatur
         updateCarouselScroll();
     }
 
-    // 5. LISTENERY DLA NAWIGACJI (Strzałki i Miniatury)
+    // ----------------------------------------------------
+    // 3. INICJALIZACJA I LISTENERY
+    // ----------------------------------------------------
 
+    // 1. Generowanie elementów (to musi być przed podpięciem listenerów do nich)
+    generateCarouselElements();
+
+    // 2. Listenery dla strzałek
     if (prevArrow) {
         prevArrow.addEventListener('click', (e) => {
             e.preventDefault();
@@ -1471,30 +1490,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 3. Listenery dla kliknięć w miniatury/kropki (pobierane po wygenerowaniu)
     const interactiveElements = [...photoElements, ...dots];
 
     interactiveElements.forEach((element) => {
-        element.addEventListener('click', (e) => {
+        element.addEventListener('click', () => {
             const index = parseInt(element.dataset.index);
             updatePhoto(index);
         });
     });
 
-    // ----------------------------------------------------
-    // 6. OBSŁUGA GESTÓW PRZESUWANIA (SWIPE) NA TELEFONACH - NOWOŚĆ
-    // ----------------------------------------------------
+    // 4. Obsługa gestów przesuwania (SWIPE)
     let touchStartX = 0;
     let touchEndX = 0;
-    // Obszar reagujący na dotyk (Główne zdjęcie/wideo)
     const swipeTarget = document.getElementById('mainMediaContainer');
 
     if (swipeTarget) {
-        // Moment dotknięcia ekranu
         swipeTarget.addEventListener('touchstart', e => {
             touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
 
-        // Moment puszczenia ekranu
         swipeTarget.addEventListener('touchend', e => {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
@@ -1502,27 +1517,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleSwipe() {
-        const swipeThreshold = 50; // Minimalna odległość przesunięcia (w pikselach)
+        const swipeThreshold = 50; 
         const swipeDistance = touchStartX - touchEndX;
 
-        // Przesunięcie w lewo (następne)
-        if (swipeDistance > swipeThreshold) {
+        if (swipeDistance > swipeThreshold) { // Przesunięcie w lewo (następne)
             updatePhoto(currentIndex + 1);
-        }
-        // Przesunięcie w prawo (poprzednie)
-        else if (swipeDistance < -swipeThreshold) {
+        } else if (swipeDistance < -swipeThreshold) { // Przesunięcie w prawo (poprzednie)
             updatePhoto(currentIndex - 1);
         }
     }
 
-    // Inicjalizacja
+    // 5. Inicjalizacja: Wczytanie pierwszego zdjęcia po załadowaniu skryptu
     if (mediaData.length > 0) {
         updatePhoto(0);
     } else {
         if (projectTitleElement) projectTitleElement.textContent = "Brak projektów do wyświetlenia.";
     }
 
-    window.addEventListener('resize', updateCarouselScroll);
+    // 6. Ponowna kalibracja przewijania karuzeli po zmianie rozmiaru okna
+    window.addEventListener('resize', () => {
+        // Sprawdź, czy okno nie jest za małe na karuzelę, zanim spróbujesz przewijać
+        if (window.innerWidth > 744) { // Domyślna szerokość dla której chowasz strzałki
+            updateCarouselScroll();
+        }
+    });
 });
 </script>
 
